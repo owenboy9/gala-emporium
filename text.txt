@@ -1,1 +1,18 @@
-here we go!
+day one (present: Zeinab, Erik, Micke, owen; Lovisa on the phone). 
+
+we begun by imagining the venue's functionality in general: it's a space all the different clubs can rent (we couldn't agree upon whether the venue will serve cocktails or not, for example).
+to make that simpler, we sketched very general wireframes (main page, club page, event page; owen insisted on sketching a cocktail menu & venue concept wireframe). questions that arose from discussing those were:
+1) if the venue ends up hosting, say, 20 clubs, how do we present them (we want to have clubs' logos/pics/etc on our homepage, linked to the clubs' pages) on our homepage? we came up with the idea of rotating display: the clubs that are active, say, this week come to the top of a scrollable list.
+2) if we choose to offer a standardized html-css club page scaffolding, what components will be obligatory for the club owners to provide? we made a preliminary list thereof (background pic + more visuals, name, description, events, gala emporium’s logo, logo (also reusable for the general event calendar), color palette)
+3) ideally, we would work with databases: separate ones for clubs and events? probably just one database.
+4) event calendar on our homepage: preferably a full week's events always visible; tonight's event highlighted. scrollable list of upcoming stuff.
+
+we decided four of us would come up with, design, and code their own club's page, and one of us (owen) would take care of the venue's site (homepage). 
+
+we are discussing pros and cons of a one-pager solution versus separate html club sites
+
+in more measurable terms, we have:
+1) set up a github repository
+2) set up a trello workspace
+3) chosen a scrum master (Lovisa)
+4) had a focused workflow planning meeting
