@@ -16,3 +16,28 @@ in more measurable terms, we have:
 2) set up a trello workspace
 3) chosen a scrum master (Lovisa)
 4) had a focused workflow planning meeting
+
+
+
+day two (present: everyone).
+
+we presented the product owner with a long list of user stories, which they will soon rearrange according to their priorities.
+
+meeting: 
+1) go through our sketches over sites.
+2) recap from meeting with our product owner: focus on presentation on monday, use mock data so far, database to fetch data from, not add to it. step two – let club owners add events.
+3) ER diagrams to figure out our database needs.
+4) we can begin to code our sites (html, css)
+5) recap what linus talked about in the morning
+
+discussion: pros and cons with more or less extensive club & calendar presentation on our homepage. we consider how to tease visitors to become more curious about what happens here. practicalities around what & when. 
+
+homepage: we agree on a sexy wireframe
+club pages AND events: take same layout as homepage. header, roll-down menu, calendar, and footer stay (almost) unchanged. every club has only its own calendar though.
+
+er-diagram: Erik & Micke will do
+
+we discuss our database structure (three tables: users, clubs, events)
+everyone else looks for their content
+code page scaffolding – begin together tomorrow
+discuss css solutions for different image sizes
