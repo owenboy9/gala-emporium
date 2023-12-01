@@ -54,4 +54,4 @@ day four.
 
 we had an actual standup meeting: we laid pretty stable ground and schedule for today's process.
 before noon, we discussed & adjusted the ER diagram Erik had prepared. then we collectively built our database, which we then added items to, everyone on their own.
-after lunch – create homepage blueprint.
+after lunch – create homepage blueprint and connect it to db. upload it all on github.
