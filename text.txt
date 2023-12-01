@@ -47,3 +47,11 @@ discuss css solutions for different image sizes
 day three.
 
 nothing much done in terms of project progress: the day went by, filled with nerve-wracking attempts at connecting servers to databases, making datagrip work, and fighting docker. still: Erik managed to draw a meaningful ER diagram, and begun to figure out all the keys it requires. our product owner rearranged our user stories according to their priorities. we got a clearer understanding of GET, PUT, and DELETE as well as git merge strategies. owen cleared out our main branch on github. tomorrow we will together build a skeletal version of our homepage (blueprint for club sites), together try to solve the server-database connection issue, and set up a functional base for more nuanced work on the website. 
+
+
+
+day four.
+
+we had an actual standup meeting: we laid pretty stable ground and schedule for today's process.
+before noon, we discussed & adjusted the ER diagram Erik had prepared. then we collectively built our database, which we then added items to, everyone on their own.
+after lunch – create homepage blueprint.
