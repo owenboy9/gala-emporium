@@ -2,9 +2,9 @@ export default async function () {
   console.log('userList.js')
   const userData = await getUsers();
 
-return `
+  return `
   <h1>Clubs</h1>
-  ${createEventList(userData)}
+  ${createUserList(userData)}
   `
 }
 
@@ -15,13 +15,13 @@ async function getUsers() {
   return data
 }
 
-function createEventList(userData) {
+function createUserList(userData) {
   console.log(userData)
   let users = ""
 
   let index = 1
   for (let user of userData) {
-   // document.getElementById('eventlist').innerHTML = user.username
+    // document.getElementById('eventlist').innerHTML = user.username
     users += `
     <div>${index}</div>
     <div>${user.user_name}</div>
@@ -34,7 +34,7 @@ function createEventList(userData) {
     <div>${users}</div>
   `
 
- 
+
 
 
 } 

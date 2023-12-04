@@ -1,5 +1,6 @@
 import eventList from "./pages/eventList.js";
 import userList from "./pages/userList.js";
+import clubs from "./pages/clubs.js";
 
 async function router() {
   switch (window.location.hash) {
@@ -9,7 +10,7 @@ async function router() {
       break;
 
     case "#getClubs":
-      $("main").html(await userList())
+      $("main").html(await clubs())
       break;
     
     case "#getEvents":
