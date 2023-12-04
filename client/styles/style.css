@@ -1,12 +1,10 @@
 main {
   width: 60vw;
   margin: auto;
-  background-color: pink;
 }
 
 #menu {
   display: flex;
-
 }
 
 #menu a {
@@ -42,4 +40,33 @@ main {
 .eventInfo h2 {
   margin: 0;
   padding: 0;
+}
+
+#clubs {
+  width: 60vw;
+  margin: 3vh auto 0 auto;
+}
+
+.club {
+  background-color: rgb(218, 139, 120);
+  border-radius: 10px;
+  margin: 0.5vw;
+  padding: 5px;
+  display: flex;
+  box-shadow: 2px 2px 3px 2px #d7d6d6;
+
+}
+
+.clubName {
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  vertical-align: middle;
+  width: 8vw;
+  min-width: 8vw;
+}
+
+.clubInfo {
+  padding: 10px;
+  margin-left: 1vw;
 }
