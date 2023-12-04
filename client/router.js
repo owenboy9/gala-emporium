@@ -1,5 +1,6 @@
 import eventList from "./pages/eventList.js";
 import userList from "./pages/userList.js";
+import clubs from "./pages/clubs.js";
 
 import login from "./modules/login.js"
 
@@ -13,7 +14,7 @@ async function router() {
       break;
 
     case "#getClubs":
-      $("main").html(await userList())
+      $("main").html(await clubs())
       break;
     
     case "#getEvents":

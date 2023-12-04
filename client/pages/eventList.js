@@ -56,7 +56,4 @@ function createEventList(eventData) {
     <div>${events}</div>
   `
 
- 
-
-
 } 

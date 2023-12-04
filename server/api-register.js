@@ -4,6 +4,7 @@ import events from "./apis/events.js";
 import login from "./apis/login.js";
 import users from "./apis/users.js"
 import events_sorted from "./apis/createview-events.js"
+import clubs from "./apis/clubs.js"
 
 
 export default function (server, db) {
@@ -12,4 +13,6 @@ export default function (server, db) {
   login(server, db)
   users(server, db)
   events_sorted(server, db)
+  clubs(server, db)
+
 }
