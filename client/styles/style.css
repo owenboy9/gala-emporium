@@ -19,6 +19,7 @@ header {
 
 #site-logo>img {
   width: 100%;
+  height: 100%;
 }
 
 #headerright {
@@ -42,7 +43,19 @@ header {
 
 }
 
-main {
+#klubbknappar {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#klubbknappar>img {
+  margin: 1vw;
+  max-height: 5vw;
+  border-radius: 50%;
+}
+
+.huvudstycke {
   display: flex;
   justify-content: space-around;
   margin: 2vw;
@@ -215,6 +228,8 @@ footer>* {
   width: 60vw;
   margin: 3vh auto 0 auto;
 }
+
+
 
 .eventItem {
   background-color: rgb(218, 139, 120);

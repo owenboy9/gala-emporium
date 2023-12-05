@@ -10,18 +10,20 @@ $('#login').html(login())
 
 async function router() {
   switch (window.location.hash) {
-      case "":
-        console.log(window.location.hash)
-      $("main").html("<h1>Startsida</h1>")
+    case "":
+      console.log(window.location.hash)
+      $("main").html("<h1>hämtar från databas</h1>")
+      $("#right").html(await eventList())
       break;
 
     case "#getClubs":
       $("main").html(await clubs())
       break;
-    
+
     case "#getEvents":
       $("main").html(await eventList())
       break;
+
 
     case "#about":
       console.log(window.location.hash)
