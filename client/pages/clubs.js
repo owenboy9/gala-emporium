@@ -22,10 +22,16 @@ function createClubList(clubData) {
   for (let club of clubData) {
     // document.getElementById('eventlist').innerHTML = user.username
     clubs += `
-    <div>${index}</div>
-    <div>${club.name}</div>
-    <div>${club.manifesto}</div>
-    <div>${club.description}</div>
+
+    <div class=club>
+    <div class="clubName">
+    <h2>${club.name}</h2>
+    </div>
+    <div class="clubInfo">
+    <h3>${club.manifesto}</h3>
+    <p>${club.description}</p>
+    </div>
+    </div>
     `
     index++
   }
