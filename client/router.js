@@ -2,6 +2,12 @@ import eventList from "./pages/eventList.js";
 import userList from "./pages/userList.js";
 import clubs from "./pages/clubs.js";
 
+
+import login from "./modules/login.js"
+
+$('#login').html(login())
+
+
 async function router() {
   switch (window.location.hash) {
       case "":
