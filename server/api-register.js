@@ -5,6 +5,8 @@ import login from "./apis/login.js";
 import users from "./apis/users.js"
 import events_sorted from "./apis/createview-events.js"
 import clubs from "./apis/clubs.js"
+import getclub from "./apis/getclub.js"
+import getParrotEvents from "./apis/getParrotEvents.js";
 
 
 export default function (server, db) {
@@ -14,5 +16,6 @@ export default function (server, db) {
   users(server, db)
   events_sorted(server, db)
   clubs(server, db)
-
+  getclub(server, db)
+  getParrotEvents(server, db)
 }

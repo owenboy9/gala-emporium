@@ -1,6 +1,7 @@
 import eventList from "./pages/eventList.js";
 import userList from "./pages/userList.js";
 import clubs from "./pages/clubs.js";
+import parrot from "./pages/clubpages/parrotprattlecracker/parrotprattlecracker.js";
 
 
 import login from "./modules/login.js"
@@ -29,6 +30,10 @@ async function router() {
       console.log(window.location.hash)
       $("main").html('<h1>About us</h1>')
       break;
+
+      case "#parrot":
+        $("main").html(await parrot())
+        break;
 
     default:
       $("main").html("<h1>Denna sida finns inte!</h1>")
