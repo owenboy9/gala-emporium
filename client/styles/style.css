@@ -19,7 +19,6 @@ header {
 
 #site-logo>img {
   width: 100%;
-  height: 100%;
 }
 
 #headerright {
@@ -32,8 +31,6 @@ header {
 
 #menu {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 #menu>nav>a {
@@ -43,19 +40,7 @@ header {
 
 }
 
-#klubbknappar {
-  align-self: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-#klubbknappar>img {
-  margin: 1vw;
-  max-height: 5vw;
-  border-radius: 50%;
-}
-
-.huvudstycke {
+main {
   display: flex;
   justify-content: space-around;
   margin: 2vw;
