@@ -9,7 +9,8 @@ return `
 }
 
 async function getEvents() {
-  const response = await fetch("api/events")
+  console.log('get events')
+  const response = await fetch("api/sorted-events")
   const data = await response.json()
   console.log(data)
   return data
