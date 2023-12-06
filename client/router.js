@@ -3,6 +3,8 @@ import userList from "./pages/userList.js";
 import clubs from "./pages/clubs.js";
 import parrot from "./pages/clubpages/parrotprattlecracker/parrotprattlecracker.js";
 import akzepto from "./pages/clubpages/akzepto/akzepto.js";
+import notdeadyet from "./pages/clubpages/notdeadyet/notdeadyet.js";
+
 
 import login from "./components/login.js"
 
@@ -37,6 +39,10 @@ async function router() {
     
     case "#akzepto":
       $("main").html(await parrot())
+      break;
+
+    case "#notdeadyet":
+      $("main").html(await notdeadyet())
       break;
 
     default:

@@ -64,4 +64,13 @@ after we'd fixed a couple of things on the website (calendar, club layout), we p
 
 day six.
 
-speedboat retrospective: more concrete tasks to focus on and solve; clearer communication; remember to have social fun together.
+speedboat retrospective: more concrete tasks to focus on and solve; clearer communication; remember to have social fun together. Micke, Zeinab and Lovisa made the site navigateable, gettign data from our db.
+
+
+day seven.
+
+Erik begun working with his club's page
+we decided to make a spearate table in our db for gala's media & texts
+made sure everyone knew how to get data from db for their own club sites
+discussed the layout for the calendar(s): Erik will play UX designer for the calendar & events
+decided what must be done today.
