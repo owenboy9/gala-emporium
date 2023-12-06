@@ -2,7 +2,7 @@ import eventList from "./pages/eventList.js";
 import userList from "./pages/userList.js";
 import clubs from "./pages/clubs.js";
 import parrot from "./pages/clubpages/parrotprattlecracker/parrotprattlecracker.js";
-
+import akzepto from "./pages/clubpages/akzepto/akzepto.js";
 
 import login from "./components/login.js"
 
@@ -32,6 +32,10 @@ async function router() {
       break;
 
     case "#parrot":
+      $("main").html(await parrot())
+      break;
+    
+    case "#akzepto":
       $("main").html(await parrot())
       break;
 
