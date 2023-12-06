@@ -77,7 +77,7 @@ decided what must be done today.
 
 Lovisa has made her club's page
 Micke's working on his
-owen set up two new tables in bd, and wrote code to get stuff from it to site (but it's still not showing correctly)
+owen made a logo, and set up two new tables in bd, and wrote code to get stuff from it to site (but it's still not showing correctly)
 Erik has worked on styling of events (work in progress)
 we have struggled hard with github
 
