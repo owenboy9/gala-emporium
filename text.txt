@@ -55,3 +55,13 @@ day four.
 we had an actual standup meeting: we laid pretty stable ground and schedule for today's process.
 before noon, we discussed & adjusted the ER diagram Erik had prepared. then we collectively built our database, which we then added items to, everyone on their own.
 after lunch – create homepage blueprint.
+
+
+day five.
+
+after we'd fixed a couple of things on the website (calendar, club layout), we presented our work for Benjamin. we assessed our vision, and ended the first sprint.
+
+
+day six.
+
+speedboat retrospective: more concrete tasks to focus on and solve; clearer communication; remember to have social fun together.
