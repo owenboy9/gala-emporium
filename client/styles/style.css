@@ -270,3 +270,10 @@ footer>* {
   padding: 10px;
   margin-left: 1vw;
 }
+
+.feather {
+  background-image: url("images/feathers.png");
+  background-repeat: none;
+  background-size: auto;
+  opacity: .7;
+}
