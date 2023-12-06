@@ -17,7 +17,7 @@ export default async function () {
 
     `
   </div>
-  <div><img src="pages/clubpages/notdeadyet/perform2.jpg"></div>
+  <div><img src="pages/clubpages/notdeadyet/images/perform2.jpg"></div>
   `
 
   return html
