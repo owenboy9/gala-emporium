@@ -6,6 +6,7 @@ export default async function () {
 
   // build your club page here
   let html = `
+  <link rel="stylesheet" href="./styles/akzeptostyle.css">
   <div class="block">
 
   <h1>${clubdata.club.name}</h1>

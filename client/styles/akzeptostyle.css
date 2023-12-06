@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600&display=swap');
+
+body {
+  display: block;
+  font-family: 'Onest',
+    sans-serif;
+  margin: 2vw;
+}
+
+header {
+  display: flex;
+  justify-content: end;
+  height: 15vw;
+}
+
+#site-logo {
+  width: 40%;
+}
+
+#site-logo>img {
+  width: 100%;
+}
+
+#headerright {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+
+#menu {
+  display: flex;
+}
+
+#menu>nav>a {
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+
+}
+
+#klubbknappar {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#klubbknappar>img {
+  margin: 1vw;
+  max-height: 5vw;
+  border-radius: 50%;
+}
+
+
+
+#klubbknappar {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#klubbknappar>img {
+  margin: 1vw;
+  max-height: 5vw;
+  border-radius: 50%;
+}
+
+#klubbknappar>a>img {
+  margin: 1vw;
+  max-height: 5vw;
+  border-radius: 50%;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin: 2vw;
+}
+
+
+#left {
+  width: 70%;
+  text-align: center;
+  text-wrap: wrap;
+  padding: 2vw;
+}
+
+
+#right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer>* {
+  width: 50%;
+}
+
+#some {
+  display: flex;
+  justify-content: end;
+}
+
+
+#some>* {
+  padding: 2vw;
+}
+
+#some>a {
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+
+}
+
+
+#eventlist {
+  width: 60vw;
+  margin: 3vh auto 0 auto;
+}
+
+
+
+.eventItem {
+  background-color: rgb(218, 139, 120);
+  border-radius: 10px;
+  margin: 0.5vw;
+  padding: 5px;
+  display: flex;
+  box-shadow: 2px 2px 3px 2px #d7d6d6;
+}
+
+.eventDate {
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.eventInfo {
+  padding: 10px;
+  margin-left: 1vw;
+}
+
+.eventInfo h2 {
+  margin: 0;
+  padding: 0;
+}
+
+#clubs {
+  width: 60vw;
+  margin: 3vh auto 0 auto;
+}
+
+.club {
+  background-color: rgb(218, 139, 120);
+  border-radius: 10px;
+  margin: 0.5vw;
+  padding: 5px;
+  display: flex;
+  box-shadow: 2px 2px 3px 2px #d7d6d6;
+
+}
+
+.clubName {
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  vertical-align: middle;
+  width: 8vw;
+  min-width: 8vw;
+}
+
+.clubInfo {
+  padding: 10px;
+  margin-left: 1vw;
+}
+
+.feather {
+  background-image: url("../pages/clubpages/parrotprattlecracker/media/feathers.png");
+  background-repeat: none;
+  background-size: auto;
+  opacity: .7;
+}
+
+.eeg {
+  background-image: url("../pages/clubpages/akzepto/media/eeg.png");
+  background-repeat: none;
+  background-size: auto;
+  opacity: .7;
+}
