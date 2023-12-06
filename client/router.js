@@ -13,7 +13,7 @@ async function router() {
   switch (window.location.hash) {
     case "":
       console.log(window.location.hash)
-      $("main").html("<h1>hämtar från databas</h1>")
+      $("#left").html("<h1>hämtar från databas</h1>")
       $("#right").html(await eventList())
       break;
 
@@ -31,9 +31,9 @@ async function router() {
       $("main").html('<h1>About us</h1>')
       break;
 
-      case "#parrot":
-        $("main").html(await parrot())
-        break;
+    case "#parrot":
+      $("main").html(await parrot())
+      break;
 
     default:
       $("main").html("<h1>Denna sida finns inte!</h1>")
