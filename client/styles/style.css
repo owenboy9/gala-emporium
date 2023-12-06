@@ -52,19 +52,7 @@ header {
   border-radius: 50%;
 }
 
-.huvudstycke {
-  display: flex;
-  justify-content: space-around;
-  margin: 2vw;
-}
 
-
-#left {
-  width: 70%;
-  text-align: center;
-  text-wrap: wrap;
-  padding: 2vw;
-}
 
 #klubbknappar {
   align-self: center;
@@ -84,7 +72,7 @@ header {
   border-radius: 50%;
 }
 
-.huvudstycke {
+main {
   display: flex;
   justify-content: space-around;
   margin: 2vw;
@@ -96,29 +84,6 @@ header {
   text-align: center;
   text-wrap: wrap;
   padding: 2vw;
-}
-
-#galaemporium {
-  display: flex;
-
-}
-
-#GEimages {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-  padding: 2vw;
-}
-
-#GEimages>* {
-  padding: 1vw;
-
-}
-
-
-
-#galaemporium>p::first-line {
-  font-weight: 600;
 }
 
 
