@@ -15,7 +15,7 @@ async function router() {
   switch (window.location.hash) {
     case "":
       console.log(window.location.hash)
-      $("#left").html(await gala())
+      $("#left").html("<h1>in the end, we are all leibnizians: all lines of flight lead to our monad. or, at least, pass though it.</h1>")
       $("#right").html(await eventList())
       break;
 
@@ -30,7 +30,7 @@ async function router() {
 
     case "#about":
       console.log(window.location.hash)
-      $("main").html(await gala())
+      $("main").html("<h1>this is a glimmering universe: it's possible, and therefore it is. also, it is parallel.</h1>")
       break;
 
     case "#parrot":
