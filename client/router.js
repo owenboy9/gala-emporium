@@ -1,7 +1,9 @@
-import eventList from "./pages/eventList.js";
-import userList from "./pages/userList.js";
-import clubs from "./pages/clubs.js";
-import parrot from "./pages/clubpages/parrotprattlecracker/parrotprattlecracker.js";
+import eventList from "./pages/eventList.js"
+import userList from "./pages/userList.js"
+import clubs from "./pages/clubs.js"
+import parrot from "./pages/clubpages/parrotprattlecracker/parrotprattlecracker.js"
+import gala from "./pages/gala/gala.js"
+import notdeadyet from "./pages/clubpages/notdeadyet/notdeadyet.js"
 
 
 import login from "./components/login.js"
@@ -13,7 +15,7 @@ async function router() {
   switch (window.location.hash) {
     case "":
       console.log(window.location.hash)
-      $("#left").html("<h1>hämtar från databas</h1>")
+      $("#left").html(await gala())
       $("#right").html(await eventList())
       break;
 
@@ -28,7 +30,7 @@ async function router() {
 
     case "#about":
       console.log(window.location.hash)
-      $("main").html('<h1>About us</h1>')
+      $("main").html(await gala())
       break;
 
     case "#parrot":
