@@ -2,6 +2,7 @@ import eventList from "./pages/eventList.js";
 import userList from "./pages/userList.js";
 import clubs from "./pages/clubs.js";
 import parrot from "./pages/clubpages/parrotprattlecracker/parrotprattlecracker.js";
+import notdeadyet from "./pages/clubpages/notdeadyet/notdeadyet.js";
 
 
 import login from "./components/login.js"
@@ -33,6 +34,10 @@ async function router() {
 
     case "#parrot":
       $("main").html(await parrot())
+      break;
+
+    case "#notdeadyet":
+      $("main").html(await notdeadyet())
       break;
 
     default:
