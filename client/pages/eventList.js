@@ -62,7 +62,7 @@ let startMinute = padZero(jsstarttime.getUTCMinutes())
     <section class="eventItem">
       <div class="eventItemLeft">
         <div class="eventItemLogo">
-          <img src="pages/clubpages/parrotprattlecracker/media/ppc_logo.png">
+          <img src="${event.logo}">
         </div>
         <div class="eventItemDate">
           <div class="eventItemDay">${date}</div>
@@ -72,7 +72,7 @@ let startMinute = padZero(jsstarttime.getUTCMinutes())
       </div>
 
       <div class="eventItemMiddle">
-        <p>${event.name} presents</p>
+        <p>${event.club_name} presents</p>
         <h2>${event.headline}</h2>
         <span class="eventItemTime">${startHour}</span>:<span class="eventItemTime">${startMinute}</span>
         <p>${event.description_short}</p>
