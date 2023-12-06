@@ -1,9 +1,10 @@
 export default async function () {
   const galaAbout = await getAbout();
+  console.log(galaAbout)
 
   return `
   <h1>Gala Emporium</h1>
-  ${getAbout(galaAbout)}
+  ${getAbout(galaAbout[0].manifesto)}
   `
 }
 

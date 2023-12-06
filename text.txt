@@ -64,7 +64,7 @@ after we'd fixed a couple of things on the website (calendar, club layout), we p
 
 day six.
 
-speedboat retrospective: more concrete tasks to focus on and solve; clearer communication; remember to have social fun together. Micke, Zeinab and Lovisa made the site navigateable, gettign data from our db.
+speedboat retrospective: more concrete tasks to focus on and solve; clearer communication; remember to have social fun together. Micke, Zeinab and Lovisa made the site navigateable, getting data from our db.
 
 
 day seven.
@@ -74,3 +74,11 @@ we decided to make a spearate table in our db for gala's media & texts
 made sure everyone knew how to get data from db for their own club sites
 discussed the layout for the calendar(s): Erik will play UX designer for the calendar & events
 decided what must be done today.
+
+Lovisa has made her club's page
+Micke's working on his
+owen set up two new tables in bd, and wrote code to get stuff from it to site (but it's still not showing correctly)
+Erik has worked on styling of events (work in progress)
+we have struggled hard with github
+
+next: every event's page
