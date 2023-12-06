@@ -78,6 +78,12 @@ header {
   border-radius: 50%;
 }
 
+#klubbknappar>a>img {
+  margin: 1vw;
+  max-height: 5vw;
+  border-radius: 50%;
+}
+
 .huvudstycke {
   display: flex;
   justify-content: space-around;
