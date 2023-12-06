@@ -21,4 +21,5 @@ export default function (server, db) {
   getclub(server, db)
   getParrotEvents(server, db)
   getNotDeadYetEvents(server, db)
+  getAkzeptoEvents(server, db)
 }

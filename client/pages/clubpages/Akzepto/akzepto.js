@@ -7,6 +7,7 @@ export default async function () {
   // build your club page here
   let html = `
   <div class="block">
+
   <h1>${clubdata.club.name}</h1>
   <h2>Club Manifesto</h2>
   <div>${clubdata.club.manifesto}</div>
@@ -63,7 +64,7 @@ function createEventList(clubEvents) {
 
     // document.getElementById('eventlist').innerHTML = user.username
     events += `
-    <div class="eventItem feather">
+    <div class="eventItem eeg">
     <div class="eventDate">
     <div>${startdate}</div>
     <div>${starttime}</div>
