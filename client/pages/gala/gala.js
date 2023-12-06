@@ -2,10 +2,16 @@ export default async function () {
   const galaAbout = await getAbout();
   console.log(galaAbout)
 
+  const aboutData = galaAbout.length > 0 ? galaAbout[0] : {};
+
   return `
-  <h1>Gala Emporium</h1>
-  ${getAbout(galaAbout[0].manifesto)}
-  `
+    <h1>Gala Emporium</h1>
+    <div>
+      <p>${aboutData.about_us || 'Not available'}</p>
+      <p>${aboutData.manifesto || 'Not available'}</p>
+      <!-- Add more HTML elements for other properties -->
+    </div>
+  `;
 }
 
 async function getAbout() {
