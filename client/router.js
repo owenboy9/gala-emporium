@@ -37,6 +37,10 @@ async function router() {
       $("main").html(await parrot())
       break;
 
+    case "#notdeadyet":
+      $("main").html(await notdeadyet())
+      break;
+
     default:
       $("main").html("<h1>Denna sida finns inte!</h1>")
       break;
