@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600&display=swap');
 
+@font-face {
+  font-family: 'Metal Lord';
+  src: url('client\pages\clubpages\akzepto\media\metal lord.ttf') format('truetype');
+}
+
 body {
+  background-image: url('client\pages\clubpages\akzepto\media\akzepto_bg.jpg');
   display: block;
-  font-family: 'Onest',
-    sans-serif;
+  font-family: 'Onest';
   margin: 2vw;
 }
 
 header {
+
   display: flex;
   justify-content: end;
   height: 15vw;
@@ -20,6 +26,7 @@ header {
 #site-logo>img {
   width: 100%;
 }
+
 
 #headerright {
   width: 60%;
@@ -73,11 +80,13 @@ header {
 }
 
 main {
+  font-family: 'Metal Lord',
+    sans-serif;
   display: flex;
   justify-content: space-around;
   margin: 2vw;
 }
-
+#logowide {width: auto}
 
 #left {
   width: 70%;
@@ -183,16 +192,11 @@ footer>* {
   margin-left: 1vw;
 }
 
-.feather {
-  background-image: url("../pages/clubpages/parrotprattlecracker/media/feathers.png");
-  background-repeat: none;
-  background-size: auto;
-  opacity: .7;
-}
+
 
 .eeg {
   background-image: url("../pages/clubpages/akzepto/media/eeg.png");
   background-repeat: none;
   background-size: auto;
-  opacity: .7;
+  opacity: 1;
 }
