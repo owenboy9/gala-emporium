@@ -38,7 +38,7 @@ async function router() {
       break;
     
     case "#akzepto":
-      $("main").html(await parrot())
+      $("main").html(await akzepto())
       break;
 
     case "#notdeadyet":

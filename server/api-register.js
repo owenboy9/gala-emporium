@@ -8,6 +8,7 @@ import clubs from "./apis/clubs.js"
 import getclub from "./apis/getclub.js"
 import getParrotEvents from "./apis/getParrotEvents.js";
 import getNotDeadYetEvents from "./apis/getNotDeadYetEvents.js";
+import getAkzeptoEvents from "./apis/getAkzeptoEvents.js";
 
 
 export default function (server, db) {
