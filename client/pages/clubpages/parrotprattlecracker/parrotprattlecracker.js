@@ -65,7 +65,7 @@ function createEventList(clubEvents) {
 
    // document.getElementById('eventlist').innerHTML = user.username
     events += `
-    <div class=eventItem feather>
+    <div class="eventItem feather">
     <div class="eventDate">
     <div>${startdate}</div>
     <div>${starttime}</div>

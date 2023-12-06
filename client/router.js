@@ -4,7 +4,7 @@ import clubs from "./pages/clubs.js";
 import parrot from "./pages/clubpages/parrotprattlecracker/parrotprattlecracker.js";
 
 
-import login from "./modules/login.js"
+import login from "./components/login.js"
 
 $('#login').html(login())
 
