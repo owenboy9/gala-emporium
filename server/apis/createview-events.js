@@ -26,7 +26,7 @@ export default async function createView (server, db) {
 
 
   server.get('/api/sorted-events', async (req, res) => {
-    const events = await db.query("SELECT * FROM events_sorted")
+    const events = await db.query("SELECT events_sorted.*, clubs.* FROM events_sorted JOIN clubs ON clubs.id = events_sorted.club_id")
     res.json(events)
     console.log(events)
   })
@@ -35,7 +35,10 @@ export default async function createView (server, db) {
 
   }
 
-/*   server.get('/api/events_sorted', async (req, res) => {
+/*   
+"SELECT * FROM events_sorted"
+
+server.get('/api/events_sorted', async (req, res) => {
     const events = await db.query("SELECT * FROM events_sorted")
     res.json(events)
     console.log('events in createview', events)

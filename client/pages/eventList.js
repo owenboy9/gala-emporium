@@ -72,6 +72,7 @@ let startMinute = padZero(jsstarttime.getUTCMinutes())
       </div>
 
       <div class="eventItemMiddle">
+        <p>${event.name} presents</p>
         <h2>${event.headline}</h2>
         <span class="eventItemTime">${startHour}</span>:<span class="eventItemTime">${startMinute}</span>
         <p>${event.description_short}</p>
@@ -96,6 +97,4 @@ function getMonthName(month) {
   let index = month
   let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   return months[index]
-
-
 }
