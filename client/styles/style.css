@@ -40,7 +40,45 @@ header {
 
 }
 
-main {
+#klubbknappar {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#klubbknappar>img {
+  margin: 1vw;
+  max-height: 5vw;
+  border-radius: 50%;
+}
+
+.huvudstycke {
+  display: flex;
+  justify-content: space-around;
+  margin: 2vw;
+}
+
+
+#left {
+  width: 70%;
+  text-align: center;
+  text-wrap: wrap;
+  padding: 2vw;
+}
+
+#klubbknappar {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#klubbknappar>img {
+  margin: 1vw;
+  max-height: 5vw;
+  border-radius: 50%;
+}
+
+.huvudstycke {
   display: flex;
   justify-content: space-around;
   margin: 2vw;
@@ -272,7 +310,7 @@ footer>* {
 }
 
 .feather {
-  background-image: url("images/feathers.png");
+  background-image: url("../pages/clubpages/parrotprattlecracker/media/feathers.png");
   background-repeat: none;
   background-size: auto;
   opacity: .7;
