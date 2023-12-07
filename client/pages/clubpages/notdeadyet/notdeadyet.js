@@ -6,19 +6,12 @@ export default async function () {
 
   // build your club page here
   let html = `
-<<<<<<< HEAD
-  <div class="block">
-  <h1>${clubdata.club.name}</h1>
-  <h2>Club Manifesto</h2>
-  <div>${clubdata.club.manifesto}</div>
-=======
   <link rel="stylesheet" href="./styles/NDY.css">
   <div class="block">
   <h1>${clubdata.club.name}</h1>
   <div class="NDYdescr">${clubdata.club.description}</div>
   <h2>Club Manifesto</h2>
   <div class="NDYmani">${clubdata.club.manifesto}</div>
->>>>>>> dev
   <h2>Upcoming events</h2>
   ${createEventList(clubEvents)}
   `
@@ -26,15 +19,11 @@ export default async function () {
 
     `
   </div>
-<<<<<<< HEAD
-  <div><img src="pages/clubpages/notdeadyet/images/perform2.jpg"></div>
-=======
   <div class="image">
   <img src="pages/clubpages/notdeadyet/images/perform2.jpg">
   <img src="pages/clubpages/notdeadyet/images/perform3.jpg">
   <img src="pages/clubpages/notdeadyet/images/perform1.jpg">
   </div>
->>>>>>> dev
   `
 
   return html
