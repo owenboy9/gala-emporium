@@ -12,7 +12,6 @@ import getAkzeptoEvents from "./apis/getAkzeptoEvents.js";
 import gala from "./apis/gala.js"
 
 
-
 export default function (server, db) {
   // connect rest api:s to web server and database
   events(server, db)
@@ -25,4 +24,6 @@ export default function (server, db) {
   getNotDeadYetEvents(server, db)
   getAkzeptoEvents(server, db)
   gala(server, db)
+
+
 }
