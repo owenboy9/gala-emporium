@@ -228,6 +228,10 @@ footer>* {
   padding: 0;
 }
 
+.eventItemPrice {
+  margin-top: 1.5vh;
+}
+
 #clubs {
   width: 60vw;
   margin: 3vh auto 0 auto;

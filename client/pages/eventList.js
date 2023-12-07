@@ -137,6 +137,9 @@ let startMinute = padZero(jsstarttime.getUTCMinutes())
         <h2>${event.headline}</h2>
         <span class="eventItemTime">${startHour}</span>:<span class="eventItemTime">${startMinute}</span>
         <p>${event.description_short}</p>
+        <div class="eventItemPrice">
+          <p>${event.ticket_price} kr</p>
+        </div>
       </div>
       
       <div class="eventItemRight">

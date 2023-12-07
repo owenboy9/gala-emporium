@@ -1,4 +1,3 @@
-
 import eventList from "./pages/eventList.js"
 import userList from "./pages/userList.js"
 import clubs from "./pages/clubs.js"
@@ -6,6 +5,7 @@ import parrot from "./pages/clubpages/parrotprattlecracker/parrotprattlecracker.
 import gala from "./pages/gala/gala.js"
 import notdeadyet from "./pages/clubpages/notdeadyet/notdeadyet.js"
 import akzepto from "./pages/clubpages/akzepto/akzepto.js";
+
 import login from "./components/login.js"
 
 $('#login').html(login())
