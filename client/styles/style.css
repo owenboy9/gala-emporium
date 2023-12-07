@@ -129,12 +129,81 @@ footer>* {
 
 
 .eventItem {
+  display: flex;
   background-color: rgb(218, 139, 120);
   border-radius: 10px;
+  width: 60%;
   margin: 0.5vw;
-  padding: 5px;
-  display: flex;
+  padding: 15px;
   box-shadow: 2px 2px 3px 2px #d7d6d6;
+}
+
+.eventItemLeft {
+  width: 20%;
+  margin-right: 2vw;
+}
+
+.eventItemMiddle {
+  width: 60%;
+  margin-right: 2vw;
+  margin-top: 1vw;
+}
+
+.eventItemMiddle h2 {
+  margin: 0 0 1vw 0;
+  padding: 0;
+}
+
+.eventItemMiddle p {
+  margin: 0;
+  padding: 0;
+}
+
+.eventItemtTime {
+  font-size: 0.7em;
+  margin: 0;
+}
+
+.eventItemRight {
+  width: 20%;
+}
+
+.eventItemButton {
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.eventItemTickets {
+  margin-top: 1vw;
+}
+
+.eventItemLogo {
+  width: 5vw;
+  min-width: 50px;
+  border-radius: 50%;
+  margin: 0.5vw 0 0 0.5vw;
+}
+
+.eventItemLogo img {
+  width: 100%;
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+}
+
+.eventItemDate {
+  width: 5vw;
+  min-width: 50px;
+  margin: 0.5vw 0 0.5vw 0.5vw;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.eventItemDay {
+  font-size: 2em;
 }
 
 .eventDate {
@@ -150,6 +219,11 @@ footer>* {
 }
 
 .eventInfo h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.eventInfo p {
   margin: 0;
   padding: 0;
 }
