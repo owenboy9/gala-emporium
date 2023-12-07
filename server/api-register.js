@@ -6,9 +6,9 @@ import users from "./apis/users.js"
 import events_sorted from "./apis/createview-events.js"
 import clubs from "./apis/clubs.js"
 import getclub from "./apis/getclub.js"
-import getParrotEvents from "./apis/getParrotEvents.js"
-import getAkzeptoEvents from "./apis/getAkzeptoEvents.js"
-import getNotDeadYetEvents from "./apis/getNotDeadYetEvents.js"
+import getParrotEvents from "./apis/getParrotEvents.js";
+import getNotDeadYetEvents from "./apis/getNotDeadYetEvents.js";
+import getAkzeptoEvents from "./apis/getAkzeptoEvents.js";
 import gala from "./apis/gala.js"
 
 
@@ -21,7 +21,7 @@ export default function (server, db) {
   clubs(server, db)
   getclub(server, db)
   getParrotEvents(server, db)
-  getAkzeptoEvents(server, db)
   getNotDeadYetEvents(server, db)
+  getAkzeptoEvents(server, db)
   gala(server, db)
 }

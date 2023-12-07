@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600&display=swap');
 
+@font-face {
+  font-family: 'Metal Lord';
+  src: url('client\pages\clubpages\akzepto\media\metal lord.ttf') format('truetype');
+}
+
 body {
+  background-image: url('client\pages\clubpages\akzepto\media\akzepto_bg.jpg');
   display: block;
-  font-family: 'Onest',
-    sans-serif;
+  font-family: 'Onest';
   margin: 2vw;
 }
 
 header {
+
   display: flex;
   justify-content: end;
   height: 15vw;
@@ -20,6 +26,7 @@ header {
 #site-logo>img {
   width: 100%;
 }
+
 
 #headerright {
   width: 60%;
@@ -73,11 +80,13 @@ header {
 }
 
 main {
+  font-family: 'Metal Lord',
+    sans-serif;
   display: flex;
   justify-content: space-around;
   margin: 2vw;
 }
-
+#logowide {width: auto}
 
 #left {
   width: 70%;
@@ -129,81 +138,12 @@ footer>* {
 
 
 .eventItem {
-  display: flex;
   background-color: rgb(218, 139, 120);
   border-radius: 10px;
-  width: 60%;
   margin: 0.5vw;
-  padding: 15px;
+  padding: 5px;
+  display: flex;
   box-shadow: 2px 2px 3px 2px #d7d6d6;
-}
-
-.eventItemLeft {
-  width: 20%;
-  margin-right: 2vw;
-}
-
-.eventItemMiddle {
-  width: 60%;
-  margin-right: 2vw;
-  margin-top: 1vw;
-}
-
-.eventItemMiddle h2 {
-  margin: 0 0 1vw 0;
-  padding: 0;
-}
-
-.eventItemMiddle p {
-  margin: 0;
-  padding: 0;
-}
-
-.eventItemtTime {
-  font-size: 0.7em;
-  margin: 0;
-}
-
-.eventItemRight {
-  width: 20%;
-}
-
-.eventItemButton {
-  padding: 20px;
-  background-color: white;
-  text-align: center;
-}
-
-.eventItemTickets {
-  margin-top: 1vw;
-}
-
-.eventItemLogo {
-  width: 5vw;
-  min-width: 50px;
-  border-radius: 50%;
-  margin: 0.5vw 0 0 0.5vw;
-}
-
-.eventItemLogo img {
-  width: 100%;
-  border-radius: 50%;
-  border-width: 2px;
-  border-color: white;
-  border-style: solid;
-}
-
-.eventItemDate {
-  width: 5vw;
-  min-width: 50px;
-  margin: 0.5vw 0 0.5vw 0.5vw;
-  text-align: center;
-  background-color: white;
-  border-radius: 10px;
-}
-
-.eventItemDay {
-  font-size: 2em;
 }
 
 .eventDate {
@@ -221,15 +161,6 @@ footer>* {
 .eventInfo h2 {
   margin: 0;
   padding: 0;
-}
-
-.eventInfo p {
-  margin: 0;
-  padding: 0;
-}
-
-.eventItemPrice {
-  margin-top: 1.5vh;
 }
 
 #clubs {
@@ -261,10 +192,11 @@ footer>* {
   margin-left: 1vw;
 }
 
-.feather {
-  background-image: url("../pages/clubpages/parrotprattlecracker/media/feathers.png");
+
+
+.eeg {
+  background-image: url("../pages/clubpages/akzepto/media/eeg.png");
   background-repeat: none;
   background-size: auto;
-  opacity: .7;
+  opacity: 1;
 }
-
