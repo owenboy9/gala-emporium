@@ -9,16 +9,19 @@ body {
 
 header {
   display: flex;
+  flex-direction: row;
   justify-content: end;
   height: 15vw;
 }
 
 #site-logo {
-  width: 40%;
+  width: 25%;
+  padding: none;
+  margin-left: none;
 }
 
-#site-logo>img {
-  width: 100%;
+#site-logo>a>img {
+  size: 30%;
 }
 
 #headerright {
@@ -51,7 +54,6 @@ header {
   max-height: 5vw;
   border-radius: 50%;
 }
-
 
 
 #klubbknappar {
