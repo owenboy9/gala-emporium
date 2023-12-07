@@ -10,7 +10,11 @@ export default async function () {
   <div class="block">
 
   <h1>${clubdata.club.name}</h1>
+<<<<<<< HEAD
   // <div class="logowide"> <img src="pages/clubpages/akzepto/media/akzepto_wide.jpg"> </div>
+=======
+  <div class="logowide"> <img src="pages/clubpages/akzepto/media/akzepto_wide.jpg"> </div>
+>>>>>>> dev
   <h2>Club Manifesto</h2>
   <div>${clubdata.club.manifesto}</div>
   <h2>Upcoming events</h2>
