@@ -1,10 +1,10 @@
-import eventList from "./pages/eventList.js";
-import userList from "./pages/userList.js";
-import clubs from "./pages/clubs.js";
-import parrot from "./pages/clubpages/parrotprattlecracker/parrotprattlecracker.js";
-import notdeadyet from "./pages/clubpages/notdeadyet/notdeadyet.js";
-import gala from "./pages/gala/gala.js";
-
+import eventList from "./pages/eventList.js"
+import userList from "./pages/userList.js"
+import clubs from "./pages/clubs.js"
+import parrot from "./pages/clubpages/parrotprattlecracker/parrotprattlecracker.js"
+import gala from "./pages/gala/gala.js"
+import notdeadyet from "./pages/clubpages/notdeadyet/notdeadyet.js"
+import akzepto from "./pages/clubpages/akzepto/akzepto.js";
 
 import login from "./components/login.js"
 
@@ -35,6 +35,10 @@ async function router() {
 
     case "#parrot":
       $("main").html(await parrot())
+      break;
+    
+    case "#akzepto":
+      $("main").html(await akzepto())
       break;
 
     case "#notdeadyet":
