@@ -1,8 +1,7 @@
 
-
 export default function init() {
   return `
-    <form onsubmit="login(); return false">
+    <form id="logInOut" onsubmit="login(); return false">
       <input name="email" placeholder="your email">
       <input name="password" placeholder="your password">
       <input type="submit" value="Login">
@@ -27,9 +26,14 @@ async function login() {
   let result = await response.json();
   console.log(result)
   if (result.loggedIn) {
-    $('#adminBar').html(`
+    $('#logInOut').html(`
       <button onclick="logout()">Logout</button>
     `)
+    $('#adminBar').html(`
+      Welcome, ${result.username}
+     `)
+    document.getElementById('adminBar').style.backgroundColor = 'red' 
+    
 
   }
 
@@ -47,6 +51,8 @@ async function logout() {
   console.log(result)
   if (!result.loggedIn) {
     $('#login').html(init())
+    $('#adminBar').html(init())
+    document.getElementById('adminBar').style.backgroundColor = 'transparent'
   }
 }
 

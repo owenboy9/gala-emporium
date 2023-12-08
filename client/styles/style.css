@@ -8,9 +8,21 @@ body {
 }
 
 #adminBar {
-  width: 900%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0.4vw;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
+}
+
+#logInOut {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.4vw;
 }
 
 header {
