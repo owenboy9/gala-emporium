@@ -1,3 +1,5 @@
+import showEvent from "./showEvent.js"
+
 export default async function () {
   console.log('eventList.js')
   const eventData = await getEvents();
@@ -79,6 +81,7 @@ let startMinute = padZero(jsstarttime.getUTCMinutes())
         <div class="eventItemPrice">
           <p>${event.ticket_price} kr</p>
         </div>
+        <div class="eventItemButton" onclick="openEventPage(${event.id})">Read more</div>
       </div>
       
       <div class="eventItemRight">
@@ -101,3 +104,9 @@ function getMonthName(month) {
   let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   return months[index]
 }
+
+async function openEventPage(eventId) {
+  $("main").html(await showEvent(eventId))
+}
+
+window.openEventPage = openEventPage
