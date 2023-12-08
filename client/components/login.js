@@ -51,7 +51,7 @@ async function logout() {
   console.log(result)
   if (!result.loggedIn) {
     $('#login').html(init())
-    $('#adminBar').html(init())
+    $('#adminBar').html("")
     document.getElementById('adminBar').style.backgroundColor = 'transparent'
   }
 }
