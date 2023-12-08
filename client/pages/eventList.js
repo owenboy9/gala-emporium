@@ -63,13 +63,14 @@ function createEventList(eventData) {
 
     <section class="eventItem">
       <div class="eventItemLeft">
-        <div class="eventItemLogo">
-          <img src="${event.logo}">
-        </div>
+        
         <div class="eventItemDate">
           <div class="eventItemDay">${date}</div>
           <div class="eventItemMonth">${getMonthName(month)}</div>
           <div class="eventItemYear">${year}</div>
+        </div>
+        <div class="eventItemLogo">
+          <img src="${event.logo}">
         </div>
       </div>
 
@@ -94,7 +95,7 @@ function createEventList(eventData) {
     index++
   }
   return `
-    <div>${events}</div>
+    <div class="eventsWrapper">${events}</div>
   `
 }
 

@@ -27,7 +27,7 @@ async function login() {
   let result = await response.json();
   console.log(result)
   if (result.loggedIn) {
-    $('#login').html(`
+    $('#adminBar').html(`
       <button onclick="logout()">Logout</button>
     `)
 

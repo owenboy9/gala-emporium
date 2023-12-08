@@ -4,7 +4,13 @@ body {
   display: block;
   font-family: 'Onest',
     sans-serif;
-  margin: 2vw;
+    margin: 2vw;
+}
+
+#adminBar {
+  width: 900%;
+  display: flex;
+  justify-content: space-between;
 }
 
 header {
@@ -129,7 +135,9 @@ footer>* {
   margin: 3vh auto 0 auto;
 }
 
-
+.eventsWrapper {
+  width: 100%;
+}
 
 .eventItem {
   display: flex;
@@ -148,8 +156,11 @@ footer>* {
 
 .eventItemMiddle {
   width: 60%;
+  padding: 1vw;
   margin-right: 2vw;
   margin-top: 1vw;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .eventItemMiddle h2 {

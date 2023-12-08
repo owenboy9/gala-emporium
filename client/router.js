@@ -30,7 +30,7 @@ async function router() {
 
     case "#about":
       console.log(window.location.hash)
-      $("left").html(await gala())
+      $("main").html(await gala())
       break;
 
     case "#parrot":
