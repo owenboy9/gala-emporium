@@ -1,3 +1,4 @@
+import showEvent from "../../showEvent.js"
 
 export default async function () {
   const clubName = { clubname: 'Not Dead Yet' }
@@ -51,12 +52,12 @@ async function getClubEvents() {
   return data
 }
 
-function createEventList(eventData) {
-  console.log(eventData)
+function createEventList(clubEvents) {
+  console.log(clubEvents)
   let events = ""
 
   let index = 1
-  for (let event of eventData) {
+  for (let event of clubEvents) {
 
     let jsstarttime = new Date(event.start_time)
 
