@@ -7,21 +7,14 @@ export default async function () {
   // build your club page here
   let html = `
   <link rel="stylesheet" href="./styles/akzeptostyle.css">
+  <div class=image><img src="pages/clubpages/akzepto/media/akzeptologo2.png"></div>
   <div class="block">
-
-  <h1 class=akzepto>${clubdata.club.name}</h1>
-  <h2 class=akzepto>Manifesto</h2>
-  <div class=akzepto>${clubdata.club.manifesto}</div>
-  <h2 class=akzepto>Upcoming events</h2>
+  <h1 class=akzepto>- WHO ARE WE? -</h1>
+  <div>${clubdata.club.manifesto}</div>
+  <h1 class=akzepto>- UPCOMING SHOWS -</h1>
   ${createEventList(clubEvents)}
-  `
-
-    +
-
-    `
-      </div>
-
-    <div class=image><img src="pages/clubpages/akzepto/media/akzeptologo2.png"></div>
+  <h1 class=akzepto>-</h1>
+  </div>
   `
 
   return html
