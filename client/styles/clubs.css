@@ -1,0 +1,47 @@
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+h1 {
+  text-align: center;
+}
+
+#clubs {
+  margin: 3vh auto 0 auto;
+}
+
+.rutor {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-height: 100vw;
+}
+
+.club {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+
+
+}
+
+.clubName {
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  vertical-align: middle;
+  width: 8vw;
+  min-width: 8vw;
+}
+
+.clubInfo {
+  padding: 10px;
+  margin-left: 1vw;
+}

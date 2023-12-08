@@ -4,7 +4,7 @@ export default async function () {
   console.log('eventList.js')
   const eventData = await getEvents();
 
-return `
+  return `
   <div>
   <h1>Events</h1>
   ${createEventList(eventData)}
@@ -27,37 +27,37 @@ function createEventList(eventData) {
   let index = 1
   for (let event of eventData) {
 
-let jsstarttime = new Date(event.start_time)
+    let jsstarttime = new Date(event.start_time)
 
-let day = jsstarttime.getUTCDay()
-let date = jsstarttime.getUTCDate()
-let month = jsstarttime.getUTCMonth()
-let year = jsstarttime.getUTCFullYear()
+    let day = jsstarttime.getUTCDay()
+    let date = jsstarttime.getUTCDate()
+    let month = jsstarttime.getUTCMonth()
+    let year = jsstarttime.getUTCFullYear()
 
-function padZero(value) {
-  return value < 10 ? `0${value}` : `${value}`
-}
+    function padZero(value) {
+      return value < 10 ? `0${value}` : `${value}`
+    }
 
-let startHour = padZero(jsstarttime.getUTCHours())
-let startMinute = padZero(jsstarttime.getUTCMinutes())
+    let startHour = padZero(jsstarttime.getUTCHours())
+    let startMinute = padZero(jsstarttime.getUTCMinutes())
 
 
     if (startMinute === '0') {
       startMinute = '00'
     }
-   /*  let jsstartdate = jsstarttime.toLocaleDateString()
+    /*  let jsstartdate = jsstarttime.toLocaleDateString()
+ 
+     const sqlDatetimeStart = event.start_time;
+     const jsDateObject = new Date(sqlDatetimeStart);
+ 
+     const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
+     const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+ 
+     const startdate = jsDateObject.toLocaleDateString('en-GB', dateOptions);
+     const starttime = jsDateObject.toLocaleTimeString('en-GB', timeOptions); */
 
-    const sqlDatetimeStart = event.start_time;
-    const jsDateObject = new Date(sqlDatetimeStart);
 
-    const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
-    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-
-    const startdate = jsDateObject.toLocaleDateString('en-GB', dateOptions);
-    const starttime = jsDateObject.toLocaleTimeString('en-GB', timeOptions); */
-
-
-   // document.getElementById('eventlist').innerHTML = user.username
+    // document.getElementById('eventlist').innerHTML = user.username
     events += `
 
 
@@ -96,7 +96,7 @@ let startMinute = padZero(jsstarttime.getUTCMinutes())
   return `
     <div>${events}</div>
   `
-} 
+}
 
 function getMonthName(month) {
   console.log(month)

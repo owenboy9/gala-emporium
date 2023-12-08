@@ -15,12 +15,12 @@ header {
 
 #site-logo {
   width: 40%;
+  height: 100%;
 
 }
 
-#site-logo>* {
-  height: 150%;
-
+#site-logo>a>img {
+  height: 100%;
 }
 
 
@@ -135,7 +135,7 @@ footer>* {
   display: flex;
   background-color: rgb(218, 139, 120);
   border-radius: 10px;
-  width: 60%;
+  width: 100%;
   margin: 0.5vw;
   padding: 15px;
   box-shadow: 2px 2px 3px 2px #d7d6d6;

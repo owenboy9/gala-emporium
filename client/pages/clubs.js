@@ -18,12 +18,13 @@ function createClubList(clubData) {
 
   let clubs = ""
 
+
   let index = 1
   for (let club of clubData) {
     // document.getElementById('eventlist').innerHTML = user.username
-    clubs += `
 
-    <div class=club>
+    clubs += `
+    <div class="club">
     <div class="clubName">
     <h2>${club.name}</h2>
     </div>
@@ -37,7 +38,9 @@ function createClubList(clubData) {
   }
 
   return `
-    <div>${clubs}</div>
+  <link rel="stylesheet" href="./styles/clubs.css">
+    <div class=rutor>${clubs}</div>
   `
 
-} 
+}
+
