@@ -123,7 +123,7 @@ function createEventList(clubEvents) {
     index++
   }
   return `
-    <div>${events}</div>
+    <div class="NDYevents">${events}</div>
   `
 }
 
