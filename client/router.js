@@ -47,5 +47,19 @@ async function router() {
   }
 }
 
+
+function handleAnchorClick(event) {
+  //event.preventDefault()
+  router()
+}
+
+document.addEventListener('DOMContentLoaded', function () { 
+  let reloadAnchor = document.querySelector('.reload-anchor')
+  if (reloadAnchor) {
+    reloadAnchor.addEventListener('click', handleAnchorClick)
+  }
+})
+
+
 window.onload = router
 window.onhashchange = router
