@@ -1,3 +1,4 @@
+import showEvent from "../../showEvent.js"
 export default async function () {
   const clubName = { clubname: 'Not Dead Yet' }
   const clubdata = await getClubData(clubName)
@@ -50,37 +51,74 @@ async function getClubEvents() {
   return data
 }
 
-function createEventList(clubEvents) {
+function createEventList(eventData) {
+  console.log(eventData)
   let events = ""
+
   let index = 1
-  for (let event of clubEvents) {
+  for (let event of eventData) {
 
-    let sqlstarttime = event.start_time;
-    let jsstarttime = new Date(sqlstarttime)
-    let jsstartdate = jsstarttime.toLocaleDateString()
+    let jsstarttime = new Date(event.start_time)
 
-    const sqlDatetimeStart = event.start_time;
-    const jsDateObject = new Date(sqlDatetimeStart);
+    let day = jsstarttime.getUTCDay()
+    let date = jsstarttime.getUTCDate()
+    let month = jsstarttime.getUTCMonth()
+    let year = jsstarttime.getUTCFullYear()
 
-    const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
-    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    function padZero(value) {
+      return value < 10 ? `0${value}` : `${value}`
+    }
 
-    const startdate = jsDateObject.toLocaleDateString('en-GB', dateOptions);
-    const starttime = jsDateObject.toLocaleTimeString('en-GB', timeOptions);
+    let startHour = padZero(jsstarttime.getUTCHours())
+    let startMinute = padZero(jsstarttime.getUTCMinutes())
+
+
+    if (startMinute === '0') {
+      startMinute = '00'
+    }
+    /*  let jsstartdate = jsstarttime.toLocaleDateString()
+ 
+     const sqlDatetimeStart = event.start_time;
+     const jsDateObject = new Date(sqlDatetimeStart);
+ 
+     const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
+     const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+ 
+     const startdate = jsDateObject.toLocaleDateString('en-GB', dateOptions);
+     const starttime = jsDateObject.toLocaleTimeString('en-GB', timeOptions); */
 
 
     // document.getElementById('eventlist').innerHTML = user.username
     events += `
-    <div class="eventItem">
-    <div class="eventDate">
-    <div>${startdate}</div>
-    <div>${starttime}</div>
-    </div>
-    <div class="eventInfo">
-    <h2>${event.headline}</h2>
-    <p>${event.description_short}</p>
-    </div>
-    </div>
+
+
+    <section class="eventItem">
+      <div class="eventItemLeft">
+        
+        <div class="eventItemDate">
+          <div class="eventItemDay">${date}</div>
+          <div class="eventItemMonth">${getMonthName(month)}</div>
+          <div class="eventItemYear">${year}</div>
+        </div>
+      </div>
+
+      <div class="eventItemMiddle">
+        
+        <h3>${event.headline}</h3>
+        <span class="eventItemTime">${startHour}</span>:<span class="eventItemTime">${startMinute}</span>
+        <p>${event.description_short}</p>
+        <div class="eventItemPrice">
+          <p>${event.ticket_price} kr</p>
+        </div>
+        <div class="eventItemButton eventItemReadMore" onclick="openEventPage(${event.id})">Read more</div>
+      </div>
+      
+      <div class="eventItemRight">
+        <div class="eventItemButton">TICKETS</div>
+        <div class="eventItemTickets">${event.tickets} tickets available</div>
+      </div>
+    
+    </section>
     `
     index++
   }
@@ -88,3 +126,16 @@ function createEventList(clubEvents) {
     <div>${events}</div>
   `
 }
+
+function getMonthName(month) {
+  console.log(month)
+  let index = month
+  let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  return months[index]
+}
+
+async function openEventPage(eventId) {
+  $("main").html(await showEvent(eventId))
+}
+
+window.openEventPage = openEventPage

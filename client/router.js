@@ -30,7 +30,7 @@ async function router() {
 
     case "#about":
       console.log(window.location.hash)
-      $("main").html(await gala())
+      $("left").html(await gala())
       break;
 
     case "#parrot":
@@ -57,7 +57,7 @@ function handleAnchorClick(event) {
   router()
 }
 
-document.addEventListener('DOMContentLoaded', function () { 
+document.addEventListener('DOMContentLoaded', function () {
   let reloadAnchor = document.querySelector('.reload-anchor')
   if (reloadAnchor) {
     reloadAnchor.addEventListener('click', handleAnchorClick)
