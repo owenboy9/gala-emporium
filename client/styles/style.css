@@ -15,11 +15,14 @@ header {
 
 #site-logo {
   width: 40%;
+
 }
 
-#site-logo>img {
-  width: 100%;
+#site-logo>* {
+  height: 150%;
+
 }
+
 
 #headerright {
   width: 60%;
@@ -168,8 +171,7 @@ footer>* {
   width: 20%;
 }
 
-.eventItemButton
- {
+.eventItemButton {
   display: inline-block;
   padding: 10px;
   background-color: white;
