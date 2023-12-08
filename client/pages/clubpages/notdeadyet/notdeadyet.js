@@ -1,5 +1,4 @@
 import showEvent from "../../showEvent.js"
-
 export default async function () {
   const clubName = { clubname: 'Not Dead Yet' }
   const clubdata = await getClubData(clubName)
