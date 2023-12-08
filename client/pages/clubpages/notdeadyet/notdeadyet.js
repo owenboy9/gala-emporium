@@ -13,7 +13,7 @@ export default async function () {
   <div class="NDYdescr">${clubdata.club.description}</div>
   <h2>Club Manifesto</h2>
   <div class="NDYmani">${clubdata.club.manifesto}</div>
-  <h2>Upcoming events</h2>
+  <h3>Upcoming events</h3>
   ${createEventList(clubEvents)}
   `
     +

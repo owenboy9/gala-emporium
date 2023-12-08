@@ -27,6 +27,20 @@ h2 {
   margin-right: 5vw;
 }
 
+h3 {
+  text-align: center;
+  font-weight: 700;
+  font-style: italic;
+  border-style: solid;
+  border-color: black;
+}
+
+h3:first-child {
+  border-style: none;
+  border-color: none;
+
+}
+
 .block {
   width: 40%;
 }
@@ -179,7 +193,8 @@ footer>* {
 
 .clubInfo {
   padding: 10px;
-  margin-left: 1vw;}
+  margin-left: 1vw;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400&display=swap');
