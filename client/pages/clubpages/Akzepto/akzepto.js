@@ -9,21 +9,16 @@ export default async function () {
   <link rel="stylesheet" href="./styles/akzeptostyle.css">
   <div class="block">
 
-  <h1>${clubdata.club.name}</h1>
-<<<<<<< HEAD
-  // <div class="logowide"> <img src="pages/clubpages/akzepto/media/akzepto_wide.jpg"> </div>
-=======
-  <div class="logowide"> <img src="pages/clubpages/akzepto/media/akzepto_wide.jpg"> </div>
->>>>>>> dev
-  <h2>Club Manifesto</h2>
+  <h1 class=akzepto>${clubdata.club.name}</h1>
+  <h2 class=akzepto>Manifesto</h2>
   <div>${clubdata.club.manifesto}</div>
-  <h2>Upcoming events</h2>
+  <h2 class=akzepto>Upcoming events</h2>
   ${createEventList(clubEvents)}
   `
     +
     `
   </div>
-  <div><img src="pages/clubpages/akzepto/media/akzepto_square.jpg"></div>
+  <div><img src="client\pages\clubpages\akzepto\media\akzeptologo2.png"></div>
   `
 
   return html

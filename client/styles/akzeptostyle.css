@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600&display=swap');
+
 
 @font-face {
   font-family: 'Metal Lord';
   src: url('client\pages\clubpages\akzepto\media\metal lord.ttf') format('truetype');
 }
+/*background-image: url('client\pages\clubpages\akzepto\media\akzepto_bg.jpg');*/
 
-body {
-  background-image: url('client\pages\clubpages\akzepto\media\akzepto_bg.jpg');
-  display: block;
-  font-family: 'Onest';
-  margin: 2vw;
+
+.akzepto {
+  font-family: 'Metal Lord';
+  color:maroon
 }
 
 header {
@@ -19,65 +19,13 @@ header {
   height: 15vw;
 }
 
-#site-logo {
-  width: 40%;
-}
 
-#site-logo>img {
+#logowide>img {
   width: 100%;
 }
 
 
-#headerright {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: end;
-}
 
-#menu {
-  display: flex;
-}
-
-#menu>nav>a {
-  font-style: normal;
-  text-decoration: none;
-  color: black;
-
-}
-
-#klubbknappar {
-  align-self: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-#klubbknappar>img {
-  margin: 1vw;
-  max-height: 5vw;
-  border-radius: 50%;
-}
-
-
-
-#klubbknappar {
-  align-self: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-#klubbknappar>img {
-  margin: 1vw;
-  max-height: 5vw;
-  border-radius: 50%;
-}
-
-#klubbknappar>a>img {
-  margin: 1vw;
-  max-height: 5vw;
-  border-radius: 50%;
-}
 
 main {
   font-family: 'Metal Lord',
@@ -86,9 +34,10 @@ main {
   justify-content: space-around;
   margin: 2vw;
 }
-#logowide {width: auto}
+
 
 #left {
+  font-family: 'Metal Lord';
   width: 70%;
   text-align: center;
   text-wrap: wrap;
@@ -103,34 +52,11 @@ main {
   width: 30%;
 }
 
-footer {
-  display: flex;
-  justify-content: space-between;
-}
 
-footer>* {
-  width: 50%;
-}
-
-#some {
-  display: flex;
-  justify-content: end;
-}
-
-
-#some>* {
-  padding: 2vw;
-}
-
-#some>a {
-  font-style: normal;
-  text-decoration: none;
-  color: black;
-
-}
 
 
 #eventlist {
+  font-family: 'Metal Lord';
   width: 60vw;
   margin: 3vh auto 0 auto;
 }
@@ -148,15 +74,13 @@ footer>* {
 
 .eventDate {
   padding: 10px;
-  background-color: white;
+  font-family: 'Metal Lord';
+  color:rgb(139, 7, 7);
+  background-color: rgb(39, 149, 240);
   border-radius: 5px;
   vertical-align: middle;
 }
 
-.eventInfo {
-  padding: 10px;
-  margin-left: 1vw;
-}
 
 .eventInfo h2 {
   margin: 0;
