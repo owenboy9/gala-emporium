@@ -29,10 +29,11 @@ function createEventList(eventData) {
 
     let jsstarttime = new Date(event.start_time)
 
-    let day = jsstarttime.getUTCDay()
+    let weekday = jsstarttime.getUTCDay()
     let date = jsstarttime.getUTCDate()
     let month = jsstarttime.getUTCMonth()
     let year = jsstarttime.getUTCFullYear()
+
 
     function padZero(value) {
       return value < 10 ? `0${value}` : `${value}`
@@ -63,15 +64,16 @@ function createEventList(eventData) {
 
     <section class="eventItem">
       <div class="eventItemLeft">
-        
+        <div class="eventItemLogo">
+          <img src="${event.logo}">
+        </div>
         <div class="eventItemDate">
+          <div class="eventItemYear">${getDayName(weekday)}</div>
           <div class="eventItemDay">${date}</div>
           <div class="eventItemMonth">${getMonthName(month)}</div>
           <div class="eventItemYear">${year}</div>
         </div>
-        <div class="eventItemLogo">
-          <img src="${event.logo}">
-        </div>
+        
       </div>
 
       <div class="eventItemMiddle">
@@ -104,6 +106,11 @@ function getMonthName(month) {
   let index = month
   let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   return months[index]
+}
+
+function getDayName(weekday) {
+  let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+  return days[weekday]
 }
 
 async function openEventPage(eventId) {
