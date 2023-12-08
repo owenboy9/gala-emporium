@@ -81,7 +81,7 @@ let startMinute = padZero(jsstarttime.getUTCMinutes())
         <div class="eventItemPrice">
           <p>${event.ticket_price} kr</p>
         </div>
-        <div class="eventItemButton" onclick="openEventPage(${event.id})">Read more</div>
+        <div class="eventItemButton eventItemReadMore" onclick="openEventPage(${event.id})">Read more</div>
       </div>
       
       <div class="eventItemRight">

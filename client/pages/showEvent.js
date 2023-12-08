@@ -5,7 +5,8 @@ export default async function (eventId) {
   const event = await getEventData(eventId)
 
   let html = `
-    ${event.headline}
+    <h1>${event.headline}</h1>
+    <p>${event.description_long}</p>
   
   
   `
