@@ -11,6 +11,7 @@ import getNotDeadYetEvents from "./apis/getNotDeadYetEvents.js";
 import getAkzeptoEvents from "./apis/getAkzeptoEvents.js";
 import gala from "./apis/gala.js"
 import getEventData from "./apis/getEventData.js"
+import eventEditor from "./apis/eventEditor.js";
 
 
 export default function (server, db) {
@@ -26,4 +27,5 @@ export default function (server, db) {
   getAkzeptoEvents(server, db)
   gala(server, db)
   getEventData(server, db)
+  eventEditor(server, db)
 }

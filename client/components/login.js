@@ -1,3 +1,4 @@
+import eventEditor from "../pages/eventEditor.js"
 
 export default function init() {
   return `
@@ -30,7 +31,9 @@ async function login() {
       <button onclick="logout()">Logout</button>
     `)
     $('#adminBar').html(`
-      Welcome, ${result.username}
+      <p>Welcome, ${result.username}</p>
+      <button onclick="openEditor(${result.userId})">Manage your events</button>
+
      `)
     document.getElementById('adminBar').style.backgroundColor = 'red' 
   }
@@ -38,6 +41,11 @@ async function login() {
 
 window.login = login // expose login to global (html) scope
 
+async function openEditor(userId) {
+  $("main").html(await eventEditor(userId))
+}
+
+window.openEditor = openEditor
 
 async function logout() {
   console.log('sir, logging out?')

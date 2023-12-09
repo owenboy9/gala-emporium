@@ -14,8 +14,12 @@ body {
   width: 100%;
   padding: 0.4vw;
   display: flex;
-  justify-content: space-between;
   box-sizing: border-box;
+}
+
+#adminBar p {
+  margin: 0 1vw 0 0;
+  padding: 0;
 }
 
 #logInOut {

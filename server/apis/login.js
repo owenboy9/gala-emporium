@@ -21,6 +21,7 @@ export default function(server, db) {
       res.json({
         loggedIn: true,
         username: users[0].user_name,
+        userId: users[0].id
       })
     }else{
       res.status(401)
