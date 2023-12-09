@@ -33,10 +33,7 @@ async function login() {
       Welcome, ${result.username}
      `)
     document.getElementById('adminBar').style.backgroundColor = 'red' 
-    
-
   }
-
 }
 
 window.login = login // expose login to global (html) scope
