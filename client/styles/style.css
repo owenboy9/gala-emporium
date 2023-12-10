@@ -294,6 +294,33 @@ footer>* {
   margin-bottom: 0.5vw;
 }
 
+.eventEditForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.eventEditForm p {
+  margin: 0;
+  padding: 0;
+}
+
+.eventEditInputBox {
+  margin-bottom: 0.5vw;
+}
+
+.editor {
+  margin: 0.3vw 0 1vw 0;
+  box-sizing: border-box;
+  background-color: antiquewhite;
+  padding: 0.5vw;
+  border-radius: 10px;
+}
+
+.eventEditFormButton {
+  width: auto;
+  margin-top: 0.5vw;
+}
+
 
 #clubs {
   width: 60vw;

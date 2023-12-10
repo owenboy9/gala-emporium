@@ -100,25 +100,64 @@ function openEventToEdit(index) {
   console.log(event.id)
   console.log('open event to edit', event.id)
   let html = ` 
-    <p>This is a test</p>
+    <div class="editor">
+      <h3>Edit your event</h3>
+
+      <form class="eventEditForm" id="formHeadline${event.id}" onsubmit="prepareUpdate(${event.id}); return false">
+        <p>Event headline</p>
+        <input class="eventEditInputBox" name="headline" placeholder="${event.headline}">
+        <p>Event description, short</p>
+        <input class="eventEditInputBox" name="description_short" placeholder="${event.description_short}">
+        <p>Event description, long</p>
+        <input class="eventEditInputBox" name="description_long" placeholder="${event.description_long}">
+        <p>Ticket price</p>
+        <input class="eventEditInputBox" name="ticket_price" placeholder="${event.ticket_price}">
+        <p>Number of tickets</p>
+        <input class="eventEditInputBox" name="tickets" placeholder="${event.tickets}">
+        <p>Start time</p>
+        <input class="eventEditInputBox" name="start_time" placeholder="${event.start_time}">
+        <p>End time</p>
+        <input class="eventEditInputBox" name="end_time" placeholder="${event.end_time}">
+        <input class="eventEditFormButton" type="submit" value="Submit changes">
+      </form>  
+    
+    </div>
   
   `
   let elementId = `#event${event.id}`
   console.log(elementId)
   $(elementId).html(html)
 
- /*  try {
-    const event = JSON.parse(eventObject);
-    console.log(event);
-    console.log('open event to edit', event.id);
-    let html = `<p>This is a test</p>`;
-    let elementId = `#event${event.id}`;
-    $(elementId).html(html);
-  } catch (error) {
-    console.error('Error parsing eventObject:', error);
-  } */
-
-
 }
 
 window.openEventToEdit = openEventToEdit
+
+async function prepareUpdate(eventId) {
+  console.log('preparing update')
+  const event = {
+    headline: $('[name=headline]').val(),
+    description_short: $('[name=description_short]').val(),
+    description_long: $('[name=description_long]').val(),
+    ticket_price: $('[name=ticket_price]').val(),
+    tickets: $('[name=tickets]').val(),
+    start_time: $('[name=start_time').val(),
+    end_time: $('[name=end_time').val()
+  }
+
+    const response = await fetch(`api/eventEditor/${eventId}`, {
+      method: 'put',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(event)
+    })
+    const result = await response.json()
+    console.log(result)
+
+    /* if (result.bookUpdated) {
+      alert(`${bookName} was updated`)
+      $("h1").html(`Edit Page for: ${bookId} - ${bookName}`)
+      $("[name=bookName]").html(`${bookName}`)
+    } */
+  } 
+
+
+window.prepareUpdate = prepareUpdate
