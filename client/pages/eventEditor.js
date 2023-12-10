@@ -105,19 +105,19 @@ function openEventToEdit(index) {
 
       <form class="eventEditForm" id="formHeadline${event.id}" onsubmit="prepareUpdate(${event.id}); return false">
         <p>Event headline</p>
-        <input class="eventEditInputBox" name="headline" placeholder="${event.headline}">
+        <input class="eventEditInputBox" name="headline" value="${event.headline}">
         <p>Event description, short</p>
-        <input class="eventEditInputBox" name="description_short" placeholder="${event.description_short}">
+        <input class="eventEditInputBox" name="description_short" value="${event.description_short}">
         <p>Event description, long</p>
-        <input class="eventEditInputBox" name="description_long" placeholder="${event.description_long}">
+        <input class="eventEditInputBox" name="description_long" value="${event.description_long}">
         <p>Ticket price</p>
-        <input class="eventEditInputBox" name="ticket_price" placeholder="${event.ticket_price}">
+        <input class="eventEditInputBox" name="ticket_price" value="${event.ticket_price}">
         <p>Number of tickets</p>
-        <input class="eventEditInputBox" name="tickets" placeholder="${event.tickets}">
+        <input class="eventEditInputBox" name="tickets" value="${event.tickets}">
         <p>Start time</p>
-        <input class="eventEditInputBox" name="start_time" placeholder="${event.start_time}">
+        <input class="eventEditInputBox" name="start_time" value="${event.start_time}">
         <p>End time</p>
-        <input class="eventEditInputBox" name="end_time" placeholder="${event.end_time}">
+        <input class="eventEditInputBox" name="end_time" value="${event.end_time}">
         <input class="eventEditFormButton" type="submit" value="Submit changes">
       </form>  
     
@@ -134,30 +134,53 @@ window.openEventToEdit = openEventToEdit
 
 async function prepareUpdate(eventId) {
   console.log('preparing update')
+  let starttimeForm = $('[name=start_time]').val()
+  let sqlStarttime = convertToSQLDatetime(starttimeForm)
+  let endtimeForm = $('[name=end_time]').val()
+  let sqlEndtime = convertToSQLDatetime(endtimeForm)
   const event = {
     headline: $('[name=headline]').val(),
     description_short: $('[name=description_short]').val(),
     description_long: $('[name=description_long]').val(),
     ticket_price: $('[name=ticket_price]').val(),
     tickets: $('[name=tickets]').val(),
-    start_time: $('[name=start_time').val(),
-    end_time: $('[name=end_time').val()
+    start_time: sqlStarttime,
+    end_time: sqlEndtime
   }
 
-    const response = await fetch(`api/eventEditor/${eventId}`, {
+  // toISOString().slice(0, 19).replace('T', ' ')
+
+  const eventString = JSON.stringify(event)
+  console.log(event, eventString)
+
+   /*  const response = await fetch(`api/eventEditor/${eventId}`, {
       method: 'put',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(event)
     })
     const result = await response.json()
-    console.log(result)
+    console.log(result) */
 
-    /* if (result.bookUpdated) {
-      alert(`${bookName} was updated`)
-      $("h1").html(`Edit Page for: ${bookId} - ${bookName}`)
-      $("[name=bookName]").html(`${bookName}`)
-    } */
+    try {
+      const response = await fetch(`api/eventEditor/${eventId}`, {
+        method: 'put',
+        headers: { 'Content-Type': 'application/json' },
+        body: eventString
+      })
+      const result = await response.json()
+      console.log(result)
+    } catch (error) {
+      console.error('Error during fetch:', error)
+    }
+
   } 
 
-
 window.prepareUpdate = prepareUpdate
+
+
+function convertToSQLDatetime(jsDateString) {
+  const jsDate = new Date(jsDateString)
+  const sqlDatetime = jsDate.toISOString().slice(0, 19).replace('T', ' ')
+  console.log(sqlDatetime)
+  return sqlDatetime;
+}
