@@ -270,6 +270,30 @@ footer>* {
   margin-top: 1.5vh;
 }
 
+.eventEditWrapper {
+  display: flex;
+  margin-bottom: 0.5vw;
+}
+
+.eventEditItem {
+  display: flex;
+  padding: 0.4vw;
+  background-color: bisque;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.eventEditButtons {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 1vw;
+}
+
+.eventEditButton {
+  display: block;
+  margin-bottom: 0.5vw;
+}
+
 
 #clubs {
   width: 60vw;
