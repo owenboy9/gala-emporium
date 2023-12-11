@@ -81,6 +81,9 @@ main {
   margin: 2vw;
 }
 
+h1 {
+  text-align: center;
+}
 
 #left {
   width: 70%;

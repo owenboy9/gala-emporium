@@ -138,3 +138,5 @@ async function openEventPage(eventId) {
   $("main").html(await showEvent(eventId))
 }
 
+
+window.openEventPage = openEventPage
