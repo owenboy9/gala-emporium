@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-export default async function (userId) {
-  let events = await getEventData(userId)
-=======
 let events
 
 export default async function (userId) {
   events = await getEventData(userId)
->>>>>>> dev
-  
+
   console.log(userId, events)
   let clubname = events[0].clubname
   let html = `
@@ -16,26 +11,14 @@ export default async function (userId) {
       <h2>Edit, add or delete your events</h2>
       <p>You are currently logged in as club admin for ${clubname}
 
-<<<<<<< HEAD
-      <div>${showEvents(events)}</div
-=======
       <div>${showEvents(events)}</div>
->>>>>>> dev
 
     </div>
   `
 
   return html
-<<<<<<< HEAD
+}
 
-
-
-
-} 
-=======
-} 
- 
->>>>>>> dev
 
 async function getEventData(userId) {
   let response = await fetch(`/api/eventEditor/${userId}`)
@@ -45,23 +28,10 @@ async function getEventData(userId) {
 }
 
 function showEvents(events) {
-<<<<<<< HEAD
-  let html = ''
-  for (let event of events) {
-    html += `
-      <div class="eventInfo">
-        <h2>${event.headline}</h2>
-        <p>${event.description_short}</p>
-      </div>
-    `
-  }
-  return html
-}
-=======
   let html = ``
   let index = 0
   for (let event of events) {
-      
+
     html += `
 
      <div class="eventEditWrapper"> 
@@ -123,7 +93,7 @@ function getDayName(weekday) {
 ///// edit event
 
 function openEventToEdit(index) {
-  
+
   console.log(index)
   let event = events[index]
   console.log(event)
@@ -137,19 +107,18 @@ function openEventToEdit(index) {
   console.log(elementId)
   $(elementId).html(html)
 
- /*  try {
-    const event = JSON.parse(eventObject);
-    console.log(event);
-    console.log('open event to edit', event.id);
-    let html = `<p>This is a test</p>`;
-    let elementId = `#event${event.id}`;
-    $(elementId).html(html);
-  } catch (error) {
-    console.error('Error parsing eventObject:', error);
-  } */
+  /*  try {
+     const event = JSON.parse(eventObject);
+     console.log(event);
+     console.log('open event to edit', event.id);
+     let html = `<p>This is a test</p>`;
+     let elementId = `#event${event.id}`;
+     $(elementId).html(html);
+   } catch (error) {
+     console.error('Error parsing eventObject:', error);
+   } */
 
 
 }
 
 window.openEventToEdit = openEventToEdit
->>>>>>> dev

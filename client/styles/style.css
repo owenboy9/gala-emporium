@@ -50,12 +50,13 @@ header {
   width: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: end;
 }
 
 #menu {
   display: flex;
+
 }
 
 #menu>nav>a {
@@ -274,7 +275,7 @@ footer>* {
   margin-top: 1.5vh;
 }
 
-<<<<<<< HEAD=======.eventEditWrapper {
+.eventEditWrapper {
   display: flex;
   margin-bottom: 0.5vw;
 }
@@ -298,7 +299,7 @@ footer>* {
   margin-bottom: 0.5vw;
 }
 
->>>>>>>dev #clubs {
+#clubs {
   width: 60vw;
   margin: 3vh auto 0 auto;
 }
