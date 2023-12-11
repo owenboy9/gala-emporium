@@ -8,6 +8,27 @@ h1 {
   text-align: center;
 }
 
+a>h2 {
+  text-align: center;
+}
+
+a>h2:hover {
+  background-color: aquamarine;
+  border-radius: 50%;
+}
+
+
+a {
+  align-self: center;
+  text-decoration: none;
+  color: black;
+}
+
+a>p:hover {
+  background-color: aquamarine;
+  border-radius: 50%;
+}
+
 #clubs {
   margin: 3vh auto 0 auto;
 }
@@ -22,7 +43,7 @@ h1 {
 }
 
 .club {
-  background-color: whitesmoke;
+  background-color: burlywood;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -37,11 +58,12 @@ h1 {
   background-color: white;
   border-radius: 5px;
   vertical-align: middle;
-  width: 8vw;
+  width: fit-content;
   min-width: 8vw;
 }
 
 .clubInfo {
   padding: 10px;
   margin-left: 1vw;
+  text-align: center;
 }

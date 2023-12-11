@@ -30,3 +30,12 @@ h1 {
 .eventDetails>* {
   margin: 2vw;
 }
+
+.closeButton {
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  width: auto;
+  cursor: pointer;
+}

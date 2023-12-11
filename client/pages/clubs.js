@@ -26,13 +26,15 @@ function createClubList(clubData) {
     clubs += `
     <div class="club">
     <div class="clubName">
-    <h2>${club.name}</h2>
+    <a href="#${club.case}"><h2>${club.name}</h2></a>
     </div>
     <div class="clubInfo">
-    <h3>${club.manifesto}</h3>
     <p>${club.description}</p>
+    <h3>${club.manifesto}</h3>
+    
+    <a href="#${club.case}"><p>More club info and all events</p></a>
     </div>
-    </div>
+     </div>
     `
     index++
   }
