@@ -1,39 +1,69 @@
-import showEvent from "./showEvent.js"
-
+import showEvent from "../../showEvent.js"
 export default async function () {
-  console.log('eventList.js')
-  const eventData = await getEvents();
+  const clubName = { clubname: 'Not Dead Yet' }
+  const clubdata = await getClubData(clubName)
+  const clubEvents = await getClubEvents()
+  console.log(clubdata, clubEvents)
 
-  return `
-  <div>
-  <h1>Events</h1>
-  ${createEventList(eventData)}
+  // build your club page here
+  let html = `
+  <link rel="stylesheet" href="./styles/NDY.css">
+  <div class="block">
+  <h1>${clubdata.club.name}</h1>
+  <div class="NDYdescr">${clubdata.club.description}</div>
+  <h2>Club Manifesto</h2>
+  <div class="NDYmani">${clubdata.club.manifesto}</div>
+  <h3>Upcoming events</h3>
+  ${createEventList(clubEvents)}
+  `
+    +
+
+    `
+  </div>
+  <div class="image">
+  <img src="pages/clubpages/notdeadyet/images/perform2.jpg">
+  <img src="pages/clubpages/notdeadyet/images/perform3.jpg">
+  <img src="pages/clubpages/notdeadyet/images/perform1.jpg">
   </div>
   `
+
+  return html
+
 }
 
-async function getEvents() {
-  console.log('get events')
-  const response = await fetch("api/sorted-events")
+async function getClubData(clubName) {
+  let response = await fetch('/api/getclub', {
+    method: 'post',
+    // and that we will send data json formatted
+    headers: { 'Content-Type': 'application/json' },
+    // the data encoded as json
+    body: JSON.stringify(clubName)
+  })
+  let result = await response.json();
+  console.log(result)
+  return result
+}
+
+async function getClubEvents() {
+  const response = await fetch("api/getNotDeadYetEvents")
   const data = await response.json()
   console.log(data)
   return data
 }
 
-function createEventList(eventData) {
-  console.log(eventData)
+function createEventList(clubEvents) {
+  console.log(clubEvents)
   let events = ""
 
   let index = 1
-  for (let event of eventData) {
+  for (let event of clubEvents) {
 
     let jsstarttime = new Date(event.start_time)
 
-    let weekday = jsstarttime.getUTCDay()
+    let day = jsstarttime.getUTCDay()
     let date = jsstarttime.getUTCDate()
     let month = jsstarttime.getUTCMonth()
     let year = jsstarttime.getUTCFullYear()
-
 
     function padZero(value) {
       return value < 10 ? `0${value}` : `${value}`
@@ -64,21 +94,17 @@ function createEventList(eventData) {
 
     <section class="eventItem">
       <div class="eventItemLeft">
-        <div class="eventItemLogo">
-          <img src="${event.logo}">
-        </div>
+        
         <div class="eventItemDate">
-          <div class="eventItemYear">${getDayName(weekday)}</div>
           <div class="eventItemDay">${date}</div>
           <div class="eventItemMonth">${getMonthName(month)}</div>
           <div class="eventItemYear">${year}</div>
         </div>
-        
       </div>
 
       <div class="eventItemMiddle">
-        <p>${event.club_name} presents</p>
-        <h2>${event.headline}</h2>
+        
+        <h3>${event.headline}</h3>
         <span class="eventItemTime">${startHour}</span>:<span class="eventItemTime">${startMinute}</span>
         <p>${event.description_short}</p>
         <div class="eventItemPrice">
@@ -97,7 +123,7 @@ function createEventList(eventData) {
     index++
   }
   return `
-    <div class="eventsWrapper">${events}</div>
+    <div class="NDYevents">${events}</div>
   `
 }
 
@@ -106,11 +132,6 @@ function getMonthName(month) {
   let index = month
   let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   return months[index]
-}
-
-function getDayName(weekday) {
-  let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-  return days[weekday]
 }
 
 async function openEventPage(eventId) {

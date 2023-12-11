@@ -4,7 +4,29 @@ body {
   display: block;
   font-family: 'Onest',
     sans-serif;
-  margin: 2vw;
+    margin: 2vw;
+}
+
+#adminBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0.4vw;
+  display: flex;
+  box-sizing: border-box;
+}
+
+#adminBar p {
+  margin: 0 1vw 0 0;
+  padding: 0;
+}
+
+#logInOut {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.4vw;
 }
 
 header {
@@ -15,11 +37,14 @@ header {
 
 #site-logo {
   width: 40%;
+  height: 100%;
+
 }
 
-#site-logo>img {
-  width: 100%;
+#site-logo>a>img {
+  height: 100%;
 }
+
 
 #headerright {
   width: 60%;
@@ -126,15 +151,97 @@ footer>* {
   margin: 3vh auto 0 auto;
 }
 
-
+.eventsWrapper {
+  width: 100%;
+}
 
 .eventItem {
+  display: flex;
   background-color: rgb(218, 139, 120);
   border-radius: 10px;
+  width: 100%;
   margin: 0.5vw;
-  padding: 5px;
-  display: flex;
+  padding: 15px;
   box-shadow: 2px 2px 3px 2px #d7d6d6;
+}
+
+.eventItemLeft {
+  width: 20%;
+  margin-right: 2vw;
+}
+
+.eventItemMiddle {
+  width: 60%;
+  padding: 1vw;
+  margin-right: 2vw;
+  margin-top: 1vw;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.eventItemMiddle h2 {
+  margin: 0 0 1vw 0;
+  padding: 0;
+}
+
+.eventItemMiddle p {
+  margin: 0;
+  padding: 0;
+}
+
+.eventItemtTime {
+  font-size: 0.7em;
+  margin: 0;
+}
+
+.eventItemRight {
+  width: 20%;
+}
+
+.eventItemButton {
+  display: inline-block;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  width: auto;
+  cursor: pointer;
+}
+
+.eventItemReadMore {
+  margin-top: 1vw;
+}
+
+
+.eventItemTickets {
+  margin-top: 1vw;
+}
+
+.eventItemLogo {
+  width: 5vw;
+  min-width: 50px;
+  border-radius: 50%;
+  margin: 0.5vw 0 0 0.5vw;
+}
+
+.eventItemLogo img {
+  width: 100%;
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+}
+
+.eventItemDate {
+  width: 5vw;
+  min-width: 50px;
+  margin: 0.5vw 0 0.5vw 0.5vw;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.eventItemDay {
+  font-size: 2em;
 }
 
 .eventDate {
@@ -153,6 +260,40 @@ footer>* {
   margin: 0;
   padding: 0;
 }
+
+.eventInfo p {
+  margin: 0;
+  padding: 0;
+}
+
+.eventItemPrice {
+  margin-top: 1.5vh;
+}
+
+.eventEditWrapper {
+  display: flex;
+  margin-bottom: 0.5vw;
+}
+
+.eventEditItem {
+  display: flex;
+  padding: 0.4vw;
+  background-color: bisque;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.eventEditButtons {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 1vw;
+}
+
+.eventEditButton {
+  display: block;
+  margin-bottom: 0.5vw;
+}
+
 
 #clubs {
   width: 60vw;
@@ -183,9 +324,4 @@ footer>* {
   margin-left: 1vw;
 }
 
-.feather {
-  background-image: url("../pages/clubpages/parrotprattlecracker/media/feathers.png");
-  background-repeat: none;
-  background-size: auto;
-  opacity: .7;
-}
+
