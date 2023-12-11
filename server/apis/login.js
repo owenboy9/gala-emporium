@@ -4,6 +4,7 @@ export default function(server, db) {
   server.get('/api/login', async (req, res) => {
       // are we logged in? get logged in user
       const users = await db.query("SELECT * FROM users WHERE email = ? AND password = ?", [req.session.user?.email, req.session.user?.password])
+      console.log(users)
       if(users[0]){
         res.json({loggedIn: true})
       }else{
@@ -17,7 +18,11 @@ export default function(server, db) {
     const users = await db.query("SELECT * FROM users WHERE email = ? AND password = ?", [req.body.email, req.body.password])
     if(users[0]){
       req.session.user = users[0]
-      res.json({loggedIn: true})
+      res.json({
+        loggedIn: true,
+        username: users[0].user_name,
+        userId: users[0].id
+      })
     }else{
       res.status(401)
       res.json({loggedIn: false})

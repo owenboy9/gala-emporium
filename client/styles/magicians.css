@@ -1,0 +1,139 @@
+background-image:url('client\pages\clubpages\magnificentmagicians\media\m.m.jpg') .magicians {
+  text-align:center;
+  color:pink;
+}
+
+.block {
+  color: black;
+  text-align: center;
+
+}
+
+body {
+  background-color: yellow;
+}
+
+
+#site-logo {
+  width: 40%;
+}
+
+#site-logo>* {
+  height: 100%;
+
+}
+
+
+
+
+h2 {
+  color: black;
+  text-align: center;
+  font-size: 150%;
+  margin-right: 5vw;
+}
+
+.block {
+  width: 40%;
+}
+
+
+
+
+
+.image {
+  width: 40%;
+}
+
+.image>img {
+  width: 100%;
+  margin: 2vw;
+}
+
+.eventItem {
+  background-image: url("../pages/clubpages/magnificentmagicians/media/m.m.jpg");
+  background-position: center;
+  background-repeat: none;
+  background-size: auto;
+}
+
+
+
+
+#left {
+  width: 70%;
+  text-align: center;
+  text-wrap: wrap;
+  padding: 2vw;
+}
+
+
+#right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+
+
+
+#eventlist {
+  width: 60vw;
+  margin: 3vh auto 0 auto;
+}
+
+
+
+.eventItem {
+  background-color: green;
+  border-radius: 10px;
+  margin: 0.5vw;
+  padding: 5px;
+  display: flex;
+  box-shadow: 2px 2px 3px 2px #d7d6d6;
+}
+
+.eventDate {
+  padding: 10px;
+  color: blue;
+  background-color: red;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+
+.eventInfo h2 {
+  margin: 0;
+  padding: 0;
+}
+
+#clubs {
+  width: 60vw;
+  margin: 3vh auto 0 auto;
+}
+
+.club {
+  background-color: rgb(130, 120, 218);
+  border-radius: 10px;
+  margin: 0.5vw;
+  padding: 5px;
+  display: flex;
+  box-shadow: 2px 2px 3px 2px #d7d6d6;
+
+}
+
+.clubName {
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  vertical-align: middle;
+  width: 8vw;
+  min-width: 8vw;
+}
+
+.clubInfo {
+  font-size: 150%;
+  padding: 10px;
+  margin-left: 1vw;
+}

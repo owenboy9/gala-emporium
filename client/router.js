@@ -4,7 +4,12 @@ import clubs from "./pages/clubs.js"
 import parrot from "./pages/clubpages/parrotprattlecracker/parrotprattlecracker.js"
 import gala from "./pages/gala/gala.js"
 import notdeadyet from "./pages/clubpages/notdeadyet/notdeadyet.js"
+<<<<<<< HEAD
+import akzepto from "./pages/clubpages/akzepto/akzepto.js"
+import magnificentmagicians from "./pages/clubpages/magnificentmagicians/magnificentmagicians.js"
+=======
 import akzepto from "./pages/clubpages/akzepto/akzepto.js";
+>>>>>>> dev
 
 import login from "./components/login.js"
 
@@ -31,19 +36,24 @@ async function router() {
 
     case "#about":
       console.log(window.location.hash)
-      $("left").html(await gala())
+      $("main").html(await gala())
       break;
 
     case "#parrot":
       $("main").html(await parrot())
       break;
 
+<<<<<<< HEAD
+    case "#magicians":
+      $("main").html(await magnificentmagicians())
+=======
     case "#akzepto":
       $("main").html(await akzepto())
       break;
 
     case "#notdeadyet":
       $("main").html(await notdeadyet())
+>>>>>>> dev
       break;
 
     default:

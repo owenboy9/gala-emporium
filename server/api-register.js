@@ -7,10 +7,12 @@ import events_sorted from "./apis/createview-events.js"
 import clubs from "./apis/clubs.js"
 import getclub from "./apis/getclub.js"
 import getParrotEvents from "./apis/getParrotEvents.js";
+import getMagicansEvents from "./apis/getMagiciansEvents.js";
 import getNotDeadYetEvents from "./apis/getNotDeadYetEvents.js";
 import getAkzeptoEvents from "./apis/getAkzeptoEvents.js";
 import gala from "./apis/gala.js"
 import getEventData from "./apis/getEventData.js"
+import eventEditor from "./apis/eventEditor.js";
 
 
 export default function (server, db) {
@@ -22,8 +24,10 @@ export default function (server, db) {
   clubs(server, db)
   getclub(server, db)
   getParrotEvents(server, db)
+  getMagicansEvents(server, db)
   getNotDeadYetEvents(server, db)
   getAkzeptoEvents(server, db)
   gala(server, db)
   getEventData(server, db)
+  eventEditor(server, db)
 }
