@@ -7,7 +7,7 @@ export default function (server, db) {
   })
 
   server.put('/api/eventEditor/:id', async (req, res) => {
-    console.log(req.body.headline)
+    console.log('puttin on the ritz', req.body)
     if (req.body.headline.trim().length > 0) {
       const result = await db.query("UPDATE events SET headline = ?, description_short = ?, description_long = ?, ticket_price = ?, tickets = ? WHERE id = ?", [req.body.headline, req.body.description_short, req.body.description_long, parseInt(req.body.ticket_price, 10), parseInt(req.body.tickets, 10), req.params.id])
       result.eventUpdated = true

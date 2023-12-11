@@ -1,4 +1,4 @@
-import eventEditor from "../pages/eventEditor.js"
+import eventManager from "../pages/eventManager.js"
 
 export default function init() {
   return `
@@ -42,7 +42,7 @@ async function login() {
 window.login = login // expose login to global (html) scope
 
 async function openEditor(userId) {
-  $("main").html(await eventEditor(userId))
+  $("main").html(await eventManager(userId))
 }
 
 window.openEditor = openEditor
@@ -69,9 +69,15 @@ async function checkLogin() {
   const result = await response.json()
   console.log(result)
   if (result.loggedIn || result.email) {
-    $('#login').html(`
+    $('#logInOut').html(`
       <button onclick="logout()">Logout</button>
     `)
+    $('#adminBar').html(`
+      <p>Welcome, ${result.username}</p>
+      <button onclick="openEditor(${result.userId})">Manage your events</button>
+
+     `)
+    document.getElementById('adminBar').style.backgroundColor = 'red' 
   }
 }
 

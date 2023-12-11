@@ -27,7 +27,6 @@ async function router() {
       $("main").html(await eventList())
       break;
 
-
     case "#about":
       console.log(window.location.hash)
       $("main").html(await gala())
@@ -44,6 +43,7 @@ async function router() {
     case "#notdeadyet":
       $("main").html(await notdeadyet())
       break;
+
 
     default:
       $("main").html("<h1>Denna sida finns inte!</h1>")

@@ -6,7 +6,10 @@ export default function(server, db) {
       const users = await db.query("SELECT * FROM users WHERE email = ? AND password = ?", [req.session.user?.email, req.session.user?.password])
       console.log(users)
       if(users[0]){
-        res.json({loggedIn: true})
+        res.json({
+          loggedIn: true,
+          username: users[0].user_name,
+          userId: users[0].id})
       }else{
         res.status(401)
         res.json({loggedIn: false})
