@@ -1,8 +1,8 @@
-
+import eventEditor from "../pages/eventEditor.js"
 
 export default function init() {
   return `
-    <form onsubmit="login(); return false">
+    <form id="logInOut" onsubmit="login(); return false">
       <input name="email" placeholder="your email">
       <input name="password" placeholder="your password">
       <input type="submit" value="Login">
@@ -27,16 +27,25 @@ async function login() {
   let result = await response.json();
   console.log(result)
   if (result.loggedIn) {
-    $('#login').html(`
+    $('#logInOut').html(`
       <button onclick="logout()">Logout</button>
     `)
+    $('#adminBar').html(`
+      <p>Welcome, ${result.username}</p>
+      <button onclick="openEditor(${result.userId})">Manage your events</button>
 
+     `)
+    document.getElementById('adminBar').style.backgroundColor = 'red' 
   }
-
 }
 
 window.login = login // expose login to global (html) scope
 
+async function openEditor(userId) {
+  $("main").html(await eventEditor(userId))
+}
+
+window.openEditor = openEditor
 
 async function logout() {
   console.log('sir, logging out?')
@@ -47,6 +56,8 @@ async function logout() {
   console.log(result)
   if (!result.loggedIn) {
     $('#login').html(init())
+    $('#adminBar').html("")
+    document.getElementById('adminBar').style.backgroundColor = 'transparent'
   }
 }
 

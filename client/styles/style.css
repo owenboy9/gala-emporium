@@ -7,6 +7,28 @@ body {
   margin: 2vw;
 }
 
+#adminBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0.4vw;
+  display: flex;
+  box-sizing: border-box;
+}
+
+#adminBar p {
+  margin: 0 1vw 0 0;
+  padding: 0;
+}
+
+#logInOut {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.4vw;
+}
+
 header {
   display: flex;
   justify-content: end;
@@ -129,7 +151,9 @@ footer>* {
   margin: 3vh auto 0 auto;
 }
 
-
+.eventsWrapper {
+  width: 100%;
+}
 
 .eventItem {
   display: flex;
@@ -148,8 +172,11 @@ footer>* {
 
 .eventItemMiddle {
   width: 60%;
+  padding: 1vw;
   margin-right: 2vw;
   margin-top: 1vw;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .eventItemMiddle h2 {
@@ -244,8 +271,31 @@ footer>* {
   margin-top: 1.5vh;
 }
 
+<<<<<<< HEAD=======.eventEditWrapper {
+  display: flex;
+  margin-bottom: 0.5vw;
+}
 
-#clubs {
+.eventEditItem {
+  display: flex;
+  padding: 0.4vw;
+  background-color: bisque;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.eventEditButtons {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 1vw;
+}
+
+.eventEditButton {
+  display: block;
+  margin-bottom: 0.5vw;
+}
+
+>>>>>>>dev #clubs {
   width: 60vw;
   margin: 3vh auto 0 auto;
 }
