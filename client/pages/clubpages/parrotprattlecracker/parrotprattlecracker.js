@@ -12,10 +12,10 @@ export default async function () {
       <div id="headline">
         <img class="headlineImage" src="pages/clubpages/parrotprattlecracker/media/headline.png">
         <img class="headlineImage" src="pages/clubpages/parrotprattlecracker/media/parrot.jpeg">
-      </div
+      </div>
     </section>
 
-  
+  <p class="parrotShout">The only club where taking birds can gather to debate, mate and iterate.</p> 
  
   <h2>Upcoming events</h2>
   ${createEventList(clubEvents)}
@@ -27,6 +27,8 @@ export default async function () {
   <div id="parrotRight">
     
     <div class="manifesto">
+      <img class="parrotImageFull" src="pages/clubpages/parrotprattlecracker/media/pipe.jpeg">
+
       <h2>Club Manifesto</h2>
       ${clubdata.club.manifesto}
     </div>
@@ -67,38 +69,72 @@ async function getClubEvents() {
 function createEventList(clubEvents) {
   let events = ""
     let index = 1
+  let colorClasses = ['color1', 'color2', 'color3']  
   for (let event of clubEvents) {
 
-    let sqlstarttime = event.start_time;
-    let jsstarttime = new Date(sqlstarttime)
-    let jsstartdate = jsstarttime.toLocaleDateString()
+    let backgroundColor = colorClasses[Math.floor(Math.random() * colorClasses.length)]
 
-    const sqlDatetimeStart = event.start_time;
-    const jsDateObject = new Date(sqlDatetimeStart);
-
-    const dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit' };
-    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-
-    const startdate = jsDateObject.toLocaleDateString('en-GB', dateOptions);
-    const starttime = jsDateObject.toLocaleTimeString('en-GB', timeOptions);
+    let jsstarttime = new Date(event.start_time)
+    let weekday = jsstarttime.getDay()
+    let date = jsstarttime.getDate()
+    let month = jsstarttime.getMonth()
+    let year = jsstarttime.getFullYear()
+    let startHour = padZero(jsstarttime.getUTCHours())
+    let startMinute = padZero(jsstarttime.getUTCMinutes())
 
 
-   // document.getElementById('eventlist').innerHTML = user.username
+
     events += `
-    <div class="eventItem">
-    <div class="eventDate">
-    <div>${startdate}</div>
-    <div>${starttime}</div>
-    </div>
-    <div class="eventInfo">
-    <h2>${event.headline}</h2>
-    <p>${event.description_short}</p>
-    </div>
-    </div>
+    <section class="parrotEventItem ${backgroundColor}">
+      
+    <div class="parrotEventLeft">
+        
+        <div class="parrotEventDate">
+          <div class="parrotEventDateText">${getDayName(weekday)}</div>
+          <div class="eventItemDay">${date}</div>
+          <div class="parrotEventDateText">${getMonthName(month)}</div>
+          <div class="eventItemYear">${year}</div>
+        </div>
+        
+      </div>
+
+      <div class="parrotEventMiddle">
+        <h2>${event.headline}</h2>
+        <span class="eventItemTime">${startHour}</span>:<span class="eventItemTime">${startMinute}</span>
+        <p>${event.description_long}</p>
+        <div class="eventItemButton eventItemReadMore" onclick="openEventPage(${event.id})">Read more</div>
+      </div>
+      
+      <div class="parrotEventRight">
+        <div class="eventItemButton">TICKETS</div>
+        <div class="eventItemTickets">${event.tickets} tickets available</div>
+        <div class="eventItemPrice">
+          <p>${event.ticket_price} kr</p>
+        </div>
+      </div>
+    
+    </section>
     `
     index++
   }
   return `
     <div>${events}</div>
   `
+  }
+
+
+  function padZero(value) {
+    return value < 10 ? `0${value}` : `${value}`
+  }
+
+  function getMonthName(month) {
+    console.log(month)
+    let index = month
+    let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    return months[index]
+  }
+  
+  function getDayName(weekday) {
+    let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    return days[weekday]
   }
