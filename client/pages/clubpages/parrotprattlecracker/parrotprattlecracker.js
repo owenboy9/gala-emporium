@@ -15,7 +15,7 @@ export default async function () {
       </div>
     </section>
 
-  <p class="parrotShout">The only club where taking birds can gather to debate, mate and iterate.</p> 
+  <p class="parrotShout">The only club where talking birds can gather to debate, mate and iterate.</p>
  
   <h2>Upcoming events</h2>
   ${createEventList(clubEvents)}
