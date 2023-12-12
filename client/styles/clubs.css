@@ -1,11 +1,23 @@
+body {
+  background-image: url(../pages/gala/media/smallstage.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 main {
   display: flex;
+  align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
 }
 
 h1 {
+  background-image: url(../pages/gala/media/ljuskrona.jpg);
+  border-radius: 20%;
   text-align: center;
+  padding: 2vw;
+  width: fit-content;
 }
 
 a>h2 {
@@ -29,9 +41,7 @@ a>p:hover {
   border-radius: 50%;
 }
 
-#clubs {
-  margin: 3vh auto 0 auto;
-}
+
 
 .rutor {
   display: flex;
@@ -49,8 +59,7 @@ a>p:hover {
   flex-direction: column;
   align-items: center;
   width: 40%;
-
-
+  box-shadow: none;
 }
 
 .clubName {

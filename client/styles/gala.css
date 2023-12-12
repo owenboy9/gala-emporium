@@ -1,0 +1,42 @@
+body {
+  background-image: url(../pages/gala/media/interior.jpeg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  background-image: none;
+}
+
+#left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../pages/gala/media/fancyBar.jpeg);
+  background-position: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+
+}
+
+#left>div {
+  background-color: white;
+  background-position: top;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+
+h1 {
+  background-image: url(../pages/gala/media/ljuskrona.jpg);
+  border-radius: 20%;
+  width: fit-content;
+  text-shadow: 0.5px 0.5px 2.5px white;
+  padding: 2vw;
+}
+
+.eventsWrapper * {
+  display: flex;
+  flex-direction: row;
+}

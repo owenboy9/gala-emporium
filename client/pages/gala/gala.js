@@ -5,6 +5,7 @@ export default async function () {
   const aboutData = galaAbout.length > 0 ? galaAbout[0] : {};
 
   return `
+  <link rel="stylesheet" href="./styles/gala.css">
     <h1>Gala Emporium</h1>
     <div>
       <p>${aboutData.about_us || 'Not available'}</p>

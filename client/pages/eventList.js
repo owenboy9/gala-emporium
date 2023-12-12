@@ -5,9 +5,11 @@ export default async function () {
   const eventData = await getEvents();
 
   return `
+  
   <div>
   <h1>Events</h1>
   ${createEventList(eventData)}
+  
   </div>
   `
 }
@@ -97,6 +99,7 @@ function createEventList(eventData) {
     index++
   }
   return `
+  <link rel="stylesheet" href="./styles/allEvents.css">
     <div class="eventsWrapper">${events}</div>
   `
 }

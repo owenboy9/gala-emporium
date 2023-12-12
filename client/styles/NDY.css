@@ -3,6 +3,7 @@
 
 
 body {
+  background-image: none;
   background-color: blanchedalmond;
 }
 
@@ -82,6 +83,28 @@ h3:first-child {
   background-repeat: none;
   background-size: auto;
   font-family: 'Lato', sans-serif;
+  box-shadow: 2px 2px 3px 2px blanchedalmond;
+}
+
+.eventItemMiddle {
+  background: none;
+}
+
+
+.eventItemButton {
+  background-color: blanchedalmond;
+}
+
+.eventItemButton:hover {
+  background-image: url("../pages/clubpages/notdeadyet/images/eventbakgrund.jpg");
+}
+
+.eventItemDate {
+  background-color: blanchedalmond;
+}
+
+.eventDate {
+  background-color: blanchedalmond;
 }
 
 .eventInfo {
@@ -145,48 +168,4 @@ footer>* {
   text-decoration: none;
   color: black;
 
-}
-
-.eventItem {
-  display: flex;
-  background-color: rgb(218, 139, 120);
-  border-radius: 10px;
-  width: 100%;
-  margin: 0.5vw;
-  padding: 15px;
-  box-shadow: 2px 2px 3px 2px #d7d6d6;
-}
-
-
-
-.eventItemMiddle {
-  background-color: blanchedalmond;
-}
-
-.eventItemMiddle h2 {
-  margin: 0 0 1vw 0;
-  padding: 0;
-}
-
-.eventItemMiddle p {
-  margin: 0;
-  padding: 0;
-}
-
-.eventItemtTime {
-  font-size: 0.7em;
-  margin: 0;
-}
-
-.eventItemRight {
-  width: 20%;
-}
-
-.eventItemButton {
-  display: inline-block;
-  padding: 10px;
-  background-color: white;
-  text-align: center;
-  width: auto;
-  cursor: pointer;
 }
