@@ -1,21 +1,13 @@
-header {
-  background-image: none;
-}
-
 #left {
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgba(161, 75, 51, 0.7);
+  border-radius: 10px;
+  margin-top: 15px;
 
 }
 
-#left>div {
-  background-color: white;
-  background-position: top;
-  background-size: auto;
-  background-repeat: no-repeat;
-}
 
 
 h1 {
@@ -24,4 +16,13 @@ h1 {
   width: fit-content;
   text-shadow: 0.5px 0.5px 2.5px white;
   padding: 2vw;
+}
+
+.image {
+  width: 40%;
+}
+
+.image>img {
+  width: 100%;
+  margin: 2vw;
 }

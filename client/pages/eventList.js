@@ -5,7 +5,7 @@ export default async function () {
   const eventData = await getEvents();
 
   return `
-  
+  <link rel="stylesheet" href="./styles/allEvents.css">
   <div class="allEvents">
   <h1>Events</h1>
   ${createEventList(eventData)}
@@ -99,7 +99,7 @@ function createEventList(eventData) {
     index++
   }
   return `
-  <link rel="stylesheet" href="./styles/allEvents.css">
+  
     <div class="eventsWrapper">${events}</div>
   `
 }
