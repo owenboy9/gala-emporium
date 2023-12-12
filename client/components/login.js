@@ -29,13 +29,14 @@ async function login() {
   console.log(result)
   if (result.loggedIn) {
     let club = await getClub(result.userId)
+    console.log(club[0].manifesto)
     $('#logInOut').html(`
       <button onclick="logout()">Logout</button>
     `)
     $('#adminBar').html(`
-      <p>Welcome, ${result.username}</p>
+      <p>Welcome, ${result.username}, admin of ${club[0].name}</p>
       <button class="adminBarButton" onclick="openEditor(${result.userId})">Manage your events</button>
-      <button class="adminBarButton" onclick="openNewEvent(${club.id})">Add new event</button>
+      <button class="adminBarButton" onclick="openNewEvent(${club[0].id})">Add new event</button>
      `)
     document.getElementById('adminBar').style.backgroundColor = 'red' 
   }
@@ -82,9 +83,9 @@ async function checkLogin() {
       <button onclick="logout()">Logout</button>
     `)
     $('#adminBar').html(`
-      <p>Welcome, ${result.username}</p>
+      <p>Welcome, ${result.username}, admin of ${club[0].name}</p>
       <button class="adminBarButton" onclick="openEditor(${result.userId})">Manage your events</button>
-      <button class="adminBarButton" onclick="openNewEvent(${club.id})">Add new event</button>
+      <button class="adminBarButton" onclick="openNewEvent(${club[0].id})">Add new event</button>
 
      `)
     document.getElementById('adminBar').style.backgroundColor = 'red' 
