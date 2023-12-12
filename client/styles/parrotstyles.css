@@ -13,10 +13,15 @@ header {
   background-image: none;
 }
 
+main {
+  margin-top: 5vw;
+}
+
 h2 {
   margin: 0;
   padding: 0;
 }
+
 
 #parrotLeft {
   flex: 6; /* Takes up 70% of the width */
