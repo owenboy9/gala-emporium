@@ -6,10 +6,17 @@ export default async function () {
 
   // build your club page here
   let html = `
-  <div class="block">
-  <h1>${clubdata.club.name}</h1>
-  <h2>Club Manifesto</h2>
-  <div>${clubdata.club.manifesto}</div>
+  <link rel="stylesheet" href="./styles/parrotstyles.css">
+  <div id="parrotLeft" class="block">
+    <section id="leftBody">
+      <div id="headline">
+        <img class="headlineImage" src="pages/clubpages/parrotprattlecracker/media/headline.png">
+        <img class="headlineImage" src="pages/clubpages/parrotprattlecracker/media/parrot.jpeg">
+      </div
+    </section>
+
+  
+ 
   <h2>Upcoming events</h2>
   ${createEventList(clubEvents)}
   `
@@ -17,7 +24,20 @@ export default async function () {
 
   `
   </div>
-  <div><img src="pages/clubpages/parrotprattlecracker/media/ppc_logo.png"></div>
+  <div id="parrotRight">
+    
+    <div class="manifesto">
+      <h2>Club Manifesto</h2>
+      ${clubdata.club.manifesto}
+    </div>
+
+  
+  
+  
+  
+  
+  
+  </div>
   `
 
   return html

@@ -1,0 +1,45 @@
+
+
+body {
+  background-color: #c9d9f0;
+}
+
+#parrotLeft {
+  flex: 7; /* Takes up 70% of the width */
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+#parrotRight {
+  width: 30%;
+  padding: 1vw;
+  box-sizing: border-box;
+}
+
+.parrotImageFull {
+  width: 100%;
+}
+
+#headline {
+  flex: 9; /* Takes up 90% of the left section */
+  display: flex;
+}
+
+#headline img {
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  height: 14vw; /* Take up 100% height of the container */
+  margin: 0 5px; /* Optional margin between images */
+}
+
+
+.manifesto {
+  background-color: #98aecc;
+  padding: 1.5vw;
+}
+
+.manifesto p {
+  margin: 0;
+  padding: 0;
+}
