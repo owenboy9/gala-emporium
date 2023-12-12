@@ -2,6 +2,15 @@
 
 body {
   background-color: #c9d9f0;
+  background-image: none;
+}
+
+h1 {
+  background-image: none;
+}
+
+header {
+  background-image: none;
 }
 
 h2 {
