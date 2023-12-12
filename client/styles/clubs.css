@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@700&family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400&display=swap');
+
 body {
   background-image: url(../pages/gala/media/smallstage.jpg);
   background-position: center;
@@ -10,9 +12,17 @@ main {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
+  color: rgb(255, 183, 0);
+  text-shadow: 0.5px 0.5px 2.5px black;
+
 }
 
 h1 {
+  font-family: 'Kalnia', serif;
+  font-style: bold;
+  font-weight: 700;
+  color: black;
+  text-shadow: none;
   background-image: url(../pages/gala/media/ljuskrona.jpg);
   border-radius: 20%;
   text-align: center;
@@ -21,23 +31,35 @@ h1 {
 }
 
 a>h2 {
+  font-family: 'Kalnia', serif;
+  font-style: bold;
+  font-weight: 700;
+  color: rgb(255, 183, 0);
+  -webkit-text-stroke-color: rgb(255, 183, 0);
+  -webkit-text-stroke-width: 0.5px;
   text-align: center;
+  margin: 0vw 1vw;
+
 }
 
 a>h2:hover {
-  background-color: aquamarine;
-  border-radius: 50%;
+  color: rgba(81, 78, 78);
+  text-shadow: none;
+  -webkit-text-stroke-color: rgba(81, 78, 78);
+
 }
 
 
 a {
   align-self: center;
   text-decoration: none;
-  color: black;
+  color: rgb(176, 128, 6);
+
 }
 
 a>p:hover {
-  background-color: aquamarine;
+  color: black;
+  background-image: url(../pages/gala/media/ljuskrona.jpg);
   border-radius: 50%;
 }
 
@@ -53,7 +75,7 @@ a>p:hover {
 }
 
 .club {
-  background-color: burlywood;
+  background-color: rgba(81, 78, 78, 0.7);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -63,12 +85,15 @@ a>p:hover {
 }
 
 .clubName {
-  padding: 10px;
-  background-color: white;
+  padding: 5px;
+  background-image: url(../pages/gala/media/backdrop.jpg);
+  background-position: center;
+  background-size: cover;
   border-radius: 5px;
   vertical-align: middle;
   width: fit-content;
   min-width: 8vw;
+  max-height: 3vw;
 }
 
 .clubInfo {

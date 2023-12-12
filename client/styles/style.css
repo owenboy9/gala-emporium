@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@700&family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400&display=swap');
+
 
 body {
-
-  background-size: contain;
+  background-image: url(../pages/gala/media/interior.jpeg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
   display: block;
   font-family: 'Onest',
     sans-serif;
@@ -89,8 +93,9 @@ header {
 }
 
 #menu>nav>a {
-  background-image: url(../pages/gala/media/backsoffa.jpeg);
-  background-size: cover;
+  font-family: 'Kalnia', serif;
+  font-style: bold;
+  font-weight: 700;
   border-radius: 20%;
   padding: 0.5vw;
   margin: 0 3vw;
@@ -101,9 +106,10 @@ header {
 }
 
 #menu>nav>a:hover {
-  background-image: url(../pages/gala/media/backdrop.jpg);
+  background-image: url(../pages/gala/media/backsoffa.jpeg);
+  background-size: cover;
   border-radius: 20%;
-  color: black;
+
 
 }
 
@@ -126,6 +132,9 @@ h1 {
 
 
 #right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 30%;
 }
 

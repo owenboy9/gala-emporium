@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400&display=swap');
 
 
 body {
-  background-image: none;
-  background-color: blanchedalmond;
+  background-image: url(../pages/clubpages/notdeadyet/images/perform1.jpg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+main {
+  background-color: rgba(255, 235, 205, 0.637);
 }
 
 
@@ -83,7 +88,7 @@ h3:first-child {
   background-repeat: none;
   background-size: auto;
   font-family: 'Lato', sans-serif;
-  box-shadow: 2px 2px 3px 2px blanchedalmond;
+  box-shadow: none;
 }
 
 .eventItemMiddle {
@@ -92,7 +97,7 @@ h3:first-child {
 
 
 .eventItemButton {
-  background-color: blanchedalmond;
+  background-color: rgba(255, 235, 205, 0.637);
 }
 
 .eventItemButton:hover {
@@ -100,11 +105,11 @@ h3:first-child {
 }
 
 .eventItemDate {
-  background-color: blanchedalmond;
+  background-color: rgba(255, 235, 205, 0.637);
 }
 
 .eventDate {
-  background-color: blanchedalmond;
+  background-color: rgba(255, 235, 205, 0.637);
 }
 
 .eventInfo {
@@ -127,45 +132,4 @@ h3:first-child {
   font-weight: 300;
   text-align: center;
   text-shadow: 2px 2px black;
-}
-
-#left {
-  width: 70%;
-  text-align: center;
-  text-wrap: wrap;
-  padding: 2vw;
-}
-
-
-#right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 30%;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-footer>* {
-  width: 50%;
-}
-
-#some {
-  display: flex;
-  justify-content: end;
-}
-
-
-#some>* {
-  padding: 2vw;
-}
-
-#some>a {
-  font-style: normal;
-  text-decoration: none;
-  color: black;
-
 }

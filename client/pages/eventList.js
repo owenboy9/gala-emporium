@@ -6,7 +6,7 @@ export default async function () {
 
   return `
   
-  <div>
+  <div class="allEvents">
   <h1>Events</h1>
   ${createEventList(eventData)}
   
