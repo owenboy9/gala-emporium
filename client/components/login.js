@@ -77,13 +77,14 @@ async function checkLogin() {
   const result = await response.json()
   console.log(result)
   if (result.loggedIn || result.email) {
+    let club = await getClub(result.userId)
     $('#logInOut').html(`
       <button onclick="logout()">Logout</button>
     `)
     $('#adminBar').html(`
       <p>Welcome, ${result.username}</p>
       <button class="adminBarButton" onclick="openEditor(${result.userId})">Manage your events</button>
-      <button class="adminBarButton" onclick="openEditor(${result.userId})">Manage your events</button>
+      <button class="adminBarButton" onclick="openNewEvent(${club.id})">Add new event</button>
 
      `)
     document.getElementById('adminBar').style.backgroundColor = 'red' 
