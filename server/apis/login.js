@@ -37,6 +37,5 @@ export default function(server, db) {
     req.session.destroy();
     res.json({loggedIn: false})
   })
-  
-  
-  }
+   
+}

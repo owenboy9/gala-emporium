@@ -8,7 +8,7 @@ export default function (server, db) {
 
   server.post('/api/eventEditor', async (req, res) => {
     if (req.body.headline.trim().length > 0) {
-      const result = await db.query("INSERT INTO events (headline, description_short, description_long, ticket_price, tickets, start_time, end_time, club_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", [req.body.headline, req.body.description_short, req.body.description_long, parseInt(req.body.ticket_price, 10), parseInt(req.body.tickets, 10), req.body.start_time, req.body.end_time,req.body.club_id])
+      const result = await db.query("INSERT INTO events (headline, description_short, description_long, ticket_price, tickets, start_time, end_time, club_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", [req.body.headline, req.body.description_short, req.body.description_long, parseInt(req.body.ticket_price, 10), parseInt(req.body.tickets, 10), req.body.start_time, req.body.end_time, req.body.club_id])
       result.eventAdded = true
       res.json(result)
       console.log("Result - ", result);
@@ -32,7 +32,13 @@ export default function (server, db) {
     }
   })
 
-// , start_time = ?, end_time = ?
-// req.body.start_time, req.body.end_time,
+  server.delete('/api/eventEditor/:id', async (req, res) => {
+    const result = await db.query("DELETE FROM events WHERE id = ?", [req.params.id]);
+    if (result.affectedRows > 0) {
+      res.json({ message: "Event deleted successfully" })
+    } else {
+      res.json({ message: "Failed to delete event" })
+    }
+  })
 
 }

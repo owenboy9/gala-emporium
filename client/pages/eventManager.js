@@ -1,7 +1,7 @@
 import editEvent from "./editEvent.js"
 import newEvent from "./newEvent.js"
 
-export default async function (userId) {
+export default async function eventManager (userId) {
   let events = await getEventData(userId)
   console.log(events)
 
@@ -43,6 +43,7 @@ function showEvents(events) {
         </div>
         <div class="eventEditButtons">
           <button class="eventEditButton" onclick="openEventToEdit(${event.id})">Edit</button>
+          <button class="eventEditButton" onclick="deleteEvent(${event.id})">Delete event</button>
         </div>
        </div> 
   
@@ -104,3 +105,42 @@ function getDayName(weekday) {
   let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
   return days[weekday]
 }
+
+async function deleteEvent (eventId) {
+  let text = "Delete event?"
+  if (confirm(text) == true) {
+
+    const response = await fetch(`api/eventEditor/${eventId}`, { 
+      method: "delete" 
+    })
+    const result = await response.json()
+    console.log("delete event - ", result);
+
+  if (result.message === "Event deleted successfully") {
+    alert(result.message)
+    $("main").html(await eventManager(await checkLogin()))
+  } else {
+    alert(result.message)
+  }
+
+  } else {
+    text = "You canceled!"
+  }
+}
+
+window.deleteEvent = deleteEvent
+
+
+async function checkLogin() {
+  const response = await fetch('/api/login')
+  const result = await response.json()
+  console.log(result)
+  if (result.loggedIn || result.email) {
+    return result.userId
+  }
+  else {
+    console.log('could not get login info')
+  }
+}
+
+window.checkLogin = checkLogin
