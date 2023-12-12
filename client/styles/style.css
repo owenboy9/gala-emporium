@@ -20,6 +20,11 @@ body {
 #adminBar p {
   margin: 0 1vw 0 0;
   padding: 0;
+  color: white;
+}
+
+.adminBarButton {
+  margin-left: 0.5vw;
 }
 
 #logInOut {

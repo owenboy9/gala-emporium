@@ -1,4 +1,5 @@
 import eventManager from "../pages/eventManager.js"
+import newEvent from "../pages/newEvent.js"
 
 export default function init() {
   return `
@@ -27,13 +28,14 @@ async function login() {
   let result = await response.json();
   console.log(result)
   if (result.loggedIn) {
+    let club = await getClub(result.userId)
     $('#logInOut').html(`
       <button onclick="logout()">Logout</button>
     `)
     $('#adminBar').html(`
       <p>Welcome, ${result.username}</p>
-      <button onclick="openEditor(${result.userId})">Manage your events</button>
-
+      <button class="adminBarButton" onclick="openEditor(${result.userId})">Manage your events</button>
+      <button class="adminBarButton" onclick="openNewEvent(${club.id})">Add new event</button>
      `)
     document.getElementById('adminBar').style.backgroundColor = 'red' 
   }
@@ -46,6 +48,12 @@ async function openEditor(userId) {
 }
 
 window.openEditor = openEditor
+
+async function openNewEvent(clubId) {
+  $("main").html(await newEvent(clubId))
+}
+
+window.openNewEvent = openNewEvent
 
 async function logout() {
   console.log('sir, logging out?')
@@ -74,11 +82,19 @@ async function checkLogin() {
     `)
     $('#adminBar').html(`
       <p>Welcome, ${result.username}</p>
-      <button onclick="openEditor(${result.userId})">Manage your events</button>
+      <button class="adminBarButton" onclick="openEditor(${result.userId})">Manage your events</button>
+      <button class="adminBarButton" onclick="openEditor(${result.userId})">Manage your events</button>
 
      `)
     document.getElementById('adminBar').style.backgroundColor = 'red' 
   }
+}
+
+async function getClub(userId) {
+  const response = await fetch(`api/getClubFromUserId/${userId}`)
+  const club = await response.json()
+  console.log(club)
+  return club
 }
 
 checkLogin() // will execute on load
