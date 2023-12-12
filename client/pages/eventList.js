@@ -1,13 +1,51 @@
 import showEvent from "./showEvent.js"
 
+const today = new Date();
+
+const aMonthFromNow = new Date(today);
+aMonthFromNow.setMonth(today.getMonth() + 1);
+
+const todayFormatted = formatDate(today);
+const aMonthFromNowFormatted = formatDate(aMonthFromNow);
+
+console.log("Today:", todayFormatted);
+console.log("A month from now:", aMonthFromNowFormatted);
+
+function formatDate(date) {
+  const day = date.getDate()
+  const month = date.getMonth() + 1
+  const year = date.getFullYear()
+  return `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`
+}
+
+
+
 export default async function () {
   console.log('eventList.js')
-  const eventData = await getEvents();
+  const eventData = await getEvents()
+
+
+  const sortedEventData = eventData.sort((a, b) => {
+    const dateA = new Date(a.start_time)
+    const dateB = new Date(b.start_time)
+    return dateA - dateB
+  })
+
+  const today = new Date()
+  const aMonthFromNow = new Date(today)
+  aMonthFromNow.setUTCMonth(today.getUTCMonth() + 1)
+
+  const filteredEvents = sortedEventData.filter(event => new Date(event.start_time) <= aMonthFromNow)
+  const eventsNotWithinMonth = eventData.filter(event => new Date(event.start_time) > aMonthFromNow);
 
   return `
-  <div>
+  <link rel="stylesheet" href="./styles/allEvents.css">
+  <div class="allEvents">
   <h1>Events</h1>
-  ${createEventList(eventData)}
+  <h2 class="calendar">This month's events</h2>
+  ${createEventList(filteredEvents)}
+  <h2 class="calendar">In the future</h2>
+  ${createEventList(eventsNotWithinMonth)}
   </div>
   `
 }
@@ -30,16 +68,16 @@ function createEventList(eventData) {
     let jsstarttime = new Date(event.start_time)
 
     let weekday = jsstarttime.getUTCDay()
-    let date = jsstarttime.getUTCDate()
-    let month = jsstarttime.getUTCMonth()
-    let year = jsstarttime.getUTCFullYear()
+    let date = jsstarttime.getDate()
+    let month = jsstarttime.getMonth()
+    let year = jsstarttime.getFullYear()
 
 
     function padZero(value) {
       return value < 10 ? `0${value}` : `${value}`
     }
 
-    let startHour = padZero(jsstarttime.getUTCHours())
+    let startHour = padZero(jsstarttime.getHours())
     let startMinute = padZero(jsstarttime.getUTCMinutes())
 
 
@@ -97,6 +135,7 @@ function createEventList(eventData) {
     index++
   }
   return `
+  
     <div class="eventsWrapper">${events}</div>
   `
 }
@@ -112,6 +151,7 @@ function getDayName(weekday) {
   let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
   return days[weekday]
 }
+
 
 async function openEventPage(eventId) {
   $("main").html(await showEvent(eventId))

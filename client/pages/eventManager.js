@@ -1,7 +1,7 @@
 import editEvent from "./editEvent.js"
 import newEvent from "./newEvent.js"
 
-export default async function eventManager (userId) {
+export default async function eventManager(userId) {
   let events = await getEventData(userId)
   console.log(events)
 
@@ -30,11 +30,11 @@ async function getEventData(userId) {
 }
 
 function showEvents(events) {
-    let html = ``
-    let index = 0
-    for (let event of events) {
-        
-      html += `
+  let html = ``
+  let index = 0
+  for (let event of events) {
+
+    html += `
   
        <div class="eventEditWrapper"> 
         <div class="eventEditItem">
@@ -50,35 +50,35 @@ function showEvents(events) {
        <section id="event${event.id}"></section>
   
       `
-      index++
-    }
-    return html
+    index++
   }
+  return html
+}
 
-  async function openEventToEdit (eventId) {
-    $("main").html(await editEvent(eventId))
-  }
+async function openEventToEdit(eventId) {
+  $("main").html(await editEvent(eventId))
+}
 
-  window.openEventToEdit = openEventToEdit
+window.openEventToEdit = openEventToEdit
 
-  async function openPageToAdd (clubId) {
-    $("main").html(await newEvent(clubId))
-  }
+async function openPageToAdd(clubId) {
+  $("main").html(await newEvent(clubId))
+}
 
-  window.openPageToAdd = openPageToAdd
+window.openPageToAdd = openPageToAdd
 
 
-  function fixTime(event) {
-      let html = ``
-      let jsstarttime = new Date(event.start_time)
-      let weekday = jsstarttime.getUTCDay()
-      let date = jsstarttime.getUTCDate()
-      let month = jsstarttime.getUTCMonth()
-      let year = jsstarttime.getUTCFullYear()
-      let startHour = padZero(jsstarttime.getUTCHours())
-      let startMinute = padZero(jsstarttime.getUTCMinutes())
-    
-      html += `
+function fixTime(event) {
+  let html = ``
+  let jsstarttime = new Date(event.start_time)
+  let weekday = jsstarttime.getUTCDay()
+  let date = jsstarttime.getDate()
+  let month = jsstarttime.getMonth()
+  let year = jsstarttime.getFullYear()
+  let startHour = padZero(jsstarttime.getHours())
+  let startMinute = padZero(jsstarttime.getUTCMinutes())
+
+  html += `
         <div class="eventEditDate">
           <div class="eventEditYear">${getDayName(weekday)}</div>
           <div class="eventEditDay">${date}</div>
@@ -86,9 +86,9 @@ function showEvents(events) {
           <div class="eventEditYear">${year}</div>
         </div>
       `
-      return html
-    
-    }
+  return html
+
+}
 
 function padZero(value) {
   return value < 10 ? `0${value}` : `${value}`
@@ -106,22 +106,22 @@ function getDayName(weekday) {
   return days[weekday]
 }
 
-async function deleteEvent (eventId) {
+async function deleteEvent(eventId) {
   let text = "Delete event?"
   if (confirm(text) == true) {
 
-    const response = await fetch(`api/eventEditor/${eventId}`, { 
-      method: "delete" 
+    const response = await fetch(`api/eventEditor/${eventId}`, {
+      method: "delete"
     })
     const result = await response.json()
     console.log("delete event - ", result);
 
-  if (result.message === "Event deleted successfully") {
-    alert(result.message)
-    $("main").html(await eventManager(await checkLogin()))
-  } else {
-    alert(result.message)
-  }
+    if (result.message === "Event deleted successfully") {
+      alert(result.message)
+      $("main").html(await eventManager(await checkLogin()))
+    } else {
+      alert(result.message)
+    }
 
   } else {
     text = "You canceled!"

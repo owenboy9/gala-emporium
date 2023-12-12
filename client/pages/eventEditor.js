@@ -56,10 +56,10 @@ function fixTime(event) {
   let html = ``
   let jsstarttime = new Date(event.start_time)
   let weekday = jsstarttime.getUTCDay()
-  let date = jsstarttime.getUTCDate()
-  let month = jsstarttime.getUTCMonth()
-  let year = jsstarttime.getUTCFullYear()
-  let startHour = padZero(jsstarttime.getUTCHours())
+  let date = jsstarttime.getDate()
+  let month = jsstarttime.getMonth()
+  let year = jsstarttime.getFullYear()
+  let startHour = padZero(jsstarttime.getHours())
   let startMinute = padZero(jsstarttime.getUTCMinutes())
 
   html += `

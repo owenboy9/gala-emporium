@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@700&family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400&display=swap');
+
 
 body {
+  background-image: url(../pages/gala/media/interior.jpeg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
   display: block;
   font-family: 'Onest',
     sans-serif;
@@ -35,6 +41,9 @@ body {
 }
 
 header {
+  background-image: url(../pages/gala/media/headerback.jpeg);
+  background-position: top;
+  background-size: cover;
   display: flex;
   justify-content: end;
   height: 15vw;
@@ -42,7 +51,7 @@ header {
 
 #site-logo {
   width: 40%;
-  height: 100%;
+  height: 120%;
 
 }
 
@@ -59,48 +68,54 @@ header {
   align-items: end;
 }
 
-#menu {
+#klubbknappar {
   display: flex;
+  justify-content: space-between;
+}
+
+#klubbknappar>a {
+  margin: 0 3vw 2vw;
+
+}
+
+#klubbknappar>a>img {
+  margin: 0.5vw;
+  max-height: 5vw;
+  border-radius: 50%;
+}
+
+#klubbknappar>a:hover {
+  background-image: url(../pages/gala/media/backsoffa.jpeg);
+  border-radius: 50%;
+
+}
+
+#menu>nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1vw;
 
 }
 
 #menu>nav>a {
+  font-family: 'Kalnia', serif;
+  font-style: bold;
+  font-weight: 700;
+  border-radius: 20%;
+  padding: 0.5vw;
+  margin: 0 3vw;
   font-style: normal;
   text-decoration: none;
-  color: black;
-
+  color: rgb(228, 158, 36);
+  text-shadow: 0.5px 0.5px 2.5px black;
 }
 
-#klubbknappar {
-  align-self: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-#klubbknappar>img {
-  margin: 1vw;
-  max-height: 5vw;
-  border-radius: 50%;
-}
+#menu>nav>a:hover {
+  background-image: url(../pages/gala/media/backsoffa.jpeg);
+  background-size: cover;
+  border-radius: 20%;
 
 
-
-#klubbknappar {
-  align-self: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-#klubbknappar>img {
-  margin: 1vw;
-  max-height: 5vw;
-  border-radius: 50%;
-}
-
-#klubbknappar>a>img {
-  margin: 1vw;
-  max-height: 5vw;
-  border-radius: 50%;
 }
 
 main {
@@ -114,7 +129,7 @@ h1 {
 }
 
 #left {
-  width: 70%;
+  width: 60%;
   text-align: center;
   text-wrap: wrap;
   padding: 2vw;
@@ -125,10 +140,15 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30%;
+  width: 40%;
 }
 
+
+
+
 footer {
+  background-image: url(../pages/gala/media/backdrop.jpg);
+  background-position: center;
   display: flex;
   justify-content: space-between;
 }
@@ -171,7 +191,6 @@ footer>* {
   width: 100%;
   margin: 0.5vw;
   padding: 15px;
-  box-shadow: 2px 2px 3px 2px #d7d6d6;
 }
 
 .eventItemLeft {

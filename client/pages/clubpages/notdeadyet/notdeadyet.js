@@ -61,15 +61,15 @@ function createEventList(clubEvents) {
     let jsstarttime = new Date(event.start_time)
 
     let day = jsstarttime.getUTCDay()
-    let date = jsstarttime.getUTCDate()
-    let month = jsstarttime.getUTCMonth()
-    let year = jsstarttime.getUTCFullYear()
+    let date = jsstarttime.getDate()
+    let month = jsstarttime.getMonth()
+    let year = jsstarttime.getFullYear()
 
     function padZero(value) {
       return value < 10 ? `0${value}` : `${value}`
     }
 
-    let startHour = padZero(jsstarttime.getUTCHours())
+    let startHour = padZero(jsstarttime.getHours())
     let startMinute = padZero(jsstarttime.getUTCMinutes())
 
 
