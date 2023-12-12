@@ -45,18 +45,19 @@ async function getEvent(eventId) {
 async function submitChange (eventId) {
   console.log('preparing update')
   console.log($('[name=ticket_price]').val())
-  let starttimeForm = $('[name=start_time]').val()
+  let starttimeForm = new Date($('[name=start_time]').val())
   let sqlStarttime = convertToSQLDatetime(starttimeForm)
   let endtimeForm = $('[name=end_time]').val()
   let sqlEndtime = convertToSQLDatetime(endtimeForm)
+  console.log('sql start time', sqlStarttime)
   let event = {
     headline: $('[name=headline]').val(),
     description_short: $('[name=description_short]').val(),
     description_long: $('[name=description_long]').val(),
     ticket_price: $('[name=ticket_price]').val(),
     tickets: $('[name=tickets]').val(),
-    start_time: JSON.stringify(sqlStarttime),
-    end_time: JSON.stringify(sqlEndtime)
+    start_time: sqlStarttime,
+    end_time: sqlEndtime
   }
 
     try {

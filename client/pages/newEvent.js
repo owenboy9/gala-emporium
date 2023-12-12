@@ -45,9 +45,9 @@ async function submitAdd () {
   console.log('preparing update')
   console.log($('[name=ticket_price]').val())
   let starttimeForm = $('[name=start_time]').val()
-  let sqlStarttime = convertToSQLDatetime(starttimeForm)
+  let sqlStarttime = starttimeForm
   let endtimeForm = $('[name=end_time]').val()
-  let sqlEndtime = convertToSQLDatetime(endtimeForm)
+  let sqlEndtime = endtimeForm
   let event = {
     club_id: $('[name=club_id]').val(),
     headline: $('[name=headline]').val(),
@@ -59,8 +59,10 @@ async function submitAdd () {
     end_time: sqlEndtime
   }
 
+  console.log('event to be added', event)
+
     try {
-      const response = await fetch(`api/eventEditor/${eventId}`, {
+      const response = await fetch("api/eventEditor", {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(event)
@@ -75,7 +77,7 @@ async function submitAdd () {
 
 }
 
-window.submitChange = submitChange
+window.submitAdd = submitAdd
 
 function convertToSQLDatetime(jsDateString) {
   const jsDate = new Date(jsDateString)
@@ -83,3 +85,5 @@ function convertToSQLDatetime(jsDateString) {
   console.log(sqlDatetime)
   return sqlDatetime;
 }
+
+window.convertToSQLDatetime = convertToSQLDatetime
