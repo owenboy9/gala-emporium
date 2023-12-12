@@ -326,6 +326,10 @@ footer>* {
   margin-top: 0.5vw;
 }
 
+.eventEditTimeContainer {
+  display: flex;
+}
+
 
 #clubs {
   width: 60vw;

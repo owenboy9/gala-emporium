@@ -1,6 +1,19 @@
 export default async function (eventId) {
   let event = await getEvent(eventId)
-  console.log(event)
+  console.log(event.start_time)
+  let startYear = new Date(event.start_time).getFullYear()
+  let startMonth = new Date(event.start_time).getMonth()
+  let startDay = new Date(event.start_time).getDate()
+  let startHour = new Date(event.start_time).getHours()
+  let startMinute = new Date(event.start_time).getMinutes()
+  let startSeconds = new Date(event.start_time).getSeconds()
+
+  let endYear = new Date(event.end_time).getFullYear()
+  let endMonth = new Date(event.end_time).getMonth()
+  let endDay = new Date(event.end_time).getDate()
+  let endHour = new Date(event.end_time).getHours()
+  let endMinute = new Date(event.end_time).getMinutes()
+  let endSeconds = new Date(event.end_time).getSeconds()
 
   let html = `
     <div>
@@ -22,9 +35,33 @@ export default async function (eventId) {
         <p>Number of tickets</p>
         <input class="eventEditInputBox" name="tickets" value="${event.tickets}">
         <p>Start time</p>
-        <input class="eventEditInputBox" name="start_time" value="${event.start_time}">
+        <div class="eventEditTimeContainer">
+          <input class="eventEditInputBox" name="start_year" value="${startYear}">
+          -
+          <input class="eventEditInputBox" name="start_month" value="${startMonth}">
+          -
+          <input class="eventEditInputBox" name="start_day" value="${startDay}">
+          &nbsp;
+          <input class="eventEditInputBox" name="start_hour" value="${startHour}">
+          :
+          <input class="eventEditInputBox" name="start_minute" value="${startMinute}">
+          :
+          <input class="eventEditInputBox" name="start_seconds" value="${startSeconds}">
+        </div>  
         <p>End time</p>
-        <input class="eventEditInputBox" name="end_time" value="${event.end_time}">
+        <div class="eventEditTimeContainer">
+          <input class="eventEditInputBox" name="end_year" value="${endYear}">
+          -
+          <input class="eventEditInputBox" name="end_month" value="${endMonth}">
+          -
+          <input class="eventEditInputBox" name="end_day" value="${endDay}">
+          &nbsp;
+          <input class="eventEditInputBox" name="end_hour" value="${endHour}">
+          :
+          <input class="eventEditInputBox" name="end_minute" value="${endMinute}">
+          :
+          <input class="eventEditInputBox" name="end_seconds" value="${endSeconds}">
+        </div>  
         <input class="eventEditFormButton" type="submit" value="Submit changes">
       </form>  
     
@@ -45,10 +82,12 @@ async function getEvent(eventId) {
 async function submitChange (eventId) {
   console.log('preparing update')
   console.log($('[name=ticket_price]').val())
+
+  let sqlStarttime = $('[name=start_year]').val() + '-' + $('[name=start_month]').val() + '-' + $('[name=start_day]').val() + ' ' + $('[name=start_hour]').val() + ':' + $('[name=start_minute]').val() + ':' + $('[name=start_seconds]').val()
+  let sqlEndtime = $('[name=end_year]').val() + '-' + $('[name=end_month]').val() + '-' + $('[name=end_day]').val() + ' ' + $('[name=end_hour]').val() + ':' + $('[name=end_minute]').val() + ':' + $('[name=end_seconds]').val()
+
   let starttimeForm = new Date($('[name=start_time]').val())
-  let sqlStarttime = convertToSQLDatetime(starttimeForm)
-  let endtimeForm = $('[name=end_time]').val()
-  let sqlEndtime = convertToSQLDatetime(endtimeForm)
+ // let sqlStarttime = convertToSQLDatetime(starttimeForm)
   console.log('sql start time', sqlStarttime)
   let event = {
     headline: $('[name=headline]').val(),

@@ -21,9 +21,33 @@ export default async function (clubId) {
         <p>Number of tickets</p>
         <input class="eventEditInputBox" name="tickets" value="">
         <p>Start time</p>
-        <input class="eventEditInputBox" name="start_time" value="">
+        <div class="eventEditTimeContainer">
+          <input class="eventEditInputBox" name="start_year" value="">
+          -
+          <input class="eventEditInputBox" name="start_month" value="">
+          -
+          <input class="eventEditInputBox" name="start_day" value="">
+          &nbsp;
+          <input class="eventEditInputBox" name="start_hour" value="">
+          :
+          <input class="eventEditInputBox" name="start_minute" value="">
+          :
+          <input class="eventEditInputBox" name="start_seconds" value="">
+        </div>  
         <p>End time</p>
-        <input class="eventEditInputBox" name="end_time" value="">
+        <div class="eventEditTimeContainer">
+          <input class="eventEditInputBox" name="end_year" value="">
+          -
+          <input class="eventEditInputBox" name="end_month" value="">
+          -
+          <input class="eventEditInputBox" name="end_day" value="">
+          &nbsp;
+          <input class="eventEditInputBox" name="end_hour" value="">
+          :
+          <input class="eventEditInputBox" name="end_minute" value="">
+          :
+          <input class="eventEditInputBox" name="end_seconds" value="">
+        </div>  
         <input class="eventEditFormButton" type="submit" value="Submit changes">
       </form>  
     
@@ -44,10 +68,10 @@ async function getEvent(eventId) {
 async function submitAdd () {
   console.log('preparing update')
   console.log($('[name=ticket_price]').val())
-  let starttimeForm = $('[name=start_time]').val()
-  let sqlStarttime = starttimeForm
-  let endtimeForm = $('[name=end_time]').val()
-  let sqlEndtime = endtimeForm
+
+  let sqlStarttime = $('[name=start_year]').val() + '-' + $('[name=start_month]').val() + '-' + $('[name=start_day]').val() + ' ' + $('[name=start_hour]').val() + ':' + $('[name=start_minute]').val() + ':' + $('[name=start_seconds]').val()
+  let sqlEndtime = $('[name=end_year]').val() + '-' + $('[name=end_month]').val() + '-' + $('[name=end_day]').val() + ' ' + $('[name=end_hour]').val() + ':' + $('[name=end_minute]').val() + ':' + $('[name=end_seconds]').val()
+
   let event = {
     club_id: $('[name=club_id]').val(),
     headline: $('[name=headline]').val(),
