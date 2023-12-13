@@ -25,10 +25,17 @@ h1 {
   width: 50%;
 }
 
-h2 {
+.eventClub {
+  font-family: 'Kalnia', serif;
+  font-style: bold;
+  font-weight: 700;
   text-align: center;
+  color: black;
 }
 
+a {
+  text-decoration: none;
+}
 
 .eventDescr {
   display: flex;

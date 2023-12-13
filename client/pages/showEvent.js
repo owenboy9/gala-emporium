@@ -4,7 +4,7 @@ import event from "./eventList.js"
 export default async function (eventId) {
   console.log(eventId)
   const event = await getEventData(eventId)
-  /*const club = await getClubs(event.club_id)*/
+
 
   let jsstarttime = new Date(event.start_time)
 
@@ -30,6 +30,7 @@ export default async function (eventId) {
     <div class="showEvent">
             <h1>${event.headline}</h1>
       <div class="eventDescr">
+           <a href="#${event.club_case}"><h2 class="eventClub">${event.club_name}</h2></a>
       <h2>${event.description_short}</h2>
       <div class="eventDetails">
        <div class="eventDatum">
@@ -58,17 +59,14 @@ export default async function (eventId) {
 }
 
 async function getEventData(eventId) {
+  console.log("Before fetch:", eventId);
   let response = await fetch(`/api/getIndividualEvents/${eventId}`)
   let result = await response.json();
   console.log(result)
   return result
 }
 
-/*async function getClubs(club_id) {
-  const response = await fetch(`/api/getclub/${club_id}`)
-  const data = await response.json()
-  return data
-}*/
+
 
 function getMonthName(month) {
   console.log(month)
