@@ -58,7 +58,7 @@ export default async function (eventId) {
 }
 
 async function getEventData(eventId) {
-  let response = await fetch(`/api/getEventData/${eventId}`)
+  let response = await fetch(`/api/getIndividualEvents/${eventId}`)
   let result = await response.json();
   console.log(result)
   return result
