@@ -163,10 +163,10 @@ async function submitBooking(no_tickets, code, eventId, eventTickets) {
 async function adjustTickets(newTickets, eventId) {
   console.log(newTickets, eventId)
 
-  /* tror man ist f att göra eventId till ett tal måste göra newTickets till en sträng, ej ett värde eller nåt, medn det är kanske ddet som själva put-en gör i registerBooking
-  jämför med puten i Bookstorekoden, ddär sätter  han in  [name: bookName]
+  /* tror man ist f att göra eventId till ett tal måste göra newTickets till en sträng, ej ett värde eller nåt, (medn det är kanske ddet som själva put-en gör i registerBooking)
+  jämför med fetchen i Bookstorekoden, ddär sätter  han in  {name: bookName}
   
-  om man ändå ska parseInt eventId så funkar det om man gör det innan try:en
+  om man ändå ska parseInt eventId så funkar det om man gör det innan try:en och inte inuti
   testa:
   async function adjustTickets(newTickets, event) {
     console.log(newTickets, event)
