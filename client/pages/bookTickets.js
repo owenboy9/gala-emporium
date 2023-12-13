@@ -25,6 +25,8 @@ export default async function (eventId) {
 
   let html = `
   <link rel="stylesheet" href="./styles/bookTickets.css">
+
+  <div class="bookTicketsContainer">
     <div class="bookTickets">
       <h2>Booking tickets </h2>
       
@@ -74,6 +76,7 @@ export default async function (eventId) {
       
     </script>
      
+     </div>
      </div>
     `
   return html
@@ -189,6 +192,7 @@ async function adjustTickets(newTickets, eventId) {
     const result = await response.json()
     console.log(result)
     console.log('Tickets updated')
+    $('#tickets').html('Your tickets have been booked. Enjoy the show!')
   } catch (error) {
     console.error('Error during fetch:', error)
     console.log('Failed to update tickets', error)

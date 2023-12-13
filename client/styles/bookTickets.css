@@ -10,3 +10,18 @@
 
 }
 */
+
+.bookTickets {
+  background-color: aliceblue;
+  padding: 1vw;
+}
+
+#tickets {
+  background-color: aliceblue;
+  padding: 1vw;
+}
+
+.bookTicketsContainer {
+  background-color: aliceblue;
+  padding: 1vw;
+}
