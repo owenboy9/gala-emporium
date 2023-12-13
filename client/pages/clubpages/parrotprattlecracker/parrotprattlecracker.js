@@ -108,7 +108,7 @@ function createEventList(clubEvents) {
         - <span class="eventItemTime">${endHour}</span>:<span class="eventItemTime">${endMinute}</span>
 
         <div class="parrotEventDescription">${event.description_long}</div>
-        <div class="eventItemButton eventItemReadMore" onclick="openEventPage(${event.id})">Read more</div>
+        <div class="eventItemButton eventItemReadMore" onclick="showEventDetails(${event.id})">Read more</div>
       </div>
       
       <div class="parrotEventRight">
@@ -126,6 +126,10 @@ function createEventList(clubEvents) {
   return `
     <div>${events}</div>
   `
+  }
+
+  async function showEventDetails(eventId) {
+    
   }
 
 
