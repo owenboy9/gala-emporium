@@ -119,8 +119,9 @@ header {
   background-size: cover;
   border-radius: 20%;
 
-
 }
+
+
 
 main {
   display: flex;
@@ -155,10 +156,13 @@ footer {
   background-position: center;
   display: flex;
   justify-content: space-between;
+  color: rgb(28, 209, 188);
+
 }
 
 footer>* {
   width: 50%;
+  color: rgb(28, 209, 188);
 }
 
 #some {
@@ -169,13 +173,14 @@ footer>* {
 
 #some>* {
   padding: 2vw;
+
 }
 
 #some>a {
   font-style: normal;
   text-decoration: none;
-  color: black;
-
+  color: rgb(28, 209, 188);
+  background-image: url(../pages/gala/media/greenc.jpg);
 }
 
 
@@ -346,10 +351,16 @@ footer>* {
 .eventManagerContainer {
   background-color: #d7d6d6;
   padding: 1vw;
+  border-radius: 10%;
+  opacity: 0.9;
+  font-family: 'Onest',
+    sans-serif;
+  max-width: 65%;
 }
 
 .eventManagerContainer h1 {
   text-align: left;
+  font-family: 'Kalnia', serif;
 }
 
 .editor {
@@ -363,10 +374,15 @@ footer>* {
 .eventEditFormButton {
   width: auto;
   margin-top: 0.5vw;
+  width: 14vw;
 }
 
 .eventEditTimeContainer {
   display: flex;
+}
+
+.eventEditTimeContainer>.eventEditInputBox {
+  width: 7vw;
 }
 
 
