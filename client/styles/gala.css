@@ -1,4 +1,5 @@
 #left {
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,16 +7,21 @@
   color: rgb(28, 209, 188);
 }
 
-
+.GE-info>p {
+  color: rgb(102, 234, 218);
+  opacity: none;
+  font-family: 'Kalnia', serif;
+}
 
 h1 {
   background-image: url(../pages/gala/media/ljuskrona.jpg);
-
   border-radius: 30%;
   width: fit-content;
   text-shadow: 0.5px 0.5px 2.5px white;
   padding: 2vw;
 }
+
+
 
 .image {
   width: 80%;

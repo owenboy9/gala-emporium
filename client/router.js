@@ -31,11 +31,6 @@ async function router() {
       $("main").html(await eventList())
       break;
 
-    case "#about":
-      console.log(window.location.hash)
-      $("main").html(await gala())
-      break;
-
     case "#parrot":
       $("main").html(await parrot())
       break;
