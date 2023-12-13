@@ -1,7 +1,7 @@
 import event from "./eventList.js"
 
 export default async function (eventId) {
-  console.log(eventId)
+  console.log("Event id i default-funktionen", eventId)
   const event = await getEventData(eventId)
 
   let jsstarttime = new Date(event.start_time)
@@ -45,6 +45,9 @@ export default async function (eventId) {
           There are currently ${event.tickets} tickets available at ${event.ticket_price} kr each.</br></br>
       
       <button id="confirmButton">Book!</button>
+      <input type="hidden" id="eventId" name="eventId" value="${event.id}">
+      <input type="hidden" id="eventTickets" name="eventTickets" value="${event.tickets}">
+
     </form>
     <script>
       const btn = document.querySelector('#confirmButton');
@@ -57,8 +60,11 @@ export default async function (eventId) {
        let ok=confirm("You want to book "+sb.value+" tickets. Sum total is "+total+" kr.")
        if (ok=true) {
         const code = generateCode();
-        console.log (code);
-        let email=prompt("Your tickets are reserved. "+code+" is your booking number. Please present it at the Gala Emporium entrance. We accept Mastercard and Visa cars, Swish and cash in SEK. Enjoy your show! If you want your reservation details sent to you please enter your e-mail here:") ;
+                console.log (code);
+                console.log(eventId)
+                submitBooking (sb.value, code, eventId.value, eventTickets.value)
+
+                let email=prompt("Your tickets are reserved. "+code+" is your booking number. Please present it at the Gala Emporium entrance. We accept Mastercard and Visa cars, Swish and cash in SEK. Enjoy your show! If you want your reservation details sent to you please enter your e-mail here:") ;
        
        console.log(email)}
 
@@ -122,3 +128,54 @@ let html = `
     </div>
   
   `*/
+
+
+async function submitBooking(no_tickets, code, eventId, eventTickets) {
+  console.log(no_tickets, code, eventId)
+
+  let booking = {
+    event_id: eventId,
+    booking_no: code,
+    no_tickets: no_tickets
+
+  }
+
+  console.log('booking to be added', booking)
+
+  try {
+    const response = await fetch("api/registerBooking", {
+      method: 'post',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(booking)
+    })
+    const result = await response.json()
+    console.log(result)
+    alert('Booking confirmed')
+    let newTickets = eventTickets - no_tickets
+    adjustTickets(newTickets, eventId)
+
+  } catch (error) {
+    console.error('Error during fetch:', error)
+    alert('Failed to submit booking', error)
+  }
+
+}
+async function adjustTickets(newTickets, eventId) {
+  console.log(newTickets, eventId)
+  try {
+    const response = await fetch(`api/registerBooking/${parseInt(eventId, 10)}`, {
+      method: 'put',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newTickets)
+    })
+    const result = await response.json()
+    console.log(result)
+    console.log('Tickets updated')
+  } catch (error) {
+    console.error('Error during fetch:', error)
+    console.log('Failed to update tickets', error)
+  }
+
+}
+
+window.submitBooking = submitBooking

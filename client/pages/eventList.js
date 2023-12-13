@@ -127,8 +127,7 @@ function createEventList(eventData) {
       </div>
       
       <div class="eventItemRight">
-        <div class="eventItemButton">TICKETS</div>
-        <div class="eventItemTickets">${event.tickets} tickets available</div>
+        <div class="eventItemButton" onclick="openTicketPage(${event.id})">BOOK TICKETS</br>${event.tickets} tickets available</div>
       </div>
     
     </section>

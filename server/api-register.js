@@ -14,7 +14,7 @@ import gala from "./apis/gala.js"
 import getEventData from "./apis/getEventData.js"
 import eventEditor from "./apis/eventEditor.js";
 import getClubFromUserId from "./apis/getClubFromUserId.js";
-
+import registerBooking from "./apis/registerBooking.js";
 
 export default function (server, db) {
   // connect rest api:s to web server and database
@@ -32,4 +32,5 @@ export default function (server, db) {
   getEventData(server, db)
   eventEditor(server, db)
   getClubFromUserId(server, db)
+  registerBooking(server, db)
 }
