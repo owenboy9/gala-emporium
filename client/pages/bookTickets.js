@@ -64,7 +64,7 @@ export default async function (eventId) {
                 console.log(eventId)
                 submitBooking (sb.value, code, eventId.value, eventTickets.value)
 
-                let email=prompt("Your tickets are reserved. "+code+" is your booking number. Please present it at the Gala Emporium entrance.\nWe accept Mastercard and Visa, Swish and cash in SEK.\nEnjoy your show!\nIf you want your reservation details sent to you please enter your e-mail here:") ;
+                let email=prompt("Your tickets are reserved. "+code+" is your booking number. Please present it at the Gala Emporium entrance. *** We accept Mastercard and Visa, Swish and cash in SEK. *** Enjoy your show! *** If you want your reservation details sent to you please enter your e-mail here:") ;
        
        console.log(email)}
 
