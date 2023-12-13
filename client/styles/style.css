@@ -41,7 +41,6 @@ body {
 
 header {
   background-image: url(../pages/gala/media/greenc.jpg);
-  opacity: 0.5;
   background-position: top;
   background-size: cover;
   display: flex;
@@ -148,14 +147,10 @@ h1 {
     sans-serif;
 }
 
-.calendar {
-  opacity: 0.6;
-}
-
 
 footer {
   background-image: url(../pages/gala/media/backdrop.jpg);
-  opacity: 0.4;
+
   background-position: center;
   display: flex;
   justify-content: space-between;
