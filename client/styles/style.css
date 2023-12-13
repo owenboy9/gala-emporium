@@ -37,7 +37,9 @@ body {
   top: 0;
   right: 0;
   padding: 0.4vw;
+  opacity: 0.5;
 }
+
 
 header {
   background-image: url(../pages/gala/media/greenc.jpg);
@@ -150,7 +152,6 @@ h1 {
 
 footer {
   background-image: url(../pages/gala/media/backdrop.jpg);
-
   background-position: center;
   display: flex;
   justify-content: space-between;
@@ -185,6 +186,8 @@ footer>* {
 
 .eventsWrapper {
   width: 100%;
+  font-family: 'Onest',
+    sans-serif;
 }
 
 .eventItem {
