@@ -5,6 +5,8 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  font-family: 'Onest',
+    sans-serif;
 }
 
 main {

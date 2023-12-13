@@ -1,6 +1,8 @@
 .showEvent {
   display: flex;
   flex-direction: row;
+  font-family: 'Onest',
+    sans-serif;
 }
 
 .showEvent>* {
