@@ -1,13 +1,15 @@
 export default async function (server, db) {
+  
   server.put('/api/registerBooking/:id', async (req, res) => {
-    if (req.body.newTickets > 0) {
-      const result = await db.query("UPDATE events SET tickets = ? WHERE id = ?", [req.body.newTickets, req.params.id])
+    if (req.body.tickets > 0) {
+      const result = await db.query("UPDATE events SET tickets = ? WHERE id = ?", [req.body.tickets, req.params.id])
       result.ticketUpdated = true
       res.json(result)
       console.log("Result - ", result);
     } else {
       res.status(401)
       res.json({ ticketUpdated: false })
+      console.log(result)
     }
   })
 

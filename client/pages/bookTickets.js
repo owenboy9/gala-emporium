@@ -178,8 +178,10 @@ async function adjustTickets(newTickets, eventId) {
   fast den skriver tickeds updated fast ticketUpdated=false
   */
 
+  console.log('new tickets', newTickets, 'eventId', parseInt(eventId, 10))
+
   try {
-    const response = await fetch(`api/registerBooking/${eventId}`, {
+    const response = await fetch(`api/registerBooking/${parseInt(eventId, 10)}`, {
       method: 'put',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ tickets: newTickets })
