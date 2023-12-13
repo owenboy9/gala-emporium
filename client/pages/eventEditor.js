@@ -2,7 +2,7 @@ let events
 
 export default async function (userId) {
   events = await getEventData(userId)
-  
+
   console.log(userId, events)
   let clubname = events[0].clubname
   let html = `
@@ -17,8 +17,8 @@ export default async function (userId) {
   `
 
   return html
-} 
- 
+}
+
 
 async function getEventData(userId) {
   let response = await fetch(`/api/eventEditor/${userId}`)
@@ -31,7 +31,7 @@ function showEvents(events) {
   let html = ``
   let index = 0
   for (let event of events) {
-      
+
     html += `
 
      <div class="eventEditWrapper"> 
@@ -56,10 +56,10 @@ function fixTime(event) {
   let html = ``
   let jsstarttime = new Date(event.start_time)
   let weekday = jsstarttime.getUTCDay()
-  let date = jsstarttime.getUTCDate()
-  let month = jsstarttime.getUTCMonth()
-  let year = jsstarttime.getUTCFullYear()
-  let startHour = padZero(jsstarttime.getUTCHours())
+  let date = jsstarttime.getDate()
+  let month = jsstarttime.getMonth()
+  let year = jsstarttime.getFullYear()
+  let startHour = padZero(jsstarttime.getHours())
   let startMinute = padZero(jsstarttime.getUTCMinutes())
 
   html += `
@@ -93,7 +93,7 @@ function getDayName(weekday) {
 ///// edit event
 
 function openEventToEdit(index) {
-  
+
   console.log(index)
   let event = events[index]
   console.log(event)
@@ -107,16 +107,16 @@ function openEventToEdit(index) {
   console.log(elementId)
   $(elementId).html(html)
 
- /*  try {
-    const event = JSON.parse(eventObject);
-    console.log(event);
-    console.log('open event to edit', event.id);
-    let html = `<p>This is a test</p>`;
-    let elementId = `#event${event.id}`;
-    $(elementId).html(html);
-  } catch (error) {
-    console.error('Error parsing eventObject:', error);
-  } */
+  /*  try {
+     const event = JSON.parse(eventObject);
+     console.log(event);
+     console.log('open event to edit', event.id);
+     let html = `<p>This is a test</p>`;
+     let elementId = `#event${event.id}`;
+     $(elementId).html(html);
+   } catch (error) {
+     console.error('Error parsing eventObject:', error);
+   } */
 
 
 }

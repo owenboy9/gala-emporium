@@ -4,9 +4,13 @@ import clubs from "./pages/clubs.js"
 import parrot from "./pages/clubpages/parrotprattlecracker/parrotprattlecracker.js"
 import gala from "./pages/gala/gala.js"
 import notdeadyet from "./pages/clubpages/notdeadyet/notdeadyet.js"
-import akzepto from "./pages/clubpages/akzepto/akzepto.js";
+import akzepto from "./pages/clubpages/akzepto/akzepto.js"
+import magnificentmagicians from "./pages/clubpages/magnificentmagicians/magnificentmagicians.js"
+
+
 
 import login from "./components/login.js"
+
 
 $('#login').html(login())
 
@@ -27,7 +31,6 @@ async function router() {
       $("main").html(await eventList())
       break;
 
-
     case "#about":
       console.log(window.location.hash)
       $("main").html(await gala())
@@ -36,7 +39,10 @@ async function router() {
     case "#parrot":
       $("main").html(await parrot())
       break;
-    
+
+    case "#magicians":
+      $("main").html(await magnificentmagicians())
+
     case "#akzepto":
       $("main").html(await akzepto())
       break;
@@ -44,6 +50,7 @@ async function router() {
     case "#notdeadyet":
       $("main").html(await notdeadyet())
       break;
+
 
     default:
       $("main").html("<h1>Denna sida finns inte!</h1>")

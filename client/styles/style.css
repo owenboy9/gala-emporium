@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@700&family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400&display=swap');
+
 
 body {
+  background-image: url(../pages/gala/media/interior.jpeg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
   display: block;
   font-family: 'Onest',
     sans-serif;
-    margin: 2vw;
+  margin: 2vw;
 }
 
 #adminBar {
@@ -20,6 +26,11 @@ body {
 #adminBar p {
   margin: 0 1vw 0 0;
   padding: 0;
+  color: white;
+}
+
+.adminBarButton {
+  margin-left: 0.5vw;
 }
 
 #logInOut {
@@ -30,6 +41,9 @@ body {
 }
 
 header {
+  background-image: url(../pages/gala/media/headerback.jpeg);
+  background-position: top;
+  background-size: cover;
   display: flex;
   justify-content: end;
   height: 15vw;
@@ -37,7 +51,7 @@ header {
 
 #site-logo {
   width: 40%;
-  height: 100%;
+  height: 120%;
 
 }
 
@@ -50,51 +64,58 @@ header {
   width: 60%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: end;
 }
 
-#menu {
-  display: flex;
-}
-
-#menu>nav>a {
-  font-style: normal;
-  text-decoration: none;
-  color: black;
-
-}
-
 #klubbknappar {
-  align-self: center;
   display: flex;
   justify-content: space-between;
 }
 
-#klubbknappar>img {
-  margin: 1vw;
-  max-height: 5vw;
-  border-radius: 50%;
-}
+#klubbknappar>a {
+  margin: 0 3vw 2vw;
 
-
-
-#klubbknappar {
-  align-self: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-#klubbknappar>img {
-  margin: 1vw;
-  max-height: 5vw;
-  border-radius: 50%;
 }
 
 #klubbknappar>a>img {
-  margin: 1vw;
+  margin: 0.5vw;
   max-height: 5vw;
   border-radius: 50%;
+}
+
+#klubbknappar>a:hover {
+  background-image: url(../pages/gala/media/backsoffa.jpeg);
+  border-radius: 50%;
+
+}
+
+#menu>nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1vw;
+
+}
+
+#menu>nav>a {
+  font-family: 'Kalnia', serif;
+  font-style: bold;
+  font-weight: 700;
+  border-radius: 20%;
+  padding: 0.5vw;
+  margin: 0 3vw;
+  font-style: normal;
+  text-decoration: none;
+  color: rgb(228, 158, 36);
+  text-shadow: 0.5px 0.5px 2.5px black;
+}
+
+#menu>nav>a:hover {
+  background-image: url(../pages/gala/media/backsoffa.jpeg);
+  background-size: cover;
+  border-radius: 20%;
+
+
 }
 
 main {
@@ -103,9 +124,12 @@ main {
   margin: 2vw;
 }
 
+h1 {
+  text-align: center;
+}
 
 #left {
-  width: 70%;
+  width: 60%;
   text-align: center;
   text-wrap: wrap;
   padding: 2vw;
@@ -116,10 +140,15 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30%;
+  width: 40%;
 }
 
+
+
+
 footer {
+  background-image: url(../pages/gala/media/backdrop.jpg);
+  background-position: center;
   display: flex;
   justify-content: space-between;
 }
@@ -162,7 +191,6 @@ footer>* {
   width: 100%;
   margin: 0.5vw;
   padding: 15px;
-  box-shadow: 2px 2px 3px 2px #d7d6d6;
 }
 
 .eventItemLeft {
@@ -206,6 +234,7 @@ footer>* {
   width: auto;
   cursor: pointer;
 }
+
 
 .eventItemReadMore {
   margin-top: 1vw;
@@ -294,6 +323,37 @@ footer>* {
   margin-bottom: 0.5vw;
 }
 
+.eventEditForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.eventEditForm p {
+  margin: 0;
+  padding: 0;
+}
+
+.eventEditInputBox {
+  margin-bottom: 0.5vw;
+}
+
+.editor {
+  margin: 0.3vw 0 1vw 0;
+  box-sizing: border-box;
+  background-color: antiquewhite;
+  padding: 0.5vw;
+  border-radius: 10px;
+}
+
+.eventEditFormButton {
+  width: auto;
+  margin-top: 0.5vw;
+}
+
+.eventEditTimeContainer {
+  display: flex;
+}
+
 
 #clubs {
   width: 60vw;
@@ -323,5 +383,3 @@ footer>* {
   padding: 10px;
   margin-left: 1vw;
 }
-
-

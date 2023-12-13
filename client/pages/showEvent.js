@@ -1,3 +1,4 @@
+import eventList from "./eventList.js"
 import event from "./eventList.js"
 
 export default async function (eventId) {
@@ -7,15 +8,15 @@ export default async function (eventId) {
   let jsstarttime = new Date(event.start_time)
 
   let day = jsstarttime.getUTCDay()
-  let date = jsstarttime.getUTCDate()
-  let month = jsstarttime.getUTCMonth()
-  let year = jsstarttime.getUTCFullYear()
+  let date = jsstarttime.getDate()
+  let month = jsstarttime.getMonth()
+  let year = jsstarttime.getFullYear()
 
   function padZero(value) {
     return value < 10 ? `0${value}` : `${value}`
   }
 
-  let startHour = padZero(jsstarttime.getUTCHours())
+  let startHour = padZero(jsstarttime.getHours())
   let startMinute = padZero(jsstarttime.getUTCMinutes())
 
 
@@ -37,14 +38,12 @@ export default async function (eventId) {
       </div>
   
       <p>${event.description_long}</p>
+      <div class="closeButton" onclick="openAllEventsPage()">Back to all events</div>
+      
       </div>
     </div>
   
   `
-
-
-
-
 
   return html
 
@@ -64,5 +63,19 @@ function getMonthName(month) {
   return months[index]
 }
 
+async function openAllEventsPage() {
+  $("main").html(await eventList())
+}
 
+window.openAllEventsPage = openAllEventsPage
 
+/*
+function closeEventPage() {
+  console.log("Closing event page");
+  setTimeout(() => {
+    window.close();
+  }, 100);
+}
+
+window.CloseEvent = closeEventPage
+*/

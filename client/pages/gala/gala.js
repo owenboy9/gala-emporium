@@ -5,12 +5,18 @@ export default async function () {
   const aboutData = galaAbout.length > 0 ? galaAbout[0] : {};
 
   return `
+  <link rel="stylesheet" href="./styles/gala.css">
     <h1>Gala Emporium</h1>
-    <div>
+    <div class="GE-info">
       <p>${aboutData.about_us || 'Not available'}</p>
       <p>${aboutData.manifesto || 'Not available'}</p>
-      <!-- Add more HTML elements for other properties -->
+
     </div>
+
+    <div class="image">
+  <img src="pages/gala/media/fancyBar.jpeg">
+  <img src="pages/gala/media/bar.jpeg">
+  </div>
   `;
 }
 

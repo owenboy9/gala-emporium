@@ -1,4 +1,5 @@
-import eventEditor from "../pages/eventEditor.js"
+import eventManager from "../pages/eventManager.js"
+import newEvent from "../pages/newEvent.js"
 
 export default function init() {
   return `
@@ -27,13 +28,15 @@ async function login() {
   let result = await response.json();
   console.log(result)
   if (result.loggedIn) {
+    let club = await getClub(result.userId)
+    console.log(club[0].manifesto)
     $('#logInOut').html(`
       <button onclick="logout()">Logout</button>
     `)
     $('#adminBar').html(`
-      <p>Welcome, ${result.username}</p>
-      <button onclick="openEditor(${result.userId})">Manage your events</button>
-
+      <p>Welcome, ${result.username}, admin of ${club[0].name}</p>
+      <button class="adminBarButton" onclick="openEditor(${result.userId})">Manage your events</button>
+      <button class="adminBarButton" onclick="openNewEvent(${club[0].id})">Add new event</button>
      `)
     document.getElementById('adminBar').style.backgroundColor = 'red' 
   }
@@ -42,10 +45,16 @@ async function login() {
 window.login = login // expose login to global (html) scope
 
 async function openEditor(userId) {
-  $("main").html(await eventEditor(userId))
+  $("main").html(await eventManager(userId))
 }
 
 window.openEditor = openEditor
+
+async function openNewEvent(clubId) {
+  $("main").html(await newEvent(clubId))
+}
+
+window.openNewEvent = openNewEvent
 
 async function logout() {
   console.log('sir, logging out?')
@@ -69,10 +78,25 @@ async function checkLogin() {
   const result = await response.json()
   console.log(result)
   if (result.loggedIn || result.email) {
-    $('#login').html(`
+    let club = await getClub(result.userId)
+    $('#logInOut').html(`
       <button onclick="logout()">Logout</button>
     `)
+    $('#adminBar').html(`
+      <p>Welcome, ${result.username}, admin of ${club[0].name}</p>
+      <button class="adminBarButton" onclick="openEditor(${result.userId})">Manage your events</button>
+      <button class="adminBarButton" onclick="openNewEvent(${club[0].id})">Add new event</button>
+
+     `)
+    document.getElementById('adminBar').style.backgroundColor = 'red' 
   }
+}
+
+async function getClub(userId) {
+  const response = await fetch(`api/getClubFromUserId/${userId}`)
+  const club = await response.json()
+  console.log(club)
+  return club
 }
 
 checkLogin() // will execute on load

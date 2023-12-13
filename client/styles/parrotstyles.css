@@ -1,0 +1,130 @@
+
+
+body {
+  background-color: #c9d9f0;
+  background-image: none;
+}
+
+h1 {
+  background-image: none;
+}
+
+header {
+  background-image: none;
+}
+
+main {
+  margin-top: 5vw;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+
+#parrotLeft {
+  flex: 6; /* Takes up 70% of the width */
+  padding: 2vw;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+#parrotRight {
+  flex: 4;
+  padding: 1vw;
+  box-sizing: border-box;
+}
+
+.parrotImageFull {
+  width: 100%;
+}
+
+#headline {
+  flex: 9; /* Takes up 90% of the left section */
+  display: flex;
+}
+
+#headline img {
+  object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+  height: 14vw; /* Take up 100% height of the container */
+  margin: 0 5px; /* Optional margin between images */
+}
+
+.parrotShout {
+  font-size: 3vw;
+  margin: 0 0 2vw 0;
+  padding: 0;
+}
+
+.parrotEventItem {
+  display: flex;
+  background-color: rgb(156, 156, 156);
+  width: 38vw;
+  margin: 1vw;
+  padding: 0.5vw;
+}
+
+
+.parrotEventLeft {
+  width: 7vw;
+  margin-right: 1.5vw;
+  padding: 0.5vw 0 0.5vw 0.5vw;
+}
+
+.parrotEventDate {
+  width: 5vw;
+  min-width: 50px;
+  padding: 0.5vw;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.parrotEventDateText {
+  font-size: 0.8em;
+}
+
+.parrotEventMiddle {
+  background-color: none;
+  width: 25vw;
+  padding: 0.5vw 1vw 0.5vw 0;
+}
+
+.parrotEventMiddle h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.parrotEventMiddle p {
+  margin: 0;
+  padding: 0;
+}
+
+.parrotEventRight {
+  padding: 0.5vw 0 0.5vw 0.5vw;
+}
+
+.manifesto {
+  background-color: #98aecc;
+  padding: 1.5vw;
+}
+
+.manifesto p {
+  margin: 0;
+  padding: 0;
+}
+
+.color1 {
+  background-color: #b4d33a;
+}
+
+.color2 {
+  background-color: #d3bddc;
+}
+
+.color3 {
+  background-color: #b89bc9;
+}
+
