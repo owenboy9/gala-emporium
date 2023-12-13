@@ -343,6 +343,15 @@ footer>* {
   margin-bottom: 0.5vw;
 }
 
+.eventManagerContainer {
+  background-color: #d7d6d6;
+  padding: 1vw;
+}
+
+.eventManagerContainer h1 {
+  text-align: left;
+}
+
 .editor {
   margin: 0.3vw 0 1vw 0;
   box-sizing: border-box;
