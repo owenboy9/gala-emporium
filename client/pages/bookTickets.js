@@ -162,11 +162,27 @@ async function submitBooking(no_tickets, code, eventId, eventTickets) {
 }
 async function adjustTickets(newTickets, eventId) {
   console.log(newTickets, eventId)
+
+  /* tror man ist f att göra eventId till ett tal måste göra newTickets till en sträng, ej ett värde eller nåt, medn det är kanske ddet som själva put-en gör i registerBooking
+  jämför med puten i Bookstorekoden, ddär sätter  han in  [name: bookName]
+  
+  om man ändå ska parseInt eventId så funkar det om man gör det innan try:en
+  testa:
+  async function adjustTickets(newTickets, event) {
+    console.log(newTickets, event)
+   let eventId=parseInt(event)
+   console.log (newTickets, eventId)
+  övre blir '2', undre 2 utan.
+  
+  nu orkar jag inte mer, men nu är det iaf bara ett felmeddellande på PUT:en resten funkar 
+  fast den skriver tickeds updated fast ticketUpdated=false
+  */
+
   try {
-    const response = await fetch(`api/registerBooking/${parseInt(eventId, 10)}`, {
+    const response = await fetch(`api/registerBooking/${eventId}`, {
       method: 'put',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(newTickets)
+      body: JSON.stringify({ tickets: newTickets })
     })
     const result = await response.json()
     console.log(result)
@@ -179,3 +195,4 @@ async function adjustTickets(newTickets, eventId) {
 }
 
 window.submitBooking = submitBooking
+window.adjustTickets = adjustTickets
