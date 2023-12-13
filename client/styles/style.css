@@ -3,13 +3,12 @@
 
 
 body {
-  background-image: url(../pages/gala/media/interior.jpeg);
+  background-image: url(../pages/gala/media/greencurt.jpg);
   background-position: top;
   background-size: cover;
   background-attachment: fixed;
   display: block;
-  font-family: 'Onest',
-    sans-serif;
+  font-family: 'Kalnia', serif;
   margin: 2vw;
 }
 
@@ -41,7 +40,8 @@ body {
 }
 
 header {
-  background-image: url(../pages/gala/media/headerback.jpeg);
+  background-image: url(../pages/gala/media/greenc.jpg);
+  opacity: 0.5;
   background-position: top;
   background-size: cover;
   display: flex;
@@ -69,8 +69,10 @@ header {
 }
 
 #klubbknappar {
+  align-self: center;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 #klubbknappar>a {
@@ -85,15 +87,16 @@ header {
 }
 
 #klubbknappar>a:hover {
-  background-image: url(../pages/gala/media/backsoffa.jpeg);
+  background-image: url(../pages/gala/media/ljuskrona.jpg);
   border-radius: 50%;
 
 }
 
 #menu>nav {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 1vw;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
 
 }
 
@@ -101,17 +104,17 @@ header {
   font-family: 'Kalnia', serif;
   font-style: bold;
   font-weight: 700;
-  border-radius: 20%;
+  border-radius: 30%;
   padding: 0.5vw;
   margin: 0 3vw;
   font-style: normal;
   text-decoration: none;
-  color: rgb(228, 158, 36);
-  text-shadow: 0.5px 0.5px 2.5px black;
+  color: rgb(28, 209, 188);
+  text-shadow: black;
 }
 
 #menu>nav>a:hover {
-  background-image: url(../pages/gala/media/backsoffa.jpeg);
+  background-image: url(../pages/gala/media/backdrop.jpg);
   background-size: cover;
   border-radius: 20%;
 
@@ -141,13 +144,18 @@ h1 {
   flex-direction: column;
   align-items: center;
   width: 40%;
+  font-family: 'Onest',
+    sans-serif;
 }
 
-
+.calendar {
+  opacity: 0.6;
+}
 
 
 footer {
   background-image: url(../pages/gala/media/backdrop.jpg);
+  opacity: 0.4;
   background-position: center;
   display: flex;
   justify-content: space-between;
