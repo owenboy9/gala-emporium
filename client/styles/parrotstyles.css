@@ -78,7 +78,7 @@ h2 {
   min-width: 50px;
   padding: 0.5vw;
   text-align: center;
-  background-color: white;
+  background-color: rgb(255, 206, 206);
   border-radius: 10px;
 }
 
@@ -100,6 +100,10 @@ h2 {
 .parrotEventMiddle p {
   margin: 0;
   padding: 0;
+}
+
+.parrotEventDescription {
+  margin-top: 1vw;
 }
 
 .parrotEventRight {
