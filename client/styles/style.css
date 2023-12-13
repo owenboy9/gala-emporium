@@ -3,13 +3,12 @@
 
 
 body {
-  background-image: url(../pages/gala/media/interior.jpeg);
+  background-image: url(../pages/gala/media/greencurt.jpg);
   background-position: top;
   background-size: cover;
   background-attachment: fixed;
   display: block;
-  font-family: 'Onest',
-    sans-serif;
+  font-family: 'Kalnia', serif;
   margin: 2vw;
 }
 
@@ -38,10 +37,12 @@ body {
   top: 0;
   right: 0;
   padding: 0.4vw;
+
 }
 
+
 header {
-  background-image: url(../pages/gala/media/headerback.jpeg);
+  background-image: url(../pages/gala/media/greenc.jpg);
   background-position: top;
   background-size: cover;
   display: flex;
@@ -69,8 +70,10 @@ header {
 }
 
 #klubbknappar {
+  align-self: center;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 #klubbknappar>a {
@@ -85,15 +88,16 @@ header {
 }
 
 #klubbknappar>a:hover {
-  background-image: url(../pages/gala/media/backsoffa.jpeg);
+  background-image: url(../pages/gala/media/ljuskrona.jpg);
   border-radius: 50%;
 
 }
 
 #menu>nav {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 1vw;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
 
 }
 
@@ -101,22 +105,23 @@ header {
   font-family: 'Kalnia', serif;
   font-style: bold;
   font-weight: 700;
-  border-radius: 20%;
+  border-radius: 30%;
   padding: 0.5vw;
-  margin: 0 3vw;
+  margin: 1.4vw;
   font-style: normal;
   text-decoration: none;
-  color: rgb(228, 158, 36);
-  text-shadow: 0.5px 0.5px 2.5px black;
+  color: rgb(28, 209, 188);
+  text-shadow: black;
 }
 
 #menu>nav>a:hover {
-  background-image: url(../pages/gala/media/backsoffa.jpeg);
+  background-image: url(../pages/gala/media/backdrop.jpg);
   background-size: cover;
   border-radius: 20%;
 
-
 }
+
+
 
 main {
   display: flex;
@@ -133,6 +138,8 @@ h1 {
   text-align: center;
   text-wrap: wrap;
   padding: 2vw;
+  opacity: 0.8;
+  font-size: large;
 }
 
 
@@ -141,9 +148,9 @@ h1 {
   flex-direction: column;
   align-items: center;
   width: 40%;
+  font-family: 'Onest',
+    sans-serif;
 }
-
-
 
 
 footer {
@@ -151,10 +158,13 @@ footer {
   background-position: center;
   display: flex;
   justify-content: space-between;
+  color: rgb(28, 209, 188);
+
 }
 
 footer>* {
   width: 50%;
+  color: rgb(28, 209, 188);
 }
 
 #some {
@@ -165,13 +175,14 @@ footer>* {
 
 #some>* {
   padding: 2vw;
+
 }
 
 #some>a {
   font-style: normal;
   text-decoration: none;
-  color: black;
-
+  color: rgb(28, 209, 188);
+  background-image: url(../pages/gala/media/greenc.jpg);
 }
 
 
@@ -182,6 +193,8 @@ footer>* {
 
 .eventsWrapper {
   width: 100%;
+  font-family: 'Onest',
+    sans-serif;
 }
 
 .eventItem {
@@ -337,6 +350,21 @@ footer>* {
   margin-bottom: 0.5vw;
 }
 
+.eventManagerContainer {
+  background-color: #d7d6d6;
+  padding: 1vw;
+  border-radius: 10%;
+  opacity: 0.9;
+  font-family: 'Onest',
+    sans-serif;
+  max-width: 65%;
+}
+
+.eventManagerContainer h1 {
+  text-align: left;
+  font-family: 'Kalnia', serif;
+}
+
 .editor {
   margin: 0.3vw 0 1vw 0;
   box-sizing: border-box;
@@ -348,10 +376,15 @@ footer>* {
 .eventEditFormButton {
   width: auto;
   margin-top: 0.5vw;
+  width: 14vw;
 }
 
 .eventEditTimeContainer {
   display: flex;
+}
+
+.eventEditTimeContainer>.eventEditInputBox {
+  width: 7vw;
 }
 
 

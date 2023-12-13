@@ -8,7 +8,7 @@ export default async function eventManager(userId) {
   let clubname = events[0].clubname
   let club_id = events[0].club_id
   let html = `
-    <div>
+    <div class="eventManagerContainer">
       <h1>Event manager</h1>
       <h2>Edit, add or delete your events</h2>
       <p>You are currently logged in as club admin for ${clubname}</p>

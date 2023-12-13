@@ -34,7 +34,7 @@ export default async function () {
 
   const today = new Date()
   const aMonthFromNow = new Date(today)
-  aMonthFromNow.setUTCMonth(today.getUTCMonth() + 1)
+  aMonthFromNow.setMonth(today.getMonth() + 1)
 
   const filteredEvents = sortedEventData.filter(event => new Date(event.start_time) <= aMonthFromNow)
   const eventsNotWithinMonth = eventData.filter(event => new Date(event.start_time) > aMonthFromNow);
@@ -68,7 +68,7 @@ function createEventList(eventData) {
 
     let jsstarttime = new Date(event.start_time)
 
-    let weekday = jsstarttime.getUTCDay()
+    let weekday = jsstarttime.getDay()
     let date = jsstarttime.getDate()
     let month = jsstarttime.getMonth()
     let year = jsstarttime.getFullYear()
@@ -79,7 +79,7 @@ function createEventList(eventData) {
     }
 
     let startHour = padZero(jsstarttime.getHours())
-    let startMinute = padZero(jsstarttime.getUTCMinutes())
+    let startMinute = padZero(jsstarttime.getMinutes())
 
 
     if (startMinute === '0') {

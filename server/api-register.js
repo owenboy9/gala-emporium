@@ -16,6 +16,7 @@ import eventEditor from "./apis/eventEditor.js";
 import getClubFromUserId from "./apis/getClubFromUserId.js";
 import registerBooking from "./apis/registerBooking.js";
 
+
 export default function (server, db) {
   // connect rest api:s to web server and database
   events(server, db)

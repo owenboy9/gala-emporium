@@ -1,7 +1,7 @@
 export default async function (clubId) {
   let event
   let html = `
-    <div>
+    <div class="eventManagerContainer">
       <h1>Add new event</h1>
       <h2>Please fill out event information</h2>
 

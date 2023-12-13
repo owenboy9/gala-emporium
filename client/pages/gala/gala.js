@@ -14,7 +14,9 @@ export default async function () {
     </div>
 
     <div class="image">
+    <img src="pages/gala/media/mainstage.jpeg">
   <img src="pages/gala/media/fancyBar.jpeg">
+  <img src="pages/gala/media/redinterior.jpeg">
   <img src="pages/gala/media/bar.jpeg">
   </div>
   `;

@@ -4,10 +4,11 @@ import event from "./eventList.js"
 export default async function (eventId) {
   console.log(eventId)
   const event = await getEventData(eventId)
+  /*const club = await getClubs(event.club_id)*/
 
   let jsstarttime = new Date(event.start_time)
 
-  let day = jsstarttime.getUTCDay()
+  let day = jsstarttime.getDay()
   let date = jsstarttime.getDate()
   let month = jsstarttime.getMonth()
   let year = jsstarttime.getFullYear()
@@ -17,7 +18,7 @@ export default async function (eventId) {
   }
 
   let startHour = padZero(jsstarttime.getHours())
-  let startMinute = padZero(jsstarttime.getUTCMinutes())
+  let startMinute = padZero(jsstarttime.getMinutes())
 
 
   if (startMinute === '0') {
@@ -27,18 +28,25 @@ export default async function (eventId) {
   let html = `
 <link rel="stylesheet" href="./styles/showEvent.css">
     <div class="showEvent">
-      <h1>${event.headline}</h1>
+            <h1>${event.headline}</h1>
       <div class="eventDescr">
+      <h2>${event.description_short}</h2>
       <div class="eventDetails">
+       <div class="eventDatum">
       <p class="eventDay">${date} ${getMonthName(month)} ${year} </p>
       <p class="eventTime">${startHour}:${startMinute} </p>
+      </div>
       
       <p class="ticketsLeft">${event.tickets} tickets available</p>
       <p class="price">${event.ticket_price} kr</p>
+
       </div>
+      <div class="eventItemButton">TICKETS</div>
   
       <p>${event.description_long}</p>
-      <div class="closeButton" onclick="openAllEventsPage()">Back to all events</div>
+      
+      <div class="closeButton" onclick="openAllEventsPage()">To all events</div>
+       
       
       </div>
     </div>
@@ -56,6 +64,12 @@ async function getEventData(eventId) {
   return result
 }
 
+/*async function getClubs(club_id) {
+  const response = await fetch(`/api/getclub/${club_id}`)
+  const data = await response.json()
+  return data
+}*/
+
 function getMonthName(month) {
   console.log(month)
   let index = month
@@ -69,13 +83,3 @@ async function openAllEventsPage() {
 
 window.openAllEventsPage = openAllEventsPage
 
-/*
-function closeEventPage() {
-  console.log("Closing event page");
-  setTimeout(() => {
-    window.close();
-  }, 100);
-}
-
-window.CloseEvent = closeEventPage
-*/

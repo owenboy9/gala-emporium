@@ -69,6 +69,7 @@ function createEventList(clubEvents) {
     <div class="eventInfo">
     <h2>${event.headline}</h2>
     <p>${event.description_short}</p>
+    <div class="eventItemButton eventItemReadMore" onclick="openEventPage(${event.id})">Read more</div>
     </div>
     </div>
     `

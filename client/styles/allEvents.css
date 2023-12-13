@@ -25,6 +25,7 @@ h1 {
   color: black;
   text-shadow: none;
   background-image: url(../pages/gala/media/ljuskrona.jpg);
+  opacity: 0.85;
   border-radius: 20%;
   width: fit-content;
   align-self: flex-start;
@@ -49,12 +50,16 @@ h1 {
 
 }
 
+.allEvents>h1 {
+  opacity: 0.85;
+}
 
 .eventItem {
   background-image: url(../pages/clubpages/notdeadyet/images/publik.JPG);
   background-position: center;
   background-size: cover;
   border-radius: 10px;
+  opacity: 0.85;
 }
 
 
