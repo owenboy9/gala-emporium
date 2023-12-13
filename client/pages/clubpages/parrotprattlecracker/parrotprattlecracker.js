@@ -79,8 +79,12 @@ function createEventList(clubEvents) {
     let date = jsstarttime.getDate()
     let month = jsstarttime.getMonth()
     let year = jsstarttime.getFullYear()
-    let startHour = padZero(jsstarttime.getUTCHours())
-    let startMinute = padZero(jsstarttime.getUTCMinutes())
+    let startHour = padZero(jsstarttime.getHours())
+    let startMinute = padZero(jsstarttime.getMinutes())
+
+    let jsEndTime = new Date(event.end_time)
+    let endHour = padZero(jsEndTime.getHours())
+    let endMinute = padZero(jsEndTime.getMinutes())
 
 
 
@@ -101,7 +105,9 @@ function createEventList(clubEvents) {
       <div class="parrotEventMiddle">
         <h2>${event.headline}</h2>
         <span class="eventItemTime">${startHour}</span>:<span class="eventItemTime">${startMinute}</span>
-        <p>${event.description_long}</p>
+        - <span class="eventItemTime">${endHour}</span>:<span class="eventItemTime">${endMinute}</span>
+
+        <div class="parrotEventDescription">${event.description_long}</div>
         <div class="eventItemButton eventItemReadMore" onclick="openEventPage(${event.id})">Read more</div>
       </div>
       
