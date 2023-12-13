@@ -9,7 +9,7 @@ export default async function () {
     <h1>Gala Emporium</h1>
     <div class="GE-info">
       <p>${aboutData.about_us || 'Not available'}</p>
-      <p>blibbediblop</p>
+      <p>${aboutData.manifesto || 'Not available'}</p>
 
     </div>
 
