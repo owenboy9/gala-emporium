@@ -46,9 +46,13 @@ a>h2:hover {
   color: rgba(81, 78, 78);
   text-shadow: none;
   -webkit-text-stroke-color: rgba(81, 78, 78);
-
 }
 
+h3 {
+  max-height: 15em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 a {
   align-self: center;
@@ -71,7 +75,7 @@ a>p:hover {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  max-height: 100vw;
+  max-height: 80vw;
 }
 
 .club {

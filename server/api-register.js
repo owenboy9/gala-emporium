@@ -16,6 +16,7 @@ import eventEditor from "./apis/eventEditor.js";
 import getClubFromUserId from "./apis/getClubFromUserId.js";
 
 
+
 export default function (server, db) {
   // connect rest api:s to web server and database
   events(server, db)
@@ -32,4 +33,4 @@ export default function (server, db) {
   getEventData(server, db)
   eventEditor(server, db)
   getClubFromUserId(server, db)
-}
+ }

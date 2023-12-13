@@ -32,6 +32,7 @@ export default async function () {
 }
 
 async function getClubData(clubName) {
+  console.log(clubName)
   let response = await fetch('/api/getclub', {
     method: 'post',
     // and that we will send data json formatted
