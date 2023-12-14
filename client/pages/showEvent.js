@@ -1,4 +1,5 @@
 import eventList from "./eventList.js"
+import bookTickets from "./bookTickets.js"
 import event from "./eventList.js"
 
 export default async function (eventId) {
@@ -43,7 +44,7 @@ export default async function (eventId) {
       <p class="price">${event.ticket_price} kr</p>
 
       </div>
-      <div class="eventItemButton">TICKETS</div>
+      <div class="eventItemButton" onclick="openTicketPage(${event.id})">BOOK TICKETS</br></div>
   
       <p>${event.description_long}</p>
       <a href="#${event.club_case}"><p class="back">Back to ${event.club_name}</p></a>
@@ -80,6 +81,12 @@ async function openAllEventsPage() {
   $("main").html(await eventList())
 }
 
+async function openTicketPage(eventId) {
+  $("main").html(await bookTickets(eventId))
+}
+
+
+window.openTicketPage = openTicketPage
 
 window.openAllEventsPage = openAllEventsPage
 
