@@ -1,0 +1,112 @@
+.showEvent {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Onest',
+    sans-serif;
+}
+
+.showEvent>* {
+  margin: 2vw;
+}
+
+h1 {
+  font-family: 'Kalnia', serif;
+  font-style: bold;
+  font-weight: 700;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  background-image: url(../pages/clubpages/notdeadyet/images/publik.JPG);
+  background-position: bottom;
+  background-size: cover;
+  border-radius: 20%;
+  font-size: 300%;
+  text-align: end;
+  padding: 2vw;
+  width: 50%;
+}
+
+h2 {
+  text-align: center;
+}
+
+.eventClub {
+  font-family: 'Kalnia', serif;
+  font-style: bold;
+  font-weight: 700;
+  text-align: center;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.eventClub:hover {
+  color: white;
+}
+
+
+.eventDescr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(161, 75, 51, 0.7);
+  border-radius: 10px;
+  width: 50%;
+}
+
+.eventDetails {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  align-items: start;
+  justify-content: center;
+}
+
+.eventDetails>* {
+  margin: 0 1vw 1vw;
+
+}
+
+.eventDatum {
+  border-width: 2px;
+  border-color: black;
+  border-style: solid;
+  margin: 0vw;
+  padding: 1vw;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+.back:hover {
+  color: white;
+}
+
+.closeButton {
+  display: inline-block;
+  padding: 10px;
+  text-align: end;
+  width: auto;
+  cursor: pointer;
+}
+
+
+.closeButton:hover {
+  color: white;
+}
+
+.eventItemButton {
+
+  background-color: rgba(161, 75, 51, 0.0);
+
+}
+
+.eventItemButton:hover {
+  color: white;
+}

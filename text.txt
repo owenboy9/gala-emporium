@@ -55,4 +55,50 @@ day four.
 we had an actual standup meeting: we laid pretty stable ground and schedule for today's process.
 before noon, we discussed & adjusted the ER diagram Erik had prepared. then we collectively built our database, which we then added items to, everyone on their own.
 after lunch – create homepage blueprint.
-set up new branches in github (dev, homepage)
+
+
+day five.
+
+after we'd fixed a couple of things on the website (calendar, club layout), we presented our work for Benjamin. we assessed our vision, and ended the first sprint.
+
+
+day six.
+
+speedboat retrospective: more concrete tasks to focus on and solve; clearer communication; remember to have social fun together. Micke, Zeinab and Lovisa made the site navigateable, getting data from our db.
+
+
+day seven.
+
+Erik begun working with his club's page
+we decided to make a spearate table in our db for gala's media & texts
+made sure everyone knew how to get data from db for their own club sites
+discussed the layout for the calendar(s): Erik will play UX designer for the calendar & events
+decided what must be done today.
+
+Lovisa has made her club's page
+Micke's working on his
+owen made a logo, and set up two new tables in bd, and wrote code to get stuff from it to site (but it's still not showing correctly)
+Erik has worked on styling of events (work in progress)
+we have struggled hard with github
+
+next: every event's page
+
+day eight.
+
+erik added a link from the events-container in all events view to an individual event.
+lovisa will build the individual events-page, add a button back to all events + the club that arranges the event and starts working on api to get the information we want from the database. 
+how to arrange all events-page? lovisa can't figure out how to make calender plan happen.
+
+day nine.
+
+to do: - admin backend - find a way to call on club-cases from generic code, - sexier our events-layout??
+micke har started on booking page and backend plus started thinking about the database connection and connection between amount of tickets and the remaining amount of tickets
+lovisa is working on individual events and in spare time thinks about all events.
+
+day ten.
+
+to do: - clean out empty links, - is there time to make a create a club-form?
+owen is fixing the last details on homepage content and design. 
+lovisa fixed ind events-api and buttons to club and back to all events. some issues with the linking, something with the router/hash system we quite don't understand.
+
+

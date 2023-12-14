@@ -1,0 +1,27 @@
+/*
+
+#confirmButton {
+  align-self: right;
+}
+
+#ticketBox {
+  border: 3px;
+  border-color: black;
+
+}
+*/
+
+.bookTickets {
+  background-color: aliceblue;
+  padding: 1vw;
+}
+
+#tickets {
+  background-color: aliceblue;
+  padding: 1vw;
+}
+
+.bookTicketsContainer {
+  background-color: aliceblue;
+  padding: 1vw;
+}

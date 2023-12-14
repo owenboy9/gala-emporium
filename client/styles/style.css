@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@700&family=Lato:ital,wght@0,300;0,400;0,700;1,100;1,300;1,400&display=swap');
+
+
+body {
+  background-image: url(../pages/gala/media/greencurt.jpg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  display: block;
+  font-family: 'Kalnia', serif;
+  margin: 2vw;
+}
+
+#adminBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0.4vw;
+  display: flex;
+  box-sizing: border-box;
+}
+
+#adminBar p {
+  margin: 0 1vw 0 0;
+  padding: 0;
+  color: white;
+}
+
+.adminBarButton {
+  margin-left: 0.5vw;
+}
+
+#logInOut {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.4vw;
+
+}
+
+
+header {
+  background-image: url(../pages/gala/media/greenc.jpg);
+  background-position: top;
+  background-size: cover;
+  display: flex;
+  justify-content: end;
+  height: 15vw;
+}
+
+#site-logo {
+  width: 40%;
+  height: 120%;
+
+}
+
+#site-logo>a>img {
+  height: 100%;
+}
+
+
+#headerright {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+#klubbknappar {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#klubbknappar>a {
+  margin: 0 3vw 2vw;
+
+}
+
+#klubbknappar>a>img {
+  margin: 0.5vw;
+  max-height: 5vw;
+  border-radius: 50%;
+}
+
+#klubbknappar>a:hover {
+  background-image: url(../pages/gala/media/ljuskrona.jpg);
+  border-radius: 50%;
+
+}
+
+#menu>nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+
+}
+
+#menu>nav>a {
+  font-family: 'Kalnia', serif;
+  font-style: bold;
+  font-weight: 700;
+  border-radius: 30%;
+  padding: 0.5vw;
+  margin: 1.4vw;
+  font-style: normal;
+  text-decoration: none;
+  color: rgb(28, 209, 188);
+  text-shadow: black;
+}
+
+#menu>nav>a:hover {
+  background-image: url(../pages/gala/media/backdrop.jpg);
+  background-size: cover;
+  border-radius: 20%;
+
+}
+
+
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin: 2vw;
+}
+
+h1 {
+  text-align: center;
+}
+
+#left {
+  width: 60%;
+  text-align: center;
+  text-wrap: wrap;
+  padding: 2vw;
+  opacity: 0.8;
+  font-size: large;
+}
+
+
+#right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  font-family: 'Onest',
+    sans-serif;
+}
+
+
+footer {
+  background-image: url(../pages/gala/media/backdrop.jpg);
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(28, 209, 188);
+
+}
+
+footer>* {
+  width: 50%;
+  color: rgb(28, 209, 188);
+}
+
+#some {
+  display: flex;
+  justify-content: end;
+}
+
+
+#some>* {
+  padding: 2vw;
+
+}
+
+#some>a {
+  font-style: normal;
+  text-decoration: none;
+  color: rgb(28, 209, 188);
+  background-image: url(../pages/gala/media/greenc.jpg);
+}
+
+
+#eventlist {
+  width: 60vw;
+  margin: 3vh auto 0 auto;
+}
+
+.eventsWrapper {
+  width: 100%;
+  font-family: 'Onest',
+    sans-serif;
+}
+
+.eventItem {
+  display: flex;
+  background-image: url(../pages/clubpages/notdeadyet/images/publik.JPG);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  width: 100%;
+  margin: 0.5vw;
+  padding: 15px;
+}
+
+.eventItemLeft {
+  width: 20%;
+  margin-right: 2vw;
+}
+
+.eventItemMiddle {
+  width: 60%;
+  padding: 1vw;
+  margin-right: 2vw;
+  margin-top: 1vw;
+  background-color: rgba(81, 78, 78, 0.7);
+  border-radius: 10px;
+}
+
+.eventItemMiddle h2 {
+  margin: 0 0 1vw 0;
+  padding: 0;
+}
+
+.eventItemMiddle p {
+  margin: 0;
+  padding: 0;
+}
+
+.eventItemtTime {
+  font-size: 0.7em;
+  margin: 0;
+}
+
+.eventItemRight {
+  width: 20%;
+}
+
+.eventItemButton {
+  display: inline-block;
+  padding: 10px;
+  background-color: black;
+  text-align: center;
+  width: auto;
+  cursor: pointer;
+}
+
+
+.eventItemReadMore {
+  margin-top: 1vw;
+}
+
+
+.eventItemTickets {
+  margin-top: 1vw;
+}
+
+.eventItemLogo {
+  width: 5vw;
+  min-width: 50px;
+  border-radius: 50%;
+  margin: 0.5vw 0 0 0.5vw;
+}
+
+.eventItemLogo img {
+  width: 100%;
+  border-radius: 50%;
+  border-width: 2px;
+  border-color: rgba(81, 78, 78, 0.7);
+  border-style: solid;
+}
+
+.eventItemDate {
+  width: 5vw;
+  min-width: 50px;
+  margin: 0.5vw 0 0.5vw 0.5vw;
+  text-align: center;
+  background-color: rgba(81, 78, 78, 0.7);
+  border-radius: 10px;
+}
+
+.eventItemDay {
+  font-size: 2em;
+}
+
+.eventDate {
+  padding: 10px;
+  background-color: rgba(81, 78, 78, 0.7);
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.eventInfo {
+  padding: 10px;
+  margin-left: 1vw;
+}
+
+.eventInfo h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.eventInfo p {
+  margin: 0;
+  padding: 0;
+}
+
+.eventItemPrice {
+  margin-top: 1.5vh;
+}
+
+.eventEditWrapper {
+  display: flex;
+  margin-bottom: 0.5vw;
+}
+
+.eventEditItem {
+  display: flex;
+  padding: 0.4vw;
+  background-color: bisque;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.eventEditButtons {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 1vw;
+}
+
+.eventEditButton {
+  display: block;
+  margin-bottom: 0.5vw;
+}
+
+.eventEditForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.eventEditForm p {
+  margin: 0;
+  padding: 0;
+}
+
+.eventEditInputBox {
+  margin-bottom: 0.5vw;
+}
+
+.eventManagerContainer {
+  background-color: #d7d6d6;
+  padding: 1vw;
+  border-radius: 10%;
+  opacity: 0.9;
+  font-family: 'Onest',
+    sans-serif;
+  max-width: 65%;
+}
+
+.eventManagerContainer h1 {
+  text-align: left;
+  font-family: 'Kalnia', serif;
+}
+
+.editor {
+  margin: 0.3vw 0 1vw 0;
+  box-sizing: border-box;
+  background-color: antiquewhite;
+  padding: 0.5vw;
+  border-radius: 10px;
+}
+
+.eventEditFormButton {
+  width: auto;
+  margin-top: 0.5vw;
+  width: 14vw;
+}
+
+.eventEditTimeContainer {
+  display: flex;
+}
+
+.eventEditTimeContainer>.eventEditInputBox {
+  width: 7vw;
+}
+
+
+#clubs {
+  width: 60vw;
+  margin: 3vh auto 0 auto;
+}
+
+.club {
+  background-color: rgb(218, 139, 120);
+  border-radius: 10px;
+  margin: 0.5vw;
+  padding: 5px;
+  display: flex;
+  box-shadow: 2px 2px 3px 2px #d7d6d6;
+
+}
+
+.clubName {
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  vertical-align: middle;
+  width: 8vw;
+  min-width: 8vw;
+}
+
+.clubInfo {
+  padding: 10px;
+  margin-left: 1vw;
+}

@@ -1,0 +1,51 @@
+h1 {
+  font-family: 'Kalnia', serif;
+  font-style: bold;
+  font-weight: 700;
+  color: black;
+  text-shadow: none;
+  background-image: url(../pages/gala/media/ljuskrona.jpg);
+  border-radius: 20%;
+  text-align: center;
+  padding: 2vw;
+  width: fit-content;
+  margin: 0;
+}
+
+
+.calMenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar {
+  font-family: 'Kalnia', serif;
+  font-style: bold;
+  font-weight: 700;
+  color: black;
+  text-shadow: none;
+  background-image: url(../pages/gala/media/ljuskrona.jpg);
+  opacity: 0.85;
+  border-radius: 20%;
+  width: fit-content;
+  align-self: flex-start;
+  margin: 0;
+}
+
+
+.calendar>a {
+  color: black;
+  text-decoration: none;
+}
+
+
+.allEvents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.5px;
+  width: 100%;
+
+}

@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'Metal Lord';
+  src: url('client\pages\clubpages\akzepto\media\metal lord.ttf') format('truetype');
+}
+
+/*background-image: url('client\pages\clubpages\akzepto\media\akzepto_bg.jpg');*/
+
+
+.akzepto {
+  font-family: 'Metal Lord';
+  text-align: center;
+  color: maroon;
+}
+
+.block {
+  font-family: 'Metal Lord';
+  color: black;
+  text-align: center;
+
+}
+
+body {
+  background-color: rgb(39, 149, 240);
+  background-image: none;
+}
+
+
+#site-logo {
+  width: 40%;
+}
+
+#site-logo>* {
+  height: 100%;
+
+}
+
+
+
+
+h2 {
+  color: black;
+  text-align: center;
+  font-size: 150%;
+  margin-right: 5vw;
+}
+
+.block {
+  width: 40%;
+}
+
+
+
+
+
+.image {
+  width: 40%;
+}
+
+.image>img {
+  width: 100%;
+  margin: 2vw;
+}
+
+.eventItem {
+  background-image: url("../pages/clubpages/akzepto/media/eeg.png");
+  background-position: center;
+  background-repeat: none;
+  background-size: auto;
+  font-family: 'Metal Lord', sans-serif;
+}
+
+.eventItemButton {
+  background-color: rgb(39, 149, 240);
+}
+
+
+
+#left {
+  width: 70%;
+  text-align: center;
+  text-wrap: wrap;
+  padding: 2vw;
+}
+
+
+#right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+
+
+
+#eventlist {
+  font-family: 'Metal Lord';
+  width: 60vw;
+  margin: 3vh auto 0 auto;
+}
+
+
+
+.eventItem {
+  background-color: rgb(39, 149, 240);
+  border-radius: 10px;
+  margin: 0.5vw;
+  padding: 5px;
+  display: flex;
+  box-shadow: 2px 2px 3px 2px #d7d6d6;
+}
+
+.eventDate {
+  padding: 10px;
+  font-family: 'Metal Lord';
+  color: rgb(139, 7, 7);
+  background-color: rgb(39, 149, 240);
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+
+.eventInfo h2 {
+  margin: 0;
+  padding: 0;
+}
+
+#clubs {
+  width: 60vw;
+  margin: 3vh auto 0 auto;
+}
+.club {
+  background-color: rgb(130, 120, 218);
+  border-radius: 10px;
+  margin: 0.5vw;
+  padding: 5px;
+  display: flex;
+  box-shadow: 2px 2px 3px 2px #d7d6d6;
+
+}
+
+.clubName {
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  vertical-align: middle;
+  width: 8vw;
+  min-width: 8vw;
+}
+
+.clubInfo {
+  font-family: 'Metal Lord';
+  font-size: 150%;
+  padding: 10px;
+  margin-left: 1vw;
+}
