@@ -104,11 +104,11 @@ function createEventList(clubEvents) {
         - <span class="eventItemTime">${endHour}</span>:<span class="eventItemTime">${endMinute}</span>
 
         <div class="parrotEventDescription">${event.description_long}</div>
-        <div class="eventItemButton eventItemReadMore" onclick="showEventDetails(${event.id})">Read more</div>
+        <div class="parrotEventButton eventItemReadMore" onclick="showEventDetails(${event.id})">Read more</div>
       </div>
       
       <div class="parrotEventRight">
-        <div class="eventItemButton" onclick="openTicketPage(${event.id})">TICKETS</div>
+        <div class="parrotEventButton" onclick="openTicketPage(${event.id})">TICKETS</div>
         <div class="eventItemTickets">${event.tickets} tickets available</div>
         <div class="eventItemPrice">
           <p>${event.ticket_price} kr</p>
