@@ -6,6 +6,7 @@ export default async function (eventId) {
   const event = await getEventData(eventId)
 
 
+
   let jsstarttime = new Date(event.start_time)
 
   let day = jsstarttime.getDay()
@@ -45,7 +46,7 @@ export default async function (eventId) {
       <div class="eventItemButton">TICKETS</div>
   
       <p>${event.description_long}</p>
-      
+      <a href="#${event.club_case}"><p class="back">Back to ${event.club_name}</p></a>
       <div class="closeButton" onclick="openAllEventsPage()">To all events</div>
        
       
@@ -79,5 +80,8 @@ async function openAllEventsPage() {
   $("main").html(await eventList())
 }
 
+
 window.openAllEventsPage = openAllEventsPage
+
+
 
