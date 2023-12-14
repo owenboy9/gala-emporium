@@ -82,3 +82,23 @@ Erik has worked on styling of events (work in progress)
 we have struggled hard with github
 
 next: every event's page
+
+day eight.
+
+erik added a link from the events-container in all events view to an individual event.
+lovisa will build the individual events-page, add a button back to all events + the club that arranges the event and starts working on api to get the information we want from the database. 
+how to arrange all events-page? lovisa can't figure out how to make calender plan happen.
+
+day nine.
+
+to do: - admin backend - find a way to call on club-cases from generic code, - sexier our events-layout??
+micke har started on booking page and backend plus started thinking about the database connection and connection between amount of tickets and the remaining amount of tickets
+lovisa is working on individual events and in spare time thinks about all events.
+
+day ten.
+
+to do: - clean out empty links, - is there time to make a create a club-form?
+owen is fixing the last details on homepage content and design. 
+lovisa fixed ind events-api and buttons to club and back to all events. some issues with the linking, something with the router/hash system we quite don't understand.
+
+
