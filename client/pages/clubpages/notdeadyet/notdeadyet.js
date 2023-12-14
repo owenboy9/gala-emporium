@@ -1,4 +1,7 @@
 import showEvent from "../../showEvent.js"
+
+
+
 export default async function () {
   const clubName = { clubname: 'Not Dead Yet' }
   const clubdata = await getClubData(clubName)
@@ -114,11 +117,7 @@ function createEventList(clubEvents) {
         <div class="eventItemButton eventItemReadMore" onclick="openEventPage(${event.id})">Read more</div>
       </div>
       
-      <div class="eventItemRight">
-        <div class="eventItemButton">TICKETS</div>
-        <div class="eventItemTickets">${event.tickets} tickets available</div>
-      </div>
-    
+      
     </section>
     `
     index++
@@ -138,6 +137,7 @@ function getMonthName(month) {
 async function openEventPage(eventId) {
   $("main").html(await showEvent(eventId))
 }
+
 
 
 window.openEventPage = openEventPage
