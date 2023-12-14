@@ -1,3 +1,4 @@
+import bookTickets from "./bookTickets.js"
 import showEvent from "./showEvent.js"
 
 const today = new Date();
@@ -126,8 +127,7 @@ function createEventList(eventData) {
       </div>
       
       <div class="eventItemRight">
-        <div class="eventItemButton">TICKETS</div>
-        <div class="eventItemTickets">${event.tickets} tickets available</div>
+        <div class="eventItemButton" onclick="openTicketPage(${event.id})">BOOK TICKETS</br>${event.tickets} tickets available</div>
       </div>
     
     </section>
@@ -159,4 +159,10 @@ async function openEventPage(eventId) {
 
 
 
+
+async function openTicketPage(eventId) {
+  $("main").html(await bookTickets(eventId))
+}
 window.openEventPage = openEventPage
+
+window.openTicketPage = openTicketPage

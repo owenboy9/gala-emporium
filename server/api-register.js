@@ -16,6 +16,7 @@ import eventEditor from "./apis/eventEditor.js";
 import getClubFromUserId from "./apis/getClubFromUserId.js";
 import getIndividualEvents from "./apis/getIndividualEvents.js";
 
+import registerBooking from "./apis/registerBooking.js";
 
 
 export default function (server, db) {
@@ -34,5 +35,7 @@ export default function (server, db) {
   getEventData(server, db)
   eventEditor(server, db)
   getClubFromUserId(server, db)
+  registerBooking(server, db)
+
   getIndividualEvents(server, db)
 }

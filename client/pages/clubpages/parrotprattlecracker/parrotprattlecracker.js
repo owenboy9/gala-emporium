@@ -1,3 +1,5 @@
+import bookTickets from "../../bookTickets.js"
+
 export default async function () {
   const clubName = {clubname: 'The Parrot Prattle Cracker'}
   const clubdata = await getClubData(clubName)
@@ -33,12 +35,6 @@ export default async function () {
       ${clubdata.club.manifesto}
     </div>
 
-  
-  
-  
-  
-  
-  
   </div>
   `
 
@@ -112,7 +108,7 @@ function createEventList(clubEvents) {
       </div>
       
       <div class="parrotEventRight">
-        <div class="eventItemButton">TICKETS</div>
+        <div class="eventItemButton" onclick="openTicketPage(${event.id})">TICKETS</div>
         <div class="eventItemTickets">${event.tickets} tickets available</div>
         <div class="eventItemPrice">
           <p>${event.ticket_price} kr</p>
@@ -148,3 +144,9 @@ function createEventList(clubEvents) {
     let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
     return days[weekday]
   }
+
+  async function openTicketPage(eventId) {
+    $("main").html(await bookTickets(eventId))
+  }
+
+  window.openTicketPage = openTicketPage

@@ -25,6 +25,7 @@ h1 {
   color: black;
   text-shadow: none;
   background-image: url(../pages/gala/media/ljuskrona.jpg);
+  opacity: 0.85;
   border-radius: 20%;
   width: fit-content;
   align-self: flex-start;
